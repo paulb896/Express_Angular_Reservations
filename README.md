@@ -13,7 +13,7 @@ Using Express Node Module to serve pages and handle data requests.
  Copy Repo
 
 ```
-git clone https://github.com/paulb896/Angular_Reservations.git
+git clone https://github.com/paulb896/Express_Anguar_Reservations
 ```
 
   Install Dependencies
