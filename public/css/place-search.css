@@ -1,0 +1,155 @@
+.city-search{
+    font-size:30px;
+    padding: 10px;
+    font-family: 'Noto Serif', serif;
+    color:black;
+    border-bottom: solid 2px black;
+    border-right: solid 2px black;
+    border-radius: 5px;
+    outline: none;
+}
+
+.city-result{
+    cursor: pointer;
+    margin: 20px;
+    -webkit-transition: 1.3s all;
+    -moz-transition: 1.3s all;
+    -ms-transition: 1.3s all;
+    transition: 1.3s all;
+}
+
+.city-result:hover{
+   font-size: 200%;
+
+}
+
+.bank{
+    background-image: url('../img/atm.png');;
+}
+
+.car_repair{
+    background-image: url('../img/car-repair.png');;
+}
+
+.food{
+    background-image: url('../img/food.png');;
+}
+
+.store{
+    background-image: url('../img/store.png');;
+}
+
+.find{
+    background-image:url('../img/find-hover.png');
+    background-size: 100%;
+    display: inline-block;
+    -webkit-transition: 1.3s all;
+    -moz-transition: 1.3s all;
+    -ms-transition: 1.3s all;
+    transition: 1.3s all;
+    cursor: pointer;
+}
+
+.found-places{
+    height: 250px;
+    overflow: hidden;
+    width:84%;
+    margin: 0;
+}
+
+.found-place-types{
+    height: 75px;
+    overflow: hidden;
+}
+
+.place-icon{
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.place-header{
+    display: inline;
+    letter-spacing: 2px;
+    width: 50%;
+    font-size: 25px;
+    color:rgba(111,1,1,0.9);
+    margin-top: 20px;
+}
+
+.place-type{
+    width:70px;
+    height:70px;
+    display: inline-block;
+    background-color: transparent;
+    background-size: 100%;
+}
+
+.place-type:hover{
+    #border-top-left-radius: 20px;
+    #border-top-right-radius: 20px;
+    background-color: rgba(111,1,1,0.9);
+}
+
+.place-search{
+    font-size:30px;
+    padding: 10px;
+    font-family: 'Noto Serif', serif;
+    color:black;
+    border-bottom: solid 2px black;
+    border-right: solid 2px black;
+    border-radius: 5px;
+    outline: none;
+    width: 120px;
+    margin-left: 40px;
+}
+
+td{
+    vertical-align: top;
+}
+
+.place-table{
+    margin-bottom: -58px;
+}
+
+.place-result{
+    background-color: rgba(200,200,205,0.4);
+    display: inline-table;
+    margin-right: 10px;
+    cursor: pointer;
+    height: 80px;
+    font-size: 16px;
+    color:rgba(111,1,1,0.9);
+    font-weight: 700;
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+    margin-top: 5px;
+    padding-right: 0;
+    text-align: center;
+}
+
+.stripe{
+    background-color: red;
+}
+
+.place-result:hover{
+    background-color: rgba(111,1,1,0.9);
+    color:white;
+}
+
+.place-type-search{
+    font-size:30px;
+    padding: 10px;
+    font-family: 'Noto Serif', serif;
+    color:black;
+    border-bottom: solid 2px black;
+    border-right: solid 2px black;
+    border-radius: 5px;
+    outline: none;
+    width:120px;
+}
+
+
+
+

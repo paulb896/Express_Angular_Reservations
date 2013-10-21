@@ -1,0 +1,20 @@
+<div ng-controller="reservationController" class="requestedTime">
+    <table class="reservation-table">
+        <tr>
+            <td><span class="selected-date-label reservation-label">SELECTED DATE</span></td>
+            <td><span ng-bind="UserSelection.selectedDate | date:'EEEE, MMMM d @ h:mma'"></span></td>
+        </tr>
+        <tr>
+            <td><span class="selected-date-label reservation-label">PLACE</span></td>
+            <td><span ng-bind="UserSelection.place.name"></span></td>
+        </tr>
+        <tr>
+            <td><span class="selected-date-label reservation-label">ATTENDEES</span></td>
+            <td><span ng-repeat="attendee in PageState.attendees" class="attendee">{{attendee}}</span></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span ng-show="UserSelection.place && UserSelection.selectedDate" class="reserve reservation-input" ng-click="reserve();">Email Request to {{UserSelection.place.name}}</span></td>
+        </tr>
+    </table>
+</div>

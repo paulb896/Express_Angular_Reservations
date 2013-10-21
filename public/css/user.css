@@ -1,0 +1,12 @@
+.current-user{
+    float: right;
+    font-size:30px;
+    padding: 10px;
+    font-family: 'Noto Serif', serif;
+    color:black;
+    border-bottom: solid 2px black;
+    border-right: solid 2px black;
+    border-radius: 5px;
+    outline: none;
+    width: 220px;
+}

@@ -1,0 +1,156 @@
+
+
+@media only screen and (min-width: 1501px) {
+    .tile-size{
+        width: 48%;
+        margin-bottom: 80px;
+    }
+
+    .inner-tile-size{
+        width:33%;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    . nav-image-size{
+        width: 50px;
+        height: 50px;
+    }
+
+    .tile-navigation-position{
+        margin-right: 15%;
+    }
+
+    .tile-navigation > li{
+        height: 70px;
+        width: 70px;
+    }
+
+    .tiles{
+        padding-top: 260px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .tile-size{
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    .inner-tile-size{
+        width: 83%;
+        border-bottom: solid blue 1px;
+        padding-left: 15px;
+    }
+
+    . nav-image-size{
+        width: 150px;
+        height: 150px;
+    }
+
+    .tile-navigation > li{
+        height: 70px;
+        width: 70px;
+    }
+
+    .tile-navigation-position{
+        margin-right: 3%;
+    }
+
+    .tiles{
+        padding-top: 310px;
+    }
+}
+
+
+body{
+    width:100%;
+    height: 800px;
+    #overflow: hidden;
+}
+
+body > div{
+    padding: 10px;
+}
+
+h2{
+    color:rgba(111,1,1,0.9);
+}
+
+.tile{
+    height:500px;
+    float:left;
+}
+
+h1{
+    font-family: "Times New Roman";
+    letter-spacing: 0px;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+h2{
+    margin: 0;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.tile-navigation{
+    list-style-type: none;
+    float: right;
+    width: 9%;
+    display: inline-block;
+    background-size: 100%;
+    margin-top: 0;
+    padding-top: 30px;
+    border-top:solid rgba(50,50,65,0.2) 5px;
+}
+
+.nav-image{
+    background-size: 100%;
+    background-repeat:no-repeat;
+}
+
+
+.inner-tile{
+    display: inline-table;
+    position:absolute;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid rgba(50,50,65,0.7) 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 5px;
+    border-top: solid rgba(50,50,65,0.7) 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 5px;
+    border-left: solid black 1px;
+    overflow: hidden;
+    background-color: rgba(200,205,205,0.01);
+    height: 400px;
+}
+
+.tile-navigation > li{
+    cursor: pointer;
+}
+
+.nav-image:hover{
+    box-shadow: -30px 0px 1px rgba(10,10,10,0.1);
+}
+
+.tile-navigation > * {
+    -webkit-transition:0.28s all;
+    -moz-transition:0.28s all;
+    -ms-transition:0.28s all;
+    transition:0.28s all;
+}
+
+
+
+
+
+
+
+

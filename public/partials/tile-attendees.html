@@ -1,0 +1,20 @@
+<h2>ATTENDEES</h2>
+<table class="attendee-table" ng-controller="attendeeController">
+    <tr>
+        <th class="attendees-header">ATTENDEE EMAIL</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input type="text" class="add-attendee-input" ng-model="UserSelection.attendee"/></td>
+        <td><span ng-click="addAttendee(UserSelection.attendee);" class="reservation-input">ADD ATTENDEE</span></td>
+    </tr>
+    <tr ng-repeat="attendee in PageState.attendees">
+        <td ng-bind="attendee" class="attendee-name"></td>
+        <td>
+            <div class="email-attendee-request" ng-show="UserSelection.place && UserSelection.selectedDate">
+                <span>SEND EMAIL REQUEST</span>
+                <div class="email-attendee" ng-click="sendEmailNotification(attendee);"></div>
+            </div>
+        </td>
+    </tr>
+</table>

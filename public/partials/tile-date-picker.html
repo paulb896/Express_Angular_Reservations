@@ -1,0 +1,27 @@
+<div ng-controller="datePickerController" ng-init="initializeDate()" class="date-picker">
+    <div class="month-picker">
+        <span class="month-size" ng-class="{true:'month-selected', false:''}[monthNumber==UserSelection.selectedDate.getMonth()]"
+              ng-repeat="(monthNumber, monthModel) in PageState.months" ng-click="setMonth($index+1);">
+            {{monthModel.name}}
+        </span>
+    </div>
+    <div class="day-picker">
+        <div ng-class="{true:'day-selected', false:''}[dayModel==UserSelection.selectedDate.getDate()]"
+             ng-repeat="dayModel in PageState.days"
+             class="floatingTile day-floating-tile"
+             ng-class="{true:'selected-tile', false:''}[dayModel==UserSelection.selectedDate]"
+             ng-click="updateSelectedDay(dayModel)">
+        <span class="dayOfMonth">
+          {{dayModel}}
+        </span>
+        </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="minute-picker" style="width:100%; height:30px; cursor: pointer;" ng-click="updateSelectedMinute($event);">
+        <g stroke="rgba(192,152,132,0.9)" stroke-width="12">
+            <path stroke-dasharray="1,3" d="M3 5 1440 5"/>
+        </g>
+    </svg>
+    <div class="time-picker-table">
+        <span ng-repeat="time in PageState.times" ng-click="updateSelectedTime(time)" ng-bind="time | niceHour" class="time-indicator"></span>
+    </div>
+</div>

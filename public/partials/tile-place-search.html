@@ -1,0 +1,53 @@
+<div ng-controller="placeSearchController" ng-init="initialize();">
+    <table class="place-table">
+        <tr ng-show="false">
+            <td>
+                <h2 class="place-header">City</h2>
+
+            </td>
+            <td>
+                <input ng-model="citySearch" type="input" class="city-search"/>
+            </td>
+            <td>
+                <div class="found-cities">
+                    <span ng-repeat="city in PageState.cities" ng-click="updateCity(city)"
+                          class="floatingTile city-result">
+                        {{city.name}}
+                    </span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><h2 class="place-header">Find {{UserSelection.placeType}}</h2></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input ng-model="placeSearch" type="input" class="place-search"/></td>
+            <td>
+                <div class="found-place-types">
+                    <div ng-repeat="placeType in PageState.placeTypesShort" ng-click="updatePlaceType(placeSearch, placeType.name)"
+                         ng-class="placeType.name"
+                         class="place-type">
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <ul class="found-places">
+                    <li ng-repeat="place in PageState.places" ng-click="updatePlace(place)"
+                          class="place-result"
+                         >
+                        {{place.name}}<img class="place-icon" ng-src="{{place.icon}}"><span ng-bind="place.rating"></span>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+
+            </td>
+        </tr>
+    </table>
+</div>

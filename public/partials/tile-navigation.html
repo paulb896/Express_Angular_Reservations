@@ -1,0 +1,6 @@
+<div>
+    <div ng-include="template.url" class="inner-tile inner-tile-size">TILE CONTENT</div>
+    <ul class="tile-navigation tile-navigation-position tile-navigation-position">
+        <li ng-repeat="navLink in templates" ng-class="{true:'', false:'tile-not-complete'}[navLink.completed()]" ng-click="updateNav(navLink)" class="nav-image-size nav-image" style="background-image:url('{{navLink.imageUrl}}');"></li>
+    </ul>
+</div>

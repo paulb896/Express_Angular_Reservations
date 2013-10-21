@@ -1,0 +1,32 @@
+<div ng-controller=ReservationCtrl ng-init="init=('hey')">
+    <div class="selectedStatus">
+      <div ng-class="selectedDateStatus" ng-model="selectedDate.status" class="status {{selectedDate.status}}" ng-click="toggleStatus(selectedDate.status)"></div>
+      <input ng-model="selectedDate.status" class="textStatus" id="textStatus">
+    </div>
+    <div class="selectedDate">
+      <span ng-bind="selectedDate.month | monthName" class="month-selected"></span>
+      <span ng-bind="selectedDate.day" class="day-selected"></span>
+      <span ng-bind="selectedDate.year" class="year-selected"></span>
+      <span ng-bind="selectedDate.company" class="company-selected"></span>
+      <ul>
+        <li ng-repeat="reservation in getReservations(selectedDate.day, selectedDate.month, selectedDate.year)">
+          {{reservation}}
+        </li>
+      </ul>
+    </div>
+    <div class="calendar" ng-init="selectedDate.month=09; selectedDate.year=1985">
+      <div>
+        <span>Tile Colour: </span>
+        <input ng-model="calendar.tile.colour">
+      </div>
+      <input ng-model=selectedDate.month>
+      <input ng-model=selectedDate.year>
+      <br /><br /><br /><br />
+      <div ng-repeat="day in getDays(selectedDate.month, selectedDate.year)" class="floatingTile">
+        <label for="day" class="dayOfMonth">
+          {{day | extractDay}}
+        </label>
+        <input name="day" type="radio" class="day" id="day_{{day}}" ng-click="getReservations(day, selectedDate.month, selectedDate.year); selectedDate.day=day">
+      </div>
+    </div>
+</div>

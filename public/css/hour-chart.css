@@ -1,0 +1,49 @@
+
+
+.attendee{
+    margin-left: 5px;
+    color: rgba(50,50,50,0.4);
+    border: 0;
+    cursor: pointer;
+}
+
+.attendee:hover{
+    border-bottom: solid blue 1px;
+    color: #000000;
+}
+
+.chart-labels{
+    padding: 10px;
+}
+
+.chart-labels > span{
+    margin-left: 12%;
+}
+
+.hour-chart{
+    height: 300px;
+    width: 90%;
+}
+
+.reservation{
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(200,200,205,0.4);
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    height: 22px;
+    font-size: 16px;
+    color:rgba(8,8,78,0.87);
+    border-radius: 10px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.current-reservation{
+    height: 48px;
+}
+
+.reservation:hover{
+    background-color: rgba(200,200,205,0.2);
+}
