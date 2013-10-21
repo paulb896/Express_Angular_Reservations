@@ -1,0 +1,12 @@
+/**
+ * Environment configs
+ * @exports node.js module
+ */
+var config = {};
+
+// REPLACE VALUES BELOW WITH CUSTOM CONFIGURATIONS
+
+config.dbHost = "mongodb://192.168.1.1:3001/reservation_system"; // Use your host and database name here
+config.developerKey = "###########################"; // Google api developer key
+
+module.exports = config;
