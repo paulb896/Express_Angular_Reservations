@@ -23,6 +23,24 @@ npm install
 ```
 
 
+  Set Configuration Parameters
+
+```
+cp config.js.dist config.js
+```
+
+And set mongo db host information, as well as google api developer key.
+
+``` config.js
+..
+// REPLACE VALUES BELOW WITH CUSTOM CONFIGURATIONS
+
+config.dbHost = "mongodb://192.168.1.1:3001/reservation_system"; // Use your host and database name here
+config.developerKey = "###########################"; // Google api developer key
+..
+```
+
+
 ###Run Server
 
 ```
