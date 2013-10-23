@@ -4,9 +4,17 @@
  */
 var config = {};
 
+//
 // REPLACE VALUES BELOW WITH CUSTOM CONFIGURATIONS
+//
 
-config.dbHost = "mongodb://192.168.1.1:3001/reservation_system"; // Use your host and database name here
-config.developerKey = "###########################"; // Google api developer key
+// Use your host and database name here
+config.dbHost = "mongodb://localhost:3001/reservation_system";
+
+// Google api developer key
+config.developerKey = "###########################";
+
+// Port the web server will listen on
+config.serverPort = 8000;
 
 module.exports = config;

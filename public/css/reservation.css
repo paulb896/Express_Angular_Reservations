@@ -64,7 +64,7 @@
 }
 
 .reserve{
-    width: 50%;
+    width: 40%;
     margin-left: 25%;
     cursor: pointer;
     text-align: center;
@@ -73,7 +73,7 @@
     -moz-transition:1.28s all;
     -ms-transition:1.28s all;
     transition:1.28s all;
-    height: 35px;
+    height: 50px;
 }
 
 .reserve:hover{

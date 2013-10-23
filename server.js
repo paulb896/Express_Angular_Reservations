@@ -65,7 +65,7 @@ app.get('/places', function(req, res){
  */
 app.get('/place-details', function(req, res){
     var request = require('request');
-    var requestUrl = "https://maps.googleapis.com/maps/api/place/details/json?sensor=true&reference=" + req.query.reference + "&sensor=true&key="+developerKey;
+    var requestUrl = "https://maps.googleapis.com/maps/api/place/details/json?sensor=true&reference=" + req.query.reference + "&sensor=true&key=" + config.developerKey;
     console.log("ATTEMPTING TO HIT " + requestUrl + " FOR PLACE DETAILS")
     request(requestUrl, function (error, response, body) {
         if (!error && response.statusCode == 200) {
@@ -112,8 +112,8 @@ app.post('/reserve', function(req, res){
 });
 
 
-app.listen(3042);
-console.log('Listening on port 3042');
+app.listen(config.serverPort);
+console.log('Listening on port ' + config.serverPort);
 
 app.use(function(err, req, res, next){
     console.error(err.stack);
