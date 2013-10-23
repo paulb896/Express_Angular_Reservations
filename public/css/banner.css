@@ -61,7 +61,7 @@
     float:right;
     display: inline-table;
     margin-right: 20px;
-    padding-left: 10px;
+    padding-left: 17px;
     padding-right: 10px;
 }
 
@@ -127,11 +127,11 @@
 
 
 .selected-place{
-    font-size: 134%;
+    font-size: 184%;
     font-style: oblique;
     letter-spacing: 2px;
     font-style: italic;
-    font-weight:900;
+    font-weight:200;
 }
 
 

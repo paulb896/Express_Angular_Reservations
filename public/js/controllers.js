@@ -43,7 +43,7 @@ angular.module('reserveTheTime.controllers', [])
                     return UserSelection.place
                 }
             }
-                , { name: 'Reserve', url: 'partials/tile-user.html', imageUrl:"img/user.png",
+                , { name: 'User', url: 'partials/tile-user.html', imageUrl:"img/user.png",
                 completed:function() {
                     return false;
                 }
@@ -167,7 +167,7 @@ angular.module('reserveTheTime.controllers', [])
 
     $scope.updateSelectedMinute =function($event) {
         // I'm putting this in because I would like to avoid using jquery if possible
-        UserSelection.selectedDate.setMinutes(Math.round(($event.offsetX / 629) * 60));
+        UserSelection.selectedDate.setMinutes(Math.round(($event.offsetX / 390) * 60));
 
     };
 

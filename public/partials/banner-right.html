@@ -9,8 +9,7 @@
             <span ng-show="UserSelection.place.name" class="selected-place" ng-bind="UserSelection.place.name"></span>
         </li>
         <li ng-controller="reservationController" ng-click="reserve();">
-            <div class="reservation-input reserve">Save Current Details</div>
+            <div class="reservation-input reserve" ng-hide="true">Save Current Details</div>
         </li>
     </ul>
-
 </div>
