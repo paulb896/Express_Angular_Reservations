@@ -5,7 +5,7 @@
     }
 
     .banner-content > li{
-        margin-bottom: 5px;
+        margin-bottom: 18px;
         height: 20px;
     }
 }
@@ -17,8 +17,8 @@
     }
 
     .banner-content > li{
-        margin-bottom: 15px;
-        height: 15px;
+        margin-bottom: 32px;
+        height: 20px;
     }
 }
 
@@ -125,9 +125,6 @@
     margin-right: 5px;
 }
 
-.reserve{
-    padding: 25px;
-}
 
 .selected-place{
     font-size: 134%;
