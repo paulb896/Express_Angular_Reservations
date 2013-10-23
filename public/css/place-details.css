@@ -24,6 +24,11 @@
     font-size: 250%;
     display: inline;
     text-shadow: 2px 2px rgba(100,100,100,0.5);
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.rating-positive{
+    font-weight: 900;
 }
 
 .refresh{

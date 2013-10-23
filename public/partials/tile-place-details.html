@@ -7,7 +7,7 @@
     <div class="phone-number">
         {{UserSelection.place.formatted_phone_number}}
     </div>
-    <div class="rating" ng-repeat="n in ratings | limitTo:UserSelection.place.rating">&#9734;</div>
+    <div class="rating" ng-repeat="n in ratings" ng-class="{'rating-positive': (n <= UserSelection.place.rating)}">&#9734;</div>
     <div id="map-canvas" class="map-size"></div>
 
 </div>

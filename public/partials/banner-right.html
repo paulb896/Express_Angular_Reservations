@@ -1,20 +1,16 @@
 <div ng-controller="bannerController" ng-class="{'spin-component': UserSelection.place.name.length > 0}">
 
-<h1>Current Selection</h1>
-<ul class="banner-content">
-    <li>
-        <span class="selected-date" ng-bind="UserSelection.selectedDate | date:'EEEE, MMMM d,y'"></span>
-    </li>
-    <li>
-        <span class="selected-date" ng-bind="UserSelection.selectedDate | date:'h:mma'"></span>
-    </li>
-    <li ng-show="UserSelection.place.name">
-        <span class="selected-place" ng-bind="UserSelection.place.name"></span>
-    </li>
-    <li ng-controller="reservationController" ng-click="reserve();">
-        <div class="reservation-input reserve">Save Current Details</div>
-    </li>
-</ul>
-
+    <h1 class="selection-header">Current Selection</h1>
+    <ul class="banner-content">
+        <li>
+            <span class="selected-date" ng-bind="UserSelection.selectedDate | date:'EEEE, MMMM d,y  h:mma'"></span>
+        </li>
+        <li>
+            <span ng-show="UserSelection.place.name" class="selected-place" ng-bind="UserSelection.place.name"></span>
+        </li>
+        <li ng-controller="reservationController" ng-click="reserve();">
+            <div class="reservation-input reserve">Save Current Details</div>
+        </li>
+    </ul>
 
 </div>

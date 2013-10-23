@@ -1,6 +1,7 @@
 @media only screen and (min-width: 1501px) {
-    .banner-height{
+    .banner-size{
         height: 225px;
+        width: 40%;
     }
 
     .banner-content > li{
@@ -10,8 +11,9 @@
 }
 
 @media only screen and (max-width: 1500px) {
-    .banner-height{
+    .banner-size{
         height: 255px;
+        width: 40%;
     }
 
     .banner-content > li{
@@ -42,7 +44,6 @@
     box-shadow: 2px 2px 10px rgba(10,10,10,0.86);
     background-color: rgba(245,245,246,0.8);
     z-index: 10;
-    width: 35%;
     font-size: 138%;
     color:rgba(111,1,1,0.9);
     display: inline-table;
@@ -54,12 +55,11 @@
     box-shadow: 2px 2px 10px rgba(10,10,10,0.8);
     background-color: rgba(245,245,246,0.8);
     z-index: 10;
-    margin-left: 45%;
+    margin-left: 50%;
     position: fixed;
     color:rgba(111,1,1,0.9);
     float:right;
     display: inline-table;
-    width: 62%;
     margin-right: 20px;
     padding-left: 10px;
     padding-right: 10px;
@@ -107,12 +107,12 @@
 }
 
 .spin-component{
-    transform: rotateY(360deg);
-    -webkit-transform: rotateY(360deg); /* Safari and Chrome */
-    -webkit-transition:1.88s all;
-    -moz-transition:1.88s all;
-    -ms-transition:1.88s all;
-    transition:1.88s all;
+    transform: rotateX(360deg);
+    -webkit-transform: rotateX(360deg); /* Safari and Chrome */
+    -webkit-transition:0.88s all;
+    -moz-transition:0.88s all;
+    -ms-transition:0.88s all;
+    transition:0.88s all;
     perspective-origin: 50% 50%;
 }
 
@@ -122,7 +122,7 @@
     letter-spacing: 2px;
     font-style: italic;
     font-weight:900;
-    margin-right: 6%;
+    margin-right: 5px;
 }
 
 .reserve{
@@ -131,7 +131,6 @@
 
 .selected-place{
     font-size: 134%;
-    color:rgba(8,8,78,0.87);
     font-style: oblique;
     letter-spacing: 2px;
     font-style: italic;
