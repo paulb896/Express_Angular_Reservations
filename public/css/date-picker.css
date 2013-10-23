@@ -66,6 +66,7 @@
     cursor: pointer;
     width:70%;
     cursor: pointer;
+    margin-top: 30px;
 }
 
 .month-picker {
@@ -80,7 +81,7 @@
     -moz-transition:0.58s all;
     -ms-transition:0.58s all;
     transition:0.58s all;
-    font-family: "Arial Black", Gadget, sans-serif;
+    font-family: "Times New Roman";
 }
 
 .month-picker > span{
