@@ -123,13 +123,15 @@ angular.module('reserveTheTime.controllers', [])
     $scope.UserSelection = UserSelection;
 
     $scope.setMonth = function(monthNumber) {
-        var newSelectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, 0, $scope.UserSelection.selectedDate.getMinutes());
+        $scope.newSelectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, 0, $scope.UserSelection.selectedDate.getMinutes());
         $scope.PageState.days = new Array();
-        for(var i = 1; i <= newSelectedDate.getDate(); i++) {
-            PageState.days.push(i);
+
+        var daysAmount = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, 0, $scope.UserSelection.selectedDate.getMinutes()).getDate();
+        for(var i = 1; i <= daysAmount; i++) {
+            $scope.PageState.days.push(i);
         }
-        newSelectedDate.setDate(UserSelection.selectedDate.getDate());
-        $scope.UserSelection.selectedDate = newSelectedDate;
+        $scope.newSelectedDate.setDate($scope.UserSelection.selectedDate.getDate());
+        $scope.UserSelection.selectedDate = $scope.newSelectedDate;
         $scope.updateReservations();
     };
 
@@ -190,8 +192,8 @@ angular.module('reserveTheTime.controllers', [])
         if (!$scope.UserSelection.selectedDate) {
             $scope.UserSelection.selectedDate = new Date();
             $scope.setMonth($scope.UserSelection.selectedDate.getMonth()+1);
-            console.log("DATE initialized");
         }
+
         $scope.setTimes();
 
     };

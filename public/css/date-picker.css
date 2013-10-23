@@ -9,7 +9,7 @@
 
 .date-picker{
     display: inline-block;
-    width: 100%;
+    width: 80%;
 }
 
 
@@ -64,7 +64,8 @@
     cursor: pointer;
     width: 80%;
     cursor: pointer;
-    width:100%; height:30px; cursor: pointer;
+    width:70%;
+    cursor: pointer;
 }
 
 .month-picker {
@@ -115,7 +116,7 @@
 }
 
 .time-indicator{
-    font-size: 9px;
+    font-size: 77%;
     letter-spacing: 1px;
     cursor: pointer;
     margin-left: 3px;

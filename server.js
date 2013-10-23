@@ -90,13 +90,20 @@ app.get('/place-details', function(req, res){
  * Attempt to save a reservation to the database.
  */
 app.post('/reserve', function(req, res){
+
+    // Add authentication check here
+
+    var authUrl = "https://accounts.google.com/o/oauth2/auth?redirect_uri=https%3A%2F%2Freservethetime.com" +
+        "&response_type=code&client_id=reservethetime.com" +
+        "&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&approval_prompt=force&access_type=offline";
+
     MongoClient.connect(config.dbHost, function(err, db) {
         if(err || !req.body) return false;
 
         var collection = db.collection('reservation');
 
         //console.log(JSON.parse(req.body));
-        collection.insert(req.body, function(err, docs) {
+        collection.insert(JSON.parse(req.body), function(err, docs) {
             db.close();
             if (err) {
                 res.send('Unable to save event properly');

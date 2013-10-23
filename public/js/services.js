@@ -35,9 +35,14 @@ angular.module('reserveTheTime.services', [])
             {name:"M", fullName:"March"},
             {name:"A", fullName:"April"},
             {name:"M", fullName:"May"},
-            {name:"J", fullName:"June"}, {name:"J", fullName:"Juy"},
-            {name:"A", fullName:"August"}, {name:"S", fullName:"September"}, {name:"O", fullName:"October"}, {name:"N", fullName:"November"},
-            {name: "D", fullName:"December"}]
+            {name:"J", fullName:"June"},
+            {name:"J", fullName:"Juy"},
+            {name:"A", fullName:"August"},
+            {name:"S", fullName:"September"},
+            {name:"O", fullName:"October"},
+            {name:"N", fullName:"November"},
+            {name: "D", fullName:"December"}
+        ]
     };
 })
 .factory('placeService', function($http) {
