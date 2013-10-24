@@ -13,18 +13,19 @@
 
 #map-canvas{
     position: absolute;
-    top:110px;
+    top:164px;
     z-index: 0;
 }
 
 .phone-number{
-    font-size: 250%;
+    font-size: 200%;
     color: rgba(8,8,78,0.87);
     font-weight: 900;
     font-style: italic;
     margin-top: 10px;
     letter-spacing: 5px;
     margin-left: 100px;
+    width: 272px;
 }
 
 .rating{

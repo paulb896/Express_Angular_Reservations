@@ -2,12 +2,12 @@
     <div style="position: absolute; z-index: 22;">
         <h2>{{UserSelection.place.name}} Details</h2>
         <div class="refresh" ng-click="getPlaceDetails(UserSelection.place);"></div>
-        <div class="area">
+        <span class="area">
             {{UserSelection.place.formatted_address}}
-        </div>
-        <div class="phone-number">
+        </span>
+        <span class="phone-number">
             {{UserSelection.place.formatted_phone_number}}
-        </div>
+        </span>
         <span class="ratings">
             <div class="rating" ng-repeat="n in ratings" ng-class="{'rating-positive': (n <= UserSelection.place.rating)}">&#9734;</div>
         </span>
