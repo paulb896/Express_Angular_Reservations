@@ -1,7 +1,7 @@
 <div ng-controller="bannerController" ng-class="{'spin-component': UserSelection.place.name.length > 0}">
 
     <h1 class="selection-header">Current Selection</h1>
-    <ul class="banner-content">
+    <ul class="banner-content" ng-controller="tileNavigationController">
         <li>
             <span class="selected-date" ng-bind="UserSelection.selectedDate | date:'EEEE, MMMM d,y  h:mma'"></span>
         </li>

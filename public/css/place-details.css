@@ -11,13 +11,20 @@
     width: 90%;
 }
 
+#map-canvas{
+    position: absolute;
+    top:110px;
+    z-index: 0;
+}
+
 .phone-number{
-    font-size: 200%;
+    font-size: 250%;
     color: rgba(8,8,78,0.87);
     font-weight: 900;
     font-style: italic;
     margin-top: 10px;
     letter-spacing: 5px;
+    margin-left: 100px;
 }
 
 .rating{
@@ -25,9 +32,15 @@
     display: inline;
     text-shadow: 2px 2px rgba(100,100,100,0.5);
     font-family: Verdana, Geneva, sans-serif;
+    color: grey;
+}
+
+.ratings{
+    margin-left: 100px;
 }
 
 .rating-positive{
+    color: black;
     font-weight: 900;
 }
 
