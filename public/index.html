@@ -39,19 +39,5 @@
         <script src="js/services.js"></script>
         <script src="js/filters.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-        <script src="https://apis.google.com/js/client.js"></script>
-        <script>
-            function auth() {
-                var config = {
-                    'client_id': '306017340293.apps.googleusercontent.com',
-                    'scope': 'https://www.googleapis.com/auth/urlshortener'
-                };
-
-                gapi.auth.authorize(config, function() {
-                    console.log('login complete');
-                    console.log(gapi.auth.getToken());
-                });
-            }
-        </script>
     </body>
 </html>
