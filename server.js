@@ -5,7 +5,8 @@ var config = require('./config'),
   express = require('express'),
   app = express();
 
-app.set('view engine', 'html');
+//app.set('view engine', 'html');
+app.set('view engine', 'ejs');
 app.use(express.bodyParser());
 app.use(express.static(__dirname + '/public'));
 

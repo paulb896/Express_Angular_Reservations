@@ -10,3 +10,10 @@
     outline: none;
     width: 220px;
 }
+
+.sign-in-with-google{
+    background-image:url('../img/sign-in-with-google.png');
+    background-size: 100%;
+    width: 392px;
+    height: 80px;
+}

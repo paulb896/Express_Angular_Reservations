@@ -36,6 +36,7 @@
         <tr>
             <td colspan="3">
                 <ul class="found-places">
+                    <li ng-hide="PageState.places.length" class="place-result">Search results will show here</li>
                     <li ng-repeat="place in PageState.places" ng-click="updatePlace(place)"
                           class="place-result"
                          >
