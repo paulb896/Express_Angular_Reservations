@@ -47,8 +47,10 @@ app.get('/places', function(req, res){
         if (!error && response.statusCode == 200) {
             console.log(body) // Print the google web page.
             MongoClient.connect(config.dbHost, function(err, db) {
+                if (!db) {
+                    return;
+                }
                 var collection = db.collection('places');
-
                 collection.insert(JSON.parse(body), function(err, docs) {
                     db.close();
                     if (err) {
@@ -71,6 +73,9 @@ app.get('/place-details', function(req, res){
     request(requestUrl, function (error, response, body) {
         if (!error && response.statusCode == 200) {
             MongoClient.connect(config.dbHost, function(err, db) {
+                if (!db) {
+                    return;
+                }
                 var collection = db.collection('placeDetails');
 
                 collection.insert(JSON.parse(body), function(err, docs) {
