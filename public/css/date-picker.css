@@ -85,18 +85,18 @@
 }
 
 .month-picker > span{
-    border-bottom: solid rgba(0,0,0,0.2) 2px;
     font-size: 230%;
     margin-left: 5px;
     font-style: oblique;
     font-weight: 900;
+    text-decoration: none;
+
 }
 
 .month-selected{
     color: rgba(8,8,78,0.87);
     color:steelblue;
     cursor: pointer;
-    border-bottom: solid rgba(1,1,1,1) 2px;
     font-weight: 900;
 }
 
@@ -108,7 +108,6 @@
 .month-picker > span:hover{
     color:steelblue;
     cursor: pointer;
-    border-bottom: solid rgba(0,0,0,0.8) 2px;
 }
 
 .time-picker-table{
