@@ -28,32 +28,32 @@ angular.module('reserveTheTime.controllers', [])
     $scope.initializeNav = function(navNumber) {
         // Bind templates specific to this controllers scope
         $rootScope.templates =
-            [{ name: 'Hourly Chart', url: 'partials/tile-date-picker.html', imageUrl:"img/clock.png",
+            [{ name: 'Date Picker', url: 'partials/tile-date-picker.html', imageUrl:"img/calendar.png",
                 completed:function() {
                     return true
                 }
             }
-                , { name: 'Place Search', url: 'partials/tile-place-search.html', imageUrl:"img/find2.png",
-                completed:function() {
-                    return UserSelection.place
-                }
-            }
-                , { name: 'Place Details', url: 'partials/tile-place-details.html', imageUrl:"img/map-icon.png",
-                completed:function() {
-                    return UserSelection.place
-                }
-            }
-                , { name: 'User', url: 'partials/tile-user.html', imageUrl:"img/user.png",
-                completed:function() {
-                    return false;
-                }
-            }
-                , { name: 'Attendees', url: 'partials/tile-attendees.html', imageUrl:"img/add-user-icon.png",
+            , { name: 'Time Picker', url: 'partials/tile-time-picker.html', imageUrl:"img/clock-nav.png",
                 completed:function() {
                     return PageState.attendees.length < 1;
                 }
             }
-                , { name: "Calendar", url: 'partials/tile-hour-chart.html', imageUrl:"img/calendar.png",
+            , { name: 'Place Search', url: 'partials/tile-place-search.html', imageUrl:"img/find2.png",
+                completed:function() {
+                    return UserSelection.place
+                }
+            }
+            , { name: 'Place Details', url: 'partials/tile-place-details.html', imageUrl:"img/map-icon.png",
+                completed:function() {
+                    return UserSelection.place
+                }
+            }
+            , { name: 'User', url: 'partials/tile-user.html', imageUrl:"img/user.png",
+                completed:function() {
+                    return false;
+                }
+            }
+            , { name: "Calendar", url: 'partials/tile-hour-chart.html', imageUrl:"img/calendar-nav.png",
                 completed:function() {
                     return true;
                 }
@@ -165,10 +165,29 @@ angular.module('reserveTheTime.controllers', [])
       }
     };
 
-    $scope.updateSelectedMinute =function($event) {
+    $scope.updateSelectedMinute = function($event) {
         // I'm putting this in because I would like to avoid using jquery if possible
         UserSelection.selectedDate.setMinutes(Math.round(($event.offsetX / 390) * 60));
+    };
 
+    $scope.updateMin = function(minute) {
+        minute = parseInt(minute);
+        if (minute >= 0 && minute <= 60) {
+            //$scope.UserSelection.selectedDate.setMinutes(minute);
+            $scope.UserSelection = new Date(UserSelection.selectedDate.getFullYear(),
+                UserSelection.selectedDate.getMonth(), UserSelection.selectedDate.getDate(), UserSelection.selectedDate.getHours(), minute);
+        }
+        console.log("Updating min", minute);
+    };
+
+    $scope.updateHour = function(hour) {
+        hour = parseInt(hour);
+        if (hour >= 0 && hour <= 23) {
+            //$scope.UserSelection.selectedDate.setHours(hour);
+            $scope.UserSelection = new Date(UserSelection.selectedDate.getFullYear(),
+                UserSelection.selectedDate.getMonth(), UserSelection.selectedDate.getDate(), hour, UserSelection.selectedDate.getMinutes());
+        }
+        console.log("Updating hour", hour);
     };
 
     $scope.updateSelectedTime = function(dateTime) {
@@ -187,6 +206,10 @@ angular.module('reserveTheTime.controllers', [])
     };
 
     $scope.initializeDate = function() {
+        $(document).ready(function() {
+            $(".cool-time-picker").sltime({format:'24'});
+        });
+
         $scope.PageState.currentDate = new Date();
 
         if (!$scope.UserSelection.selectedDate) {
@@ -196,6 +219,15 @@ angular.module('reserveTheTime.controllers', [])
 
         $scope.setTimes();
 
+
+        $(document).on("update-min", function(event, min) {
+           $scope.updateMin(min);
+        });
+
+        $(document).on("update-hour", function(event, hour) {
+            $scope.updateHour(hour);
+            console.log("EVENT - Hour", hour);
+        });
     };
 
     $scope.updateReservations = function(){
