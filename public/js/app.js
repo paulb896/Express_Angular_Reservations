@@ -9,4 +9,14 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('reserveTheTime', ['reserveTheTime.services', 'reserveTheTime.controllers', 'reserveTheTime.place.controller', 'reserveTheTime.filters']);
+angular.module('reserveTheTime', [
+    'reserveTheTime.services',
+    'reserveTheTime.controllers.banner',
+    'reserveTheTime.controllers.datePicker',
+    'reserveTheTime.controllers.hourChart',
+    'reserveTheTime.controllers.placeSearch',
+    'reserveTheTime.controllers.reservation',
+    'reserveTheTime.controllers.tileNavigation',
+    'reserveTheTime.place.controller',
+    'reserveTheTime.filters']
+);

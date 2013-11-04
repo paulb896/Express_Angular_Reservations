@@ -8,6 +8,7 @@
 }
 
 .cool-time-picker{
+    padding: 20px;
     font-size: 2em;
     float: right;
     cursor: pointer;
@@ -16,7 +17,9 @@
 }
 
 .cool-time-picker:hover{
-  color: steelblue;
+  color: rgba(111,1,1,0.9);
+    font-size: 3em;
+    font-weight: 900;
 }
 
 .date-picker{
