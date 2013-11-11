@@ -121,6 +121,7 @@ h2{
     position:absolute;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 10px;
     border-bottom: solid rgba(50,50,65,0.7) 5px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 5px;
@@ -130,7 +131,7 @@ h2{
     border-left: solid black 1px;
     overflow: hidden;
     background-color: rgba(200,205,205,0.01);
-    height: 400px;
+    height: 425px;
 }
 
 .tile-navigation > li{
