@@ -1,7 +1,10 @@
 @media only screen and (min-width: 1501px) {
-    .banner-size{
-        height: 225px;
+    .banner-width{
         width: 45%;
+    }
+
+    .banner-height{
+        height: 225px;
     }
 
     .banner-content > li{
@@ -11,9 +14,12 @@
 }
 
 @media only screen and (max-width: 1500px) {
-    .banner-size{
-        height: 255px;
+    .banner-width{
         width: 40%;
+    }
+
+    .banner-height{
+        height: 255px;
     }
 
     .banner-content > li{
@@ -51,6 +57,7 @@
 }
 
 .banner-right{
+    width: 50%;
     padding-bottom: 10px;
     box-shadow: 2px 2px 10px rgba(10,10,10,0.8);
     background-color: rgba(245,245,246,0.8);
