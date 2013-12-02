@@ -1,7 +1,7 @@
 ;'use strict';
 
 /**
- * Angular Controller that sets up and handles search requests
+ * Angular Controller that sets up date picker functionality
  */
 angular.module('reserveTheTime.controllers.datePicker', [])
 /**

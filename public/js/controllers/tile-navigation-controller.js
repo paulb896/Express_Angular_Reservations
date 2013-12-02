@@ -39,11 +39,6 @@ angular.module('reserveTheTime.controllers.tileNavigation', [])
                     return UserSelection.place
                 }
             }
-                , { name: 'User', url: 'partials/tile-user.html', imageUrl:"img/user.png",
-                completed:function() {
-                    return false;
-                }
-            }
                 , { name: "Calendar", url: 'partials/tile-hour-chart.html', imageUrl:"img/calendar-nav.png",
                 completed:function() {
                     return true;

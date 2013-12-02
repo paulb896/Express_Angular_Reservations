@@ -2,7 +2,7 @@
 
 @media only screen and (min-width: 1501px) {
     .tile-size{
-        width: 48%;
+        width: 50%;
         margin-bottom: 80px;
     }
 
@@ -18,7 +18,7 @@
     }
 
     .tile-navigation-position{
-        margin-left: 35%;
+        margin-left: 28%;
     }
 
     .tile-navigation > li{
@@ -30,15 +30,14 @@
         padding-top: 260px;
     }
 }
-
-@media only screen and (max-width: 1500px) {
+@media screen and (min-width: 801px) and (max-width: 1500px) {
     .tile-size{
         width: 95%;
         margin-bottom: 10px;
     }
 
     .inner-tile-size{
-        width: 83%;
+        width: 95%;
         border-bottom: solid blue 1px;
         padding-left: 15px;
     }
@@ -54,13 +53,45 @@
     }
 
     .tile-navigation-position{
-        margin-left: 70%;
+        margin-left: 85%;
     }
 
     .tiles{
         padding-top: 310px;
     }
 }
+
+@media only screen and (max-width: 800px) {
+    .tile-size{
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    .inner-tile-size{
+        width: 85%;
+        border-bottom: solid blue 1px;
+        padding-left: 15px;
+    }
+
+    . nav-image-size{
+        width: 150px;
+        height: 150px;
+    }
+
+    .tile-navigation > li{
+        height: 70px;
+        width: 70px;
+    }
+
+    .tile-navigation-position{
+        margin-left: 77%;
+    }
+
+    .tiles{
+        padding-top: 310px;
+    }
+}
+
 
 
 body{
@@ -130,7 +161,7 @@ h2{
     border-left: solid black 1px;
     overflow: hidden;
     background-color: rgba(200,205,205,0.01);
-    height: 400px;
+    height: 425px;
 }
 
 .tile-navigation > li{
