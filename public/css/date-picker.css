@@ -24,10 +24,8 @@
 
 .date-picker{
     display: inline-block;
-    width: 90%;
+    width: 80%;
 }
-
-
 
 .floatingTile:hover{
     -webkit-animation-timing-function: ease-in-out;
@@ -101,7 +99,7 @@
 }
 
 .month-picker > span{
-    font-size: 230%;
+    font-size: 210%;
     margin-left: 5px;
     font-style: oblique;
     font-weight: 900;
