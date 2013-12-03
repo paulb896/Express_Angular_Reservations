@@ -28,8 +28,8 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
         PageState.times = [];
         var items = 12;
         for(var i = 1; i <= items; i++) {
-            var x = 100 - 12 + 104 * Math.cos(2 * Math.PI * i / items);
-            var y = 100 - 12 + 104 * Math.sin(2 * Math.PI * i / items);
+            var x = 100 - 12 + 104 * Math.cos(2 * Math.PI * i / items - (Math.PI/2) );
+            var y = 100 - 12 + 104 * Math.sin(2 * Math.PI * i / items - (Math.PI/2) );
             PageState.times.push({x: x, y:y, value: i});
         }
     };
@@ -43,15 +43,15 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
         PageState.times = [];
         var items = 12;
         for(var i = 0; i < items; i++) {
-            var x = 100 - 12 + 104 * Math.cos(2 * Math.PI * i / items);
-            var y = 100 - 12 + 104 * Math.sin(2 * Math.PI * i / items);
-            var value = i *5;
+            var x = 100 - 12 + 104 * Math.cos(2 * Math.PI * i / items - (Math.PI/2)),
+            y = 100 - 12 + 104 * Math.sin(2 * Math.PI * i / items - (Math.PI/2)),
+            value = i *5;
             PageState.times.push({x: x, y:y, value: value});
         }
     };
 
     /**
-     *
+     * Toggle selected time between AM and PM
      */
     $scope.toggleAmPm = function()
     {
