@@ -15,7 +15,7 @@
     cursor: pointer;
     position: absolute;
     color:black;
-    font-size: 22px;
+    font-size: 125%;
     width: 30px;
     height: 30px;
     text-align: center;
@@ -37,9 +37,8 @@
 }
 
 .hour:hover{
-    color: red;
+    color: lightblue;
     font-weight: 900;
-    background-color: darkgrey;
     border-radius: 50px;
 }
 
@@ -68,4 +67,8 @@
     height: 100px;
     padding-top: 20px;
     font-size: 27px;
+}
+
+.time-header > span:hover{
+    color: blue;
 }
