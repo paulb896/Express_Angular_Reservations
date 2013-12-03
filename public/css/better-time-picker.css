@@ -15,10 +15,11 @@
     cursor: pointer;
     position: absolute;
     color:black;
-    font-size: 125%;
+    font-size: 155%;
     width: 30px;
     height: 30px;
     text-align: center;
+    margin: 10px;
 }
 
 .hours-circle{
@@ -27,7 +28,7 @@
     border-radius:100px;
     position:relative;
     left:42px;
-    top:175px;
+    top:135px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
