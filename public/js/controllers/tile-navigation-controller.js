@@ -24,7 +24,7 @@ angular.module('reserveTheTime.controllers.tileNavigation', [])
                     return true
                 }
             }
-                , { name: 'Time Picker', url: 'partials/tile-time-picker.html', imageUrl:"img/clock-nav.png",
+                , { name: 'Time Picker', url: 'partials/better-time-picker.html', imageUrl:"img/clock-nav.png",
                 completed:function() {
                     return PageState.attendees.length < 1;
                 }

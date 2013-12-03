@@ -53,4 +53,4 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
             }
         });
     };
-}])
+}]);
