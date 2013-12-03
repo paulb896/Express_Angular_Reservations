@@ -24,7 +24,7 @@ angular.module('reserveTheTime.controllers.tileNavigation', [])
                     return true
                 }
             }
-                , { name: 'Time Picker', url: 'partials/tile-time-picker.html', imageUrl:"img/clock-nav.png",
+                , { name: 'Time Picker', url: 'partials/better-time-picker.html', imageUrl:"img/clock-nav.png",
                 completed:function() {
                     return PageState.attendees.length < 1;
                 }
@@ -37,11 +37,6 @@ angular.module('reserveTheTime.controllers.tileNavigation', [])
                 , { name: 'Place Details', url: 'partials/tile-place-details.html', imageUrl:"img/map-icon.png",
                 completed:function() {
                     return UserSelection.place
-                }
-            }
-                , { name: 'User', url: 'partials/tile-user.html', imageUrl:"img/user.png",
-                completed:function() {
-                    return false;
                 }
             }
                 , { name: "Calendar", url: 'partials/tile-hour-chart.html', imageUrl:"img/calendar-nav.png",

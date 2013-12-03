@@ -1,7 +1,7 @@
 ;'use strict';
 
 /**
- * Angular Controller that sets up and handles search requests
+ * Angular Controller that sets up date picker functionality
  */
 angular.module('reserveTheTime.controllers.datePicker', [])
 /**
@@ -90,10 +90,6 @@ angular.module('reserveTheTime.controllers.datePicker', [])
     };
 
     $scope.initializeDate = function() {
-        $(document).ready(function() {
-            $(".cool-time-picker").sltime({format:'24'});
-        });
-
         $scope.PageState.currentDate = new Date();
 
         if (!$scope.UserSelection.selectedDate) {
@@ -105,15 +101,6 @@ angular.module('reserveTheTime.controllers.datePicker', [])
 
         $scope.PageState = PageState;
         $scope.UserSelection = UserSelection;
-
-        $(document).on("update-min", function(event, min) {
-            $scope.updateMin(min);
-        });
-
-        $(document).on("update-hour", function(event, hour) {
-            $scope.updateHour(hour);
-            console.log("EVENT - Hour", hour);
-        });
     };
 
     $scope.updateReservations = function(){
@@ -124,4 +111,4 @@ angular.module('reserveTheTime.controllers.datePicker', [])
             Pace.stop();
         });
     };
-}])
+}]);
