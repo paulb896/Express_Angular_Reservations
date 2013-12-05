@@ -3,7 +3,7 @@
     height: 400px;
     background-color: rgba(11,11,11,0.6);
     color:#ffffff;
-    margin-left: 123px;
+    margin-left: 71px;
     margin-top: 25px;
 }
 
@@ -15,7 +15,7 @@
     cursor: pointer;
     position: absolute;
     color:black;
-    font-size: 155%;
+    font-size: 250%;
     width: 30px;
     height: 30px;
     text-align: center;
@@ -47,7 +47,7 @@
     font-size: 66px;
     cursor: pointer;
     font-weight: 500;
-    margin-left: 20%;
+    margin-left: 8%;
 }
 
 .selected-minute{
@@ -68,8 +68,13 @@
     height: 100px;
     padding-top: 20px;
     font-size: 27px;
+    font-family: monospace;
+}
+
+.time-header > span{
+    font-weight: 300;
 }
 
 .time-header > span:hover{
-    color: blue;
+    color: lightblue;
 }

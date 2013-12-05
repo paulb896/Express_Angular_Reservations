@@ -1,7 +1,7 @@
 <h2>MODIFY SELECTED TIME</h2>
 <div ng-controller="betterTimePickerController" ng-init="initializeTime();" class="better-time-picker">
     <div class="time-header">
-        <span ng-class="{highlighted: PageState.hourPickerEnabled}" ng-click="setHourPicker()" class="selected-hour" ng-bind="UserSelection.selectedDate | date:'h'"></span> :
+        <span ng-class="{highlighted: PageState.hourPickerEnabled}" ng-click="setHourPicker()" class="selected-hour" ng-bind="UserSelection.selectedDate | date:'hh'"></span> :
         <span ng-class="{highlighted: !PageState.hourPickerEnabled}" ng-click="setMinutePicker()" class="selected-minute" ng-bind="UserSelection.selectedDate | date:'mm'"></span>
         <span ng-click="toggleAmPm()" class="selected-am-pm-toggle" ng-bind="UserSelection.selectedDate | date:'a'"></span>
     </div>
