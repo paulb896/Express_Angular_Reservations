@@ -1,3 +1,7 @@
+.better-time-picker > * >*{
+    transition:all 0.1s linear 0.1s;
+}
+
 .better-time-picker{
     width: 300px;
     height: 400px;
@@ -8,13 +12,13 @@
 }
 
 .highlighted{
-    color: rgba(250,10,10,4);
+    color: rgba(8,8,78,0.87);
 }
 
 .hour{
     cursor: pointer;
     position: absolute;
-    color:black;
+    color:white;
     font-size: 250%;
     width: 30px;
     height: 30px;
@@ -38,7 +42,7 @@
 }
 
 .hour:hover{
-    color: lightblue;
+    color: rgba(8,8,78,0.87);
     font-weight: 900;
     border-radius: 50px;
 }
@@ -63,7 +67,7 @@
 
 .time-header{
     float: right;
-    background-color: rgba(11,11,11,0.4);
+    background-color: rgba(245,245,246,0.8);
     width: 300px;
     height: 100px;
     padding-top: 20px;
@@ -76,5 +80,5 @@
 }
 
 .time-header > span:hover{
-    color: lightblue;
+    color: rgba(8,8,78,0.87);
 }
