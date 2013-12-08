@@ -24,14 +24,18 @@
 
 .date-picker{
     display: inline-block;
-    width: 80%;
-    margin-left: 5%;
+    width: 475px;
+    margin-left:20px;
+}
+
+ul{
+    padding: 0;
 }
 
 .floatingTile:hover{
-    -webkit-animation-timing-function: ease-in-out;
-    -moz-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    animation-timing-function: linear;
     -webkit-transition:0.38s all;
     background-color: rgba(111,1,1,0.9);
 }
@@ -41,13 +45,12 @@
     -moz-box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
     box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
     font-family: sans-serif;
-    font-size: 1.2em;
-    -webkit-transition:0.28s all;
-    -moz-transition:0.28s all;
-    -ms-transition:0.28s all;
-    transition:0.28s all;
+    -webkit-transition:0.18s all;
+    -moz-transition:0.18s all;
+    -ms-transition:0.18s all;
+    transition:0.18s all;
     padding:12px;
-    margin: 10px;
+    margin: 4px;
     display:inline-table;
     #float:left;
     cursor:pointer;

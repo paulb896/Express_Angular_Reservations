@@ -5,15 +5,15 @@
             {{monthModel.name}}
         </span>
     </div>
-    <div class="day-picker">
-        <div ng-class="{true:'day-selected', false:''}[dayModel==UserSelection.selectedDate.getDate()]"
-             ng-repeat="dayModel in PageState.days"
-             class="floatingTile day-floating-tile"
-             ng-class="{true:'selected-tile', false:''}[dayModel==UserSelection.selectedDate]"
-             ng-click="updateSelectedDay(dayModel)">
-        <span class="dayOfMonth">
-          {{dayModel}}
-        </span>
-        </div>
-    </div>
+    <ul class="day-picker">
+        <li ng-class="{true:'day-selected', false:''}[dayModel==UserSelection.selectedDate.getDate()]"
+           ng-repeat="dayModel in PageState.days"
+           class="floatingTile day-floating-tile"
+           ng-class="{true:'selected-tile', false:''}[dayModel==UserSelection.selectedDate]"
+           ng-click="updateSelectedDay(dayModel)">
+            <span class="dayOfMonth">
+              {{dayModel}}
+            </span>
+        </li>
+    </ul>
 </div>
