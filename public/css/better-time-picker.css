@@ -6,13 +6,14 @@
     width: 300px;
     height: 400px;
     background-color: rgba(11,11,11,0.6);
-    color:#ffffff;
+    color:rgba(98, 98, 98, 1);
+    text-shadow: 1px 1px 3px rgba(215, 215, 233, 1);
     margin-left: 71px;
     margin-top: 25px;
 }
 
 .highlighted{
-    color: rgba(8,8,78,0.87);
+    color: rgba(86,1,1,0.89);
 }
 
 .hour{
@@ -20,8 +21,8 @@
     position: absolute;
     color:white;
     font-size: 250%;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     text-align: center;
     margin: 10px;
 }
@@ -31,7 +32,7 @@
     height:200px;
     border-radius:100px;
     position:relative;
-    left:42px;
+    left:22px;
     top:135px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -42,7 +43,7 @@
 }
 
 .hour:hover{
-    color: rgba(8,8,78,0.87);
+    color: rgba(111,1,1,0.9);
     font-weight: 900;
     border-radius: 50px;
 }
@@ -76,9 +77,9 @@
 }
 
 .time-header > span{
-    font-weight: 300;
+    font-weight: 900;
 }
 
 .time-header > span:hover{
-    color: rgba(8,8,78,0.87);
+    color: rgba(111,1,1,0.9);
 }

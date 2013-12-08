@@ -13,6 +13,20 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         $scope.PageState.days = new Array();
 
         var daysAmount = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, 0, $scope.UserSelection.selectedDate.getMinutes()).getDate();
+        $scope.PageState.days.push("S");
+        $scope.PageState.days.push("M");
+        $scope.PageState.days.push("T");
+        $scope.PageState.days.push("W");
+        $scope.PageState.days.push("T");
+        $scope.PageState.days.push("F");
+        $scope.PageState.days.push("S");
+
+        // Add spacers for to set first day of week
+        var selectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber-1, 1, 0);
+        for(var j = 1; j <= selectedDate.getDay(); j++) {
+            $scope.PageState.days.push("-");
+        }
+
         for(var i = 1; i <= daysAmount; i++) {
             $scope.PageState.days.push(i);
         }
@@ -22,6 +36,10 @@ angular.module('reserveTheTime.controllers.datePicker', [])
     };
 
     $scope.updateSelectedDay = function(day) {
+        day = parseInt(day);
+        if (!day) {
+            return;
+        }
         var newSelectedDate = new Date(UserSelection.selectedDate.getFullYear(), UserSelection.selectedDate.getMonth(), day);
         newSelectedDate.setMinutes(UserSelection.selectedDate.getMinutes());
         UserSelection.selectedDate = newSelectedDate;
@@ -80,24 +98,14 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         UserSelection.selectedDate = newSelectedDate;
     };
 
-    $scope.setTimes = function() {
-        PageState.times = new Array();
-        for(var i = 0; i <= 23; i++) {
-            var timeIndicator = new Date();
-            timeIndicator.setHours(i);
-            PageState.times.push(timeIndicator);
-        }
-    };
-
     $scope.initializeDate = function() {
         $scope.PageState.currentDate = new Date();
 
-        if (!$scope.UserSelection.selectedDate) {
-            $scope.UserSelection.selectedDate = new Date();
+        if (!$scope.UserSelection.selectedDate.hasOwnProperty("getDate")) {
+            var currentTime = new Date();
+            $scope.UserSelection.selectedDate = new Date(currentTime.getFullYear(), currentTime.getMonth());
             $scope.setMonth($scope.UserSelection.selectedDate.getMonth()+1);
         }
-
-        $scope.setTimes();
 
         $scope.PageState = PageState;
         $scope.UserSelection = UserSelection;
