@@ -19,7 +19,7 @@
     }
 
     .banner-height{
-        height: 255px;
+        height: 275px;
     }
 
     .banner-content > li{
@@ -97,6 +97,11 @@
     display: block;
     margin-top: 10px;
     text-decoration: none;
+    color:rgba(8,8,78,0.87);
+    display: block;
+    font-size: 110%;
+    font-family: 'Libre Baskerville', serif;
+    text-shadow: 2px 2px rgba(188,188,188,0.8);
 }
 
 .logo{
