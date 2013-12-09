@@ -30,3 +30,10 @@ angular.module('reserveTheTime.filters', [])
         return dateTime.getHours() + ":" + minutes;
     }
 }])
+.filter('visibleResults', [function() {
+    return function(resultSet, pageNumber, pageSize) {
+        console.log("visibleResults Filter: ", resultSet, pageNumber, pageSize);
+
+        return resultSet.slice(pageNumber * pageSize, (pageNumber * pageSize) + pageSize);
+    }
+}])

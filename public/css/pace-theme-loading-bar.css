@@ -1,81 +1,70 @@
 .pace {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-
   -webkit-pointer-events: none;
   pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
 
   z-index: 2000;
   position: fixed;
-  #margin: auto;
-  top: 210px;
-  right: 40px;
-  bottom: 0;
-  width: 200px;
-  height: 25px;
-  border: 2px solid #7f1f1f;
-  background-color: #fff;
+  height: 90px;
+  width: 90px;
+  margin: auto;
+  top: 50px;
+  #left: 0;
+  right: 70px;
+  #bottom: 0;
 }
 
-.pace .pace-progress {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
+.pace.pace-inactive .pace-activity {
+  display: none;
+}
 
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-
-  -webkit-transition: width 1s ease-in-out 1s linear;
-  -moz-transition: width 1s ease-in-out 1s linear;
-  -ms-transition: width 1s ease-in-out 1s linear;
-  -o-transition: width 1s ease-in-out 1s linear;
-  transition: width 1s ease-in-out 1s linear;
-
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-
-  max-width: 190px;
+.pace .pace-activity {
   position: fixed;
   z-index: 2000;
   display: block;
   position: absolute;
-  left: 3px;
-  top: 3px;
-  height: 15px;
-  font-size: 12px;
-  background: #7f1f1f;
-  color: #7f1f1f;
-  line-height: 60px;
-  font-weight: bold;
-  font-family:  Helvetica, Arial, "Lucida Grande", sans-serif;
+  left: 30px;
+  top: -30px;
+  height: 90px;
+  width: 90px;
+  display: block;
+  border-width: 30px;
+  border-style: double;
+  border-color: #7f1f1f transparent transparent;
+  border-radius: 50%;
+
+  -webkit-animation: spin 1s linear infinite;
+     -moz-animation: spin 1s linear infinite;
+       -o-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 
-.pace .pace-progress:after {
-  content: attr(data-progress-text);
-  display: inline-block;
+.pace .pace-activity:before {
+  content: ' ';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 50px;
+  width: 50px;
+  display: block;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #7f1f1f transparent transparent;
+  border-radius: 50%;
 }
 
-.pace.pace-inactive {
-  display: none;
+
+@-webkit-keyframes spin {
+  100% { -webkit-transform: rotate(359deg); }
+}
+
+@-moz-keyframes spin {
+  100% { -moz-transform: rotate(359deg); }
+}
+
+@-o-keyframes spin {
+  100% { -moz-transform: rotate(359deg); }
+}
+
+@keyframes spin {
+  100% {  transform: rotate(359deg); }
 }

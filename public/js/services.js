@@ -31,6 +31,8 @@ angular.module('reserveTheTime.services', [])
         "attendees":[],
         "days" : ["S","M","T","W","T","F","S"],
         "chartHours": [13,14,15,16,17],
+        "resultSetPage":0,
+        "resultPageSize":6,
         "months": [{name:"J", fullName:"January"},
             {name:"F", fullName:"February"},
             {name:"M", fullName:"March"},
