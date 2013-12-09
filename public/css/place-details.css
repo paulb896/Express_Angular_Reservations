@@ -8,12 +8,12 @@
 
 .map-size{
     height: 300px;
-    width: 80%;
+    width: 75%;
 }
 
 #map-canvas{
     position: absolute;
-    top:164px;
+    top:134px;
     z-index: 0;
 }
 
