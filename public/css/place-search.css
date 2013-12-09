@@ -75,7 +75,7 @@
     font-size: 25px;
     color:rgba(111,1,1,0.9);
     margin-top: 20px;
-    margin-left: 19px;
+    margin-left: 5px;
 }
 
 .place-type{
@@ -104,7 +104,6 @@
     border-radius: 5px;
     outline: none;
     width: 120px;
-    margin-left: 40px;
 }
 
 td{
