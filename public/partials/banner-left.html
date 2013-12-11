@@ -1,10 +1,10 @@
 
-<span ng-controller="bannerController">
+<span ng-controller="bannerController" ng-init="startTime()">
     <embed src="img/calendar.svg" class="logo" type="image/svg+xml"/>
     <h1 class="main-title">Reserve The Time</h1>
     <div class="current-date-info">
         <h2 class="current-date-label">IT'S CURRENTLY</h2>
-        <span class="current-date" ng-bind="PageState.currentDate | date:'medium'"></span>
+        <span class="current-date" ng-bind="PageState.currentDate | date:'yyyy-MM-dd HH:mm:ss'"></span>
     </div>
     <a class="git-link" href="https://github.com/paulb896/Express_Anguar_Reservations">
         Source Code <img src="../img/github-icon-small.png">
