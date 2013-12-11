@@ -68,7 +68,6 @@
 
     .inner-tile-size{
         width: 85%;
-        border-bottom: solid blue 1px;
         padding-left: 15px;
     }
 
@@ -133,9 +132,6 @@ h2{
     background-size: 100%;
     margin-top: 0;
     padding-top: 30px;
-    #border-top:solid rgba(50,50,65,0.2) 5px;
-
-
 }
 
 .nav-image{
