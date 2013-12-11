@@ -38,7 +38,6 @@
 
     .inner-tile-size{
         width: 95%;
-        border-bottom: solid blue 1px;
         padding-left: 15px;
     }
 
@@ -160,7 +159,7 @@ h2{
 }
 
 .nav-image:hover{
-    box-shadow: -10px 0px 1px rgba(10,10,10,0.1);
+    box-shadow: -15px 0px 1px rgba(10,10,10,0.1);
     border-radius: 5px;
 }
 

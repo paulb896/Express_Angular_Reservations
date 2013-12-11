@@ -80,7 +80,9 @@
 
 .place-result-modify{
     background-color: lightblue;
+    font-style: italic;
     font-weight: 900;
+    color: rgba(30,19,19,0.7);
 }
 
 .place-result-modify:hover{
