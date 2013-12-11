@@ -73,7 +73,7 @@
     -moz-transition:1.28s all;
     -ms-transition:1.28s all;
     transition:1.28s all;
-    height: 50px;
+    height: 30px;
 }
 
 .reserve:hover{
