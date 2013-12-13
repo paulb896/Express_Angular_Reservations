@@ -5,6 +5,7 @@
     color:rgba(98, 98, 98, 1);
     text-shadow: 1px 1px 3px rgba(215, 215, 233, 1);
     margin-top: 25px;
+    box-shadow: 2px 2px 10px rgba(10,10,10,0.8);
 }
 
 .highlighted{
