@@ -7,9 +7,9 @@
             <span ng-bind="reservation.place.name"  class="reservation-place-name"></span>
             <span ng-bind="reservation.date| date:'MM/dd/yyyy @ h:mma'"  class="reservation_time"></span>
         </li>
-        <li class="reservation current-reservation">
+        <li class="reservation current-reservation place-result">
             <div>
-                <h2>{{UserSelection.place.name}} - Unsaved</h2>
+                <h2>{{UserSelection.place.name}}</h2>
             </div>
             <span ng-bind="UserSelection.selectedDate| date:'MM/dd/yyyy @ h:mma'"  class="reservation_time"></span>
         </li>
