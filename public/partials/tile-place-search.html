@@ -1,14 +1,10 @@
 <div ng-controller="placeSearchController" ng-init="initialize();">
     <table class="place-table">
-        <tr ng-show="false">
-            <td>
-                <h2 class="place-header">City</h2>
-
+        <tr>
+            <td colspan="2">
+                <input ng-model="citySearch" type="input" class="city-search" placeholder="City Name"/>
             </td>
-            <td>
-                <input ng-model="citySearch" type="input" class="city-search"/>
-            </td>
-            <td>
+            <td ng-show="false">
                 <div class="found-cities">
                     <span ng-repeat="city in PageState.cities" ng-click="updateCity(city)"
                           class="floatingTile city-result">
@@ -18,7 +14,7 @@
             </td>
         </tr>
         <tr>
-            <td colspan="2"><input ng-model="placeSearch" type="input" class="place-search"/></td>
+            <td colspan="2"><input ng-model="placeSearch" type="input" class="place-search" placeholder="Place Name"/></td>
             <td>
                 <div class="found-place-types">
                     <div ng-repeat="placeType in PageState.placeTypesShort" ng-click="updatePlaceType(placeSearch, placeType.name)"

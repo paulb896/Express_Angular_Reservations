@@ -7,6 +7,7 @@
     border-right: solid 2px black;
     border-radius: 5px;
     outline: none;
+    width: 180px;
 }
 
 .city-result{
@@ -114,7 +115,7 @@
     border-right: solid 2px black;
     border-radius: 5px;
     outline: none;
-    width: 120px;
+    width: 180px;
 }
 
 td{
