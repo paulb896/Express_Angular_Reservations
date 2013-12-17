@@ -5,7 +5,7 @@
             {{monthModel.name}}
         </span>
     </div>
-    <ul class="day-picker">
+    <ul class="day-picker day-picker-size">
         <li ng-class="{true:'day-selected', false:''}[dayModel==UserSelection.selectedDate.getDate()]"
            ng-repeat="dayModel in PageState.days"
            class="floatingTile day-floating-tile"
