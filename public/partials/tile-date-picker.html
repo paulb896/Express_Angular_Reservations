@@ -3,6 +3,7 @@
         <span class="month-size" ng-class="{true:'month-selected', false:''}[monthNumber==UserSelection.selectedDate.getMonth()]"
               ng-repeat="(monthNumber, monthModel) in PageState.months" ng-click="setMonth($index+1);">
             {{monthModel.name}}
+            <span class="month-name">{{monthModel.fullName}}</span>
         </span>
     </div>
     <ul class="day-picker day-picker-size">

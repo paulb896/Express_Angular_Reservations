@@ -39,7 +39,7 @@ angular.module('reserveTheTime.services', [])
             {name:"A", fullName:"April"},
             {name:"M", fullName:"May"},
             {name:"J", fullName:"June"},
-            {name:"J", fullName:"Juy"},
+            {name:"J", fullName:"July"},
             {name:"A", fullName:"August"},
             {name:"S", fullName:"September"},
             {name:"O", fullName:"October"},

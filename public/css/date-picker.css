@@ -116,8 +116,19 @@ ul{
     margin-top: 30px;
 }
 
+
+.month-name{
+    font-size: 10px;
+}
+
+.month-name:hover{
+    color: red;
+}
+
 .month-picker {
     height: 66px;
+    width: 90%;
+    margin-bottom: 50px;
 }
 
 .month-picker > * {
@@ -137,11 +148,17 @@ ul{
     font-style: oblique;
     font-weight: 900;
     text-decoration: none;
+    padding: 0px 7px 0px 7px;
+    display: inline-table;
+    margin-bottom: 10px;
+}
 
+.month-picker > span:not(.month-selected){
+    color: lightgray;
 }
 
 .month-selected{
-
+    box-shadow: 2px 2px 5px #888888;
     color: rgba(111,1,1,0.9);
     cursor: pointer;
     font-weight: 900;
@@ -152,9 +169,11 @@ ul{
 
 }
 
-.month-picker > span:hover{
-    color: rgba(8,8,78,0.87);
+.month-picker > span:not(.month-selected):hover{
+    color:rgba(111,1,1,0.9);
     cursor: pointer;
+    box-shadow: 2px 2px 2px #888888 inset;
+
 }
 
 .time-picker-table{
