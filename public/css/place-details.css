@@ -11,7 +11,7 @@
     width: 75%;
 }
 
-#map-canvas{
+.map-canvas{
     position: absolute;
     top:134px;
     z-index: 0;
