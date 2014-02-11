@@ -127,7 +127,7 @@ ul{
 
 .month-picker {
     height: 66px;
-    width: 90%;
+    width: 60%;
     margin-bottom: 50px;
 }
 
@@ -155,6 +155,7 @@ ul{
 
 .month-picker > span:not(.month-selected){
     color: lightgray;
+    padding: 0px 7px 4px 7px;
 }
 
 .month-selected{
@@ -162,6 +163,7 @@ ul{
     color: rgba(111,1,1,0.9);
     cursor: pointer;
     font-weight: 900;
+    padding: 10px;
 }
 
 .day-selected{
@@ -173,7 +175,6 @@ ul{
     color:rgba(111,1,1,0.9);
     cursor: pointer;
     box-shadow: 2px 2px 2px #888888 inset;
-
 }
 
 .time-picker-table{

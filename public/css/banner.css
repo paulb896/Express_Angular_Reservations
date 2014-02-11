@@ -87,8 +87,8 @@
 
 .current-date{
     color:rgba(8,8,78,0.87);
-    display: block;
-    font-size: 105%;
+    display: inline;
+    font-size: 125%;
     font-family: serif;
     text-shadow: 2px 2px rgba(188,188,188,0.1);
     letter-spacing: 1.6px;
@@ -102,7 +102,6 @@
     color:rgba(8,8,78,0.87);
     display: block;
     font-size: 70%;
-    font-family: 'Libre Baskerville', serif;
     text-shadow: 2px 2px rgba(188,188,188,0.8);
 }
 
@@ -116,7 +115,7 @@
 
 .main-title{
     display: inline;
-    font-size:45px;
+    font-size:35px;
 }
 
 .powered-by-google{
@@ -139,8 +138,16 @@
 }
 
 .selection-header{
-    font-size: 38px;
+    font-size: 180%;
     margin: 0;
+}
+
+.selection-header > span{
+    cursor: pointer;
+}
+
+.selection-header > span:hover{
+    color: blue;
 }
 
 .selected-date{
