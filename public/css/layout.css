@@ -155,8 +155,7 @@ h2{
 }
 
 .nav-image:hover{
-    box-shadow: -15px 0px 1px rgba(10,10,10,0.1);
-    border-radius: 5px;
+    box-shadow: -5px 0px 2px rgba(110,110,110,0.3);
 }
 
 .tile-navigation > * {
