@@ -127,7 +127,7 @@ ul{
 
 .month-picker {
     height: 66px;
-    width: 60%;
+    width: 85%;
     margin-bottom: 50px;
 }
 
@@ -143,19 +143,19 @@ ul{
 }
 
 .month-picker > span{
-    font-size: 250%;
-    margin-left: 5px;
+    font-size: 200%;
     font-style: oblique;
     font-weight: 900;
     text-decoration: none;
-    padding: 0px 7px 0px 7px;
     display: inline-table;
-    margin-bottom: 10px;
+    margin: 5px;
+    padding-right: 10px;
+    padding-left: 4px;
 }
 
 .month-picker > span:not(.month-selected){
     color: lightgray;
-    padding: 0px 7px 4px 7px;
+    #padding: 0px 8px 4px 1px;
 }
 
 .month-selected{
@@ -163,7 +163,7 @@ ul{
     color: rgba(111,1,1,0.9);
     cursor: pointer;
     font-weight: 900;
-    padding: 10px;
+    #padding: 2px 10px 4px 2px;
 }
 
 .day-selected{
