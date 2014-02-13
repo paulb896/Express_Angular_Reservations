@@ -153,9 +153,8 @@
 }
 
 .selected-date{
-    font-size: 184%;
+    font-size: 130%;
     color:rgba(8,8,78,0.87);
-    letter-spacing: 1px;
     font-weight:300;
     margin-right: 5px;
 }
