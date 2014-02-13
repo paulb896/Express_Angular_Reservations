@@ -154,7 +154,7 @@ h2{
 
 .nav-image:hover{
     background-color: rgba(111,1,1,0.1);
-    border-radius: 14px;
+    border-radius: 5px;
 }
 
 .tile-navigation > * {
