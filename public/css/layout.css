@@ -12,9 +12,9 @@
         padding-left: 10px;
     }
 
-    . nav-image-size{
-        width: 50px;
-        height: 50px;
+    .nav-image-size{
+        width: 15px;
+        height: 15px;
     }
 
     .tile-navigation-position{
@@ -22,8 +22,8 @@
     }
 
     .tile-navigation > li{
-        height: 70px;
-        width: 70px;
+        height: 35px;
+        width: 35px;
     }
 
     .tiles{
@@ -41,14 +41,14 @@
         padding-left: 15px;
     }
 
-    . nav-image-size{
-        width: 150px;
-        height: 150px;
+    .nav-image-size{
+        width: 50px;
+        height: 50px;
     }
 
     .tile-navigation > li{
-        height: 70px;
-        width: 70px;
+        height: 50px;
+        width: 50px;
     }
 
     .tile-navigation-position{
@@ -71,14 +71,14 @@
         padding-left: 15px;
     }
 
-    . nav-image-size{
-        width: 150px;
-        height: 150px;
+    .nav-image-size{
+        width: 40px;
+        height: 40px;
     }
 
     .tile-navigation > li{
-        height: 70px;
-        width: 70px;
+        height: 40px;
+        width: 40px;
     }
 
     .tile-navigation-position{
