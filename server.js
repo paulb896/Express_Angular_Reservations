@@ -51,7 +51,7 @@ app.get('/login', function(req, res){
 
                             // Render index with session data
                             res.cookie('sessionId', 'as9dfusd9f',  { maxAge: 900000, httpOnly: true });
-                            res.location('/');
+                            res.redirect('..');
                         });
                 });
         });
