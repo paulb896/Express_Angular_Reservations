@@ -26,6 +26,12 @@ config.loginHint = "";
 // Google auth redirectUrl
 config.redirectUrl = "";
 
+// Cypto hash method, one of {'sha1', 'md5', 'sha256', 'sha512'}
+config.hashMethod = "md5";
+
+// Some secret random string
+config.mySecretKey = "safewpfwpeoajf-i33awf3a2f-3ai0-iw3-0i-0eiai-0dsi0-sdi-if-0ewi0f-wier0-i3g89sjg8eg8e";
+
 // Port the web server will listen on
 config.serverPort = 8000;
 
