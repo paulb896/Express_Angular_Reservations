@@ -44,10 +44,14 @@ app.get('/login', function(req, res){
                                 console.log('An error occured', err);
                                 return;
                             }
-                            console.log(profile.displayName, ':', profile.tagline);
+                            console.log(profile.displayName, ':', profile.image.url);
+                            console.log(profile.emails);
+
+                            // Insert session into mongodb
+
                             // Render index with session data
-
-
+                            res.cookie('sessionId', 'as9dfusd9f',  { maxAge: 900000, httpOnly: true });
+                            res.location('/');
                         });
                 });
         });
