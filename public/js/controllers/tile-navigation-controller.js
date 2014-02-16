@@ -19,32 +19,56 @@ angular.module('reserveTheTime.controllers.tileNavigation', [])
     $scope.initializeNav = function(navNumber) {
         // Bind templates specific to this controllers scope
         $rootScope.templates =
-            [{ name: 'Date Picker', url: 'partials/tile-date-picker.html', imageUrl:"img/calendar.png",
+            [
+            {
+                name: 'Date Picker',
+                url: 'partials/tile-date-picker.html',
+                imageUrl:"img/calendar.png",
                 completed:function() {
                     return true
                 }
-            }
-                , { name: 'Time Picker', url: 'partials/better-time-picker.html', imageUrl:"img/clock-nav.png",
+            },
+            {
+                name: 'Time Picker',
+                url: 'partials/better-time-picker.html',
+                imageUrl:"img/clock-nav.png",
                 completed:function() {
                     return PageState.attendees.length < 1;
                 }
-            }
-                , { name: 'Place Search', url: 'partials/tile-place-search.html', imageUrl:"img/find2.png",
+            },
+            {
+                name: 'Place Search',
+                url: 'partials/tile-place-search.html',
+                imageUrl:"img/find2.png",
                 completed:function() {
                     return UserSelection.place
                 }
-            }
-                , { name: 'Place Details', url: 'partials/tile-place-details.html', imageUrl:"img/map-icon.png",
+            },
+            {
+                name: 'Place Details',
+                url: 'partials/tile-place-details.html',
+                imageUrl:"img/map-icon.png",
                 completed:function() {
                     return UserSelection.place
                 }
-            }
-                , { name: "Calendar", url: 'partials/tile-hour-chart.html', imageUrl:"img/calendar-nav.png",
+            },
+            {
+                name: "Calendar",
+                url: 'partials/tile-hour-chart.html',
+                imageUrl:"img/calendar-nav.png",
+                completed:function() {
+                    return true;
+                }
+            },
+            {
+                name: "User",
+                url: 'partials/login.html',
+                imageUrl:"img/user.png",
                 completed:function() {
                     return true;
                 }
             }
-            ];
+        ];
 
         $scope.template = $rootScope.templates[navNumber || 0];
     };

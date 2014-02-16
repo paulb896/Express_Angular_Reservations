@@ -16,20 +16,26 @@ Using Express Node Module to serve pages and handle data requests.
 git clone https://github.com/paulb896/Express_Anguar_Reservations
 ```
 
-  Install Dependencies
+  Install Dependencies.
 
 ```
 npm install
 ```
 
 
-  Set Configuration Parameters
+  Copy example configuration file, server will read look for "config.js".
 
 ```
 cp config.js.dist config.js
 ```
 
-And set mongo db host information, as well as google api developer key.
+  Set Configuration Parameters
+
+```
+vim config.js
+```
+
+  Set mongo db host information, as well as google api developer key.
 
 ``` config.js
 ..

@@ -3,12 +3,67 @@
 var config = require('./config'),
   MongoClient = require('mongodb').MongoClient,
   express = require('express'),
-  app = express();
+  app = express(),
+
+  // Setup google api helper
+  googleapis = require('googleapis'),
+  OAuth2 = googleapis.auth.OAuth2,
+  oauth2Client =
+    new OAuth2(config.clientId, config.clientSecret, config.redirectUrl);
+
+// generates a url that allows offline access and asks permissions
+// for Google+ scope.
+var loginUrl;
 
 //app.set('view engine', 'html');
-app.set('view engine', 'ejs');
+
 app.use(express.bodyParser());
+//app.set('view engine', 'ejs');
+app.engine('.html', require('ejs').__express);
+app.set('view engine', 'html');
+
 app.use(express.static(__dirname + '/public'));
+app.set('partials', __dirname + '/public/partials');
+app.set('views', __dirname + '/public/partials');
+
+/**
+ * Respond with reservations for given date input
+ */
+app.get('/login', function(req, res){
+    if (req.query.code) {
+        oauth2Client.getToken(req.query.code, function(err, tokens) {
+            oauth2Client.setCredentials(tokens);
+            googleapis
+                .discover('plus', 'v1')
+                .execute(function(err, client) {
+                    client
+                        .plus.people.get({ userId: 'me' })
+                        .withAuthClient(oauth2Client)
+                        .execute(function(err, profile) {
+                            if (err) {
+                                console.log('An error occured', err);
+                                return;
+                            }
+                            console.log(profile.displayName, ':', profile.tagline);
+                            // Render index with session data
+
+
+                        });
+                });
+        });
+    } else {
+        loginUrl = oauth2Client.generateAuthUrl({
+            access_type: 'offline',
+            login_hint: config.loginHint,
+            scope: 'https://www.googleapis.com/auth/plus.me'
+        });
+
+        res.render('login', {
+            loginUrl: loginUrl
+        });
+    }
+});
+
 
 /**
  * Respond with reservations for given date input

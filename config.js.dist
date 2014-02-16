@@ -14,6 +14,18 @@ config.dbHost = "mongodb://localhost:3001/reservation_system";
 // Google api developer key
 config.developerKey = "###########################";
 
+// Google auth clientId
+config.clientId = "";
+
+// Google auth client_secret
+config.clientSecret = "";
+
+// Google auth api "login_hint"
+config.loginHint = "";
+
+// Google auth redirectUrl
+config.redirectUrl = "";
+
 // Port the web server will listen on
 config.serverPort = 8000;
 
