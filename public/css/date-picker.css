@@ -150,14 +150,13 @@ ul{
     font-weight: 900;
     text-decoration: none;
     display: inline-block;
-    margin: 5px;
+    width: 35px;
     padding-right: 10px;
     padding-left: 4px;
 }
 
 .month-picker > span:not(.month-selected){
     color: lightgray;
-    #padding: 0px 8px 4px 1px;
 }
 
 .month-selected{
@@ -166,6 +165,7 @@ ul{
     cursor: pointer;
     font-weight: 900;
     border: solid #000000 1px;
+    margin:0px
 }
 
 .month-name{
