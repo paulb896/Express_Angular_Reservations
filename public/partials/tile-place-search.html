@@ -12,13 +12,11 @@
                     </div>
                 </div>
             </td>
+            <td><% include tile-place-details.html %></td>
         </tr>
         <tr>
             <td colspan="3">
                 <ul class="found-places">
-                    <li>
-                        <% include tile-place-details.html %>
-                    </li>
                     <li ng-hide="PageState.places.length" class="place-result">Search results will show here</li>
                     <li class="place-result-modify place-result" ng-show="PageState.resultSetPage > 0" ng-click="PageState.resultSetPage = PageState.resultSetPage - 1;">Page Back</li>
                     <li ng-repeat="place in PageState.places | visibleResults:PageState.resultSetPage:PageState.resultPageSize" ng-click="updatePlace(place)"
