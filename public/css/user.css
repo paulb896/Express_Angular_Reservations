@@ -14,8 +14,10 @@
 .sign-in-with-google{
     background-image:url("../img/sign-in-with-google.png");
     background-size: 100%;
-    width: 392px;
-    height: 80px;
+    width: 200px;
+    height: 39px;
+    margin-left: 20%;
+    float: right;
 }
 
 #login

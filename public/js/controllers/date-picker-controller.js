@@ -24,7 +24,7 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         // Add spacers for to set first day of week
         var selectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber-1, 1, 0);
         for(var j = 1; j <= selectedDate.getDay(); j++) {
-            $scope.PageState.days.push(".");
+            $scope.PageState.days.push("~");
         }
 
         for(var i = 1; i <= daysAmount; i++) {
@@ -53,6 +53,8 @@ angular.module('reserveTheTime.controllers.datePicker', [])
     };
 
     $scope.initializeDate = function() {
+        $scope.PageState = PageState;
+        $scope.UserSelection = UserSelection;
         $scope.PageState.currentDate = new Date();
 
         if (!$scope.UserSelection.selectedDate.hasOwnProperty("getDate")) {
@@ -60,9 +62,6 @@ angular.module('reserveTheTime.controllers.datePicker', [])
             $scope.UserSelection.selectedDate = new Date(currentTime.getFullYear(), currentTime.getMonth());
             $scope.setMonth($scope.UserSelection.selectedDate.getMonth()+1);
         }
-
-        $scope.PageState = PageState;
-        $scope.UserSelection = UserSelection;
     };
 
     $scope.updateReservations = function(){

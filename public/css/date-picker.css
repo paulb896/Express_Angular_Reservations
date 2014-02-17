@@ -18,7 +18,7 @@
 /*}*/
 
 .day-picker-size{
-    width: 600px;
+    width: 360px;
 }
 
 .floatingTile {
@@ -46,7 +46,9 @@
 
 .date-picker{
     display: inline-block;
-    margin-left:10px;
+    margin-left:23px;
+    position: fixed;
+    width: 50%;
 }
 
 ul{
@@ -62,8 +64,7 @@ ul{
 }
 
 .day-picker > li:nth-child(-n+7){
-  background-color: lightgray;
-    font-size: 22px;
+    background-color: lightgray;
     color:  rgba(86,1,1,0.89);
     cursor: default;
     font-family: monospace times;
@@ -80,13 +81,13 @@ ul{
     -ms-transition:0.18s all;
     transition:0.18s all;
     padding:12px;
-    margin: 6px;
+    margin: 4px;
     display:inline-table;
     #float:left;
     cursor:pointer;
     font-weight: 800;
-    width: 8%;
-    height:30px;
+    width: 15px;
+    height:15px;
 }
 
 .selected-tile{

@@ -90,6 +90,14 @@
     color: whitesmoke;
 }
 
+.place-search{
+    width: 600px;
+    position: fixed;
+    margin-left: 50%;
+    margin-top: 30px;
+    padding: 0;
+}
+
 .place-type{
     width:70px;
     height:70px;
@@ -106,7 +114,7 @@
 
 }
 
-.place-search{
+.place-search-input{
     font-size:30px;
     padding: 10px;
     font-family: 'Noto Serif', serif;

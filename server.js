@@ -20,7 +20,11 @@ var config = require('./config'),
   googleapis = require('googleapis'),
   OAuth2 = googleapis.auth.OAuth2,
   oauth2Client = new OAuth2(config.clientId, config.clientSecret, config.redirectUrl),
-  loginUrl;
+  loginUrl = oauth2Client.generateAuthUrl({
+    access_type: 'offline',
+    login_hint: config.loginHint,
+    scope: 'https://www.googleapis.com/auth/plus.me'
+  });
 
 /**
  * Configure express server
@@ -31,6 +35,14 @@ app.set('view engine', 'html');
 app.use(express.static(__dirname + '/public'));
 app.set('partials', __dirname + '/public/partials');
 app.set('views', __dirname + '/public/partials');
+
+app.get('/reservation-system', function(req, res){
+    res.render('reserve', {
+        title: "Reserve the Time",
+        header: "Reservation System",
+        loginUrl: loginUrl
+    });
+});
 
 /**
  * Respond with reservations for given date input
@@ -74,7 +86,7 @@ app.get('/login', function(req, res){
                     return;
                   }
 
-                  // Set for a week
+                  // Session usable for a week
                   res.cookie('sessionId', sessionId,  { maxAge: 604800000, httpOnly: true });
                   res.redirect('..');
                 });
@@ -83,12 +95,6 @@ app.get('/login', function(req, res){
         });
     });
   } else {
-    loginUrl = oauth2Client.generateAuthUrl({
-      access_type: 'offline',
-      login_hint: config.loginHint,
-      scope: 'https://www.googleapis.com/auth/plus.me'
-    });
-
     res.render('login', {
       loginUrl: loginUrl
     });

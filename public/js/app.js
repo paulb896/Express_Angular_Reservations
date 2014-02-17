@@ -20,4 +20,8 @@ angular.module('reserveTheTime', [
     'reserveTheTime.controllers.tileNavigation',
     'reserveTheTime.place.controller',
     'reserveTheTime.filters']
-);
+    ).
+    run(['$rootScope', function($rootScope) {
+
+        console.log("HELLO");
+    }]);

@@ -1,4 +1,5 @@
-<div ng-controller="bannerController" ng-class="{'spin-component': UserSelection.place.name.length > 0}">
+<div ng-controller="bannerController" ng-class="{'spin-component': UserSelection.place.name.length > 0}" class="banner banner-right banner-height">
+    <% include login.html %>
     <h2 class="selection-header">
         <span>Find a Place</span>,
         <span>Save a Time</span>
@@ -11,7 +12,7 @@
             <span ng-show="UserSelection.place.name" class="selected-place" ng-bind="UserSelection.place.name"></span>
         </li>
         <li ng-controller="reservationController" ng-click="reserve();">
-            <div class="reservation-input reserve">Save</div>
+            <span class="reservation-input reserve">Save</span>
         </li>
     </ul>
 </div>
