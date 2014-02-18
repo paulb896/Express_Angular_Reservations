@@ -27,15 +27,20 @@ angular.module('reserveTheTime.place.controller', [])
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
 
-                var map = new google.maps.Map(document.getElementsByName('map-canvas'),
-                    mapOptions);
+                var maps = document.getElementsByName("map-canvas");
+                console.log(maps);
+                for (var i = 0; i < maps.length; i++) {
+                    var map = new google.maps.Map(maps[i],
+                        mapOptions);
 
-                var marker = new google.maps.Marker({
-                    position: placeLatlng,
-                    map: map,
-                    title: UserSelection.place.name,
-                    animation: google.maps.Animation.DROP
-                });
+                    var marker = new google.maps.Marker({
+                        position: placeLatlng,
+                        map: map,
+                        title: UserSelection.place.name,
+                        animation: google.maps.Animation.DROP
+                    });
+                }
+
             });
         }
     };

@@ -88,7 +88,7 @@ app.get('/login', function(req, res){
 
                   // Session usable for a week
                   res.cookie('sessionId', sessionId,  { maxAge: 604800000, httpOnly: true });
-                  res.redirect('..');
+                  res.redirect('/reservation-system');
                 });
               });
             });
