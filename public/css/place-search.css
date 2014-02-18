@@ -101,6 +101,13 @@
 .place-selected{
     height: 318px;
     border: 15px;
+    box-shadow: 2px 2px 5px #888888;
+    color: rgba(111,1,1,0.9);
+    cursor: pointer;
+    font-weight: 900;
+    border: solid #000000 1px;
+    margin:0px;
+    background-color:#dddddb;
 }
 
 .place-type{
