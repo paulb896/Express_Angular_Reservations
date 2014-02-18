@@ -13,7 +13,7 @@ angular.module('reserveTheTime.place.controller', [])
 
     $scope.ratings = [1,2,3,4,5];
 
-    $scope.getPlaceDetails = function() {
+    $scope.getPlaceDetails = function(mapElement) {
         if (UserSelection.place
             && UserSelection.place.hasOwnProperty('reference')
         ) {
@@ -27,20 +27,30 @@ angular.module('reserveTheTime.place.controller', [])
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
 
-                var maps = document.getElementsByName("map-canvas");
-                console.log(maps);
-                var mapsArray = new Array(maps.length);
-                for (var i = 0; i < maps.length; i++) {
-                    mapsArray[i] = new google.maps.Map(maps[i],
-                        mapOptions);
+                var map = new google.maps.Map(document.getElementById(mapElement),
+                    mapOptions);
 
-                    var marker = new google.maps.Marker({
-                        position: placeLatlng,
-                        map: mapsArray[i],
-                        title: UserSelection.place.name,
-                        animation: google.maps.Animation.DROP
-                    });
-                }
+                var marker = new google.maps.Marker({
+                    position: placeLatlng,
+                    map: map,
+                    title: UserSelection.place.name,
+                    animation: google.maps.Animation.DROP
+                });
+
+//                var maps = document.getElementsByName("map-canvas");
+//                console.log(maps);
+//                var mapsArray = [document.getElementById("map-canvas"), ];
+//                for (var i = 0; i < maps.length; i++) {
+//                    mapsArray[i] = new google.maps.Map(maps[i],
+//                        mapOptions);
+//
+//                    var marker = new google.maps.Marker({
+//                        position: placeLatlng,
+//                        map: mapsArray[i],
+//                        title: UserSelection.place.name,
+//                        animation: google.maps.Animation.DROP
+//                    });
+//                }
 
             });
         }

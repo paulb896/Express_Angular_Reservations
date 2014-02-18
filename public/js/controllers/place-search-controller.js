@@ -14,11 +14,11 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
     $scope.searchPlaces = function(searchText) {
         console.log("SEARCH REQUEST, search text", searchText);
         Pace.start();
-        placeService.find(UserSelection.placeType, searchText).then(function(d) {
+        placeService.find(UserSelection.placeType, searchText).then(function(placeData) {
             // Send view an array of reservations for the current state
             //$scope.selectedDate.reservations = d;
-            console.log("Data from place search: ", d);
-            PageState.places = d.results;
+            console.log("Data from place search: ", placeData);
+            PageState.places = placeData.results;
             Pace.stop();
         });
     };
@@ -33,7 +33,9 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
 
 
     $scope.updatePlace = function(place) {
-        UserSelection.place = place;
+        if (UserSelection.place.id != place.id) {
+            UserSelection.place = place;
+        }
     };
 
     $scope.updatePlaceType = function(searchText, placeType) {
