@@ -98,6 +98,10 @@
     padding: 0;
 }
 
+.place-selected{
+    height: 800px;
+}
+
 .place-type{
     width:70px;
     height:70px;

@@ -18,7 +18,8 @@
                 <ul class="found-places">
                     <li ng-hide="PageState.places.length" class="place-result">Search results will show here</li>
                     <li class="place-result-modify place-result" ng-show="PageState.resultSetPage > 0" ng-click="PageState.resultSetPage = PageState.resultSetPage - 1;">Page Back</li>
-                    <li ng-repeat="place in PageState.places | visibleResults:PageState.resultSetPage:PageState.resultPageSize" ng-click="updatePlace(place)"
+                    <li ng-class="{true:'place-selected', false:''}[place.id==UserSelection.place.id]"
+                        ng-repeat="place in PageState.places | visibleResults:PageState.resultSetPage:PageState.resultPageSize" ng-click="updatePlace(place)"
                           class="place-result place-result-color"
                          >
                         {{place.name}}<img class="place-icon" ng-src="{{place.icon}}"><span ng-bind="place.rating"></span>
