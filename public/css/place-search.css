@@ -101,7 +101,6 @@
 .place-selected{
     height: 200px;
     border: 5px;
-    background-color: lightgray;
     color: black;
 }
 
@@ -166,12 +165,10 @@ td{
     background-color: red;
 }
 
-.place-result-color:hover{
+.place-result-color:not(.place-selected):hover{
     background-color: rgba(111,1,1,0.9);
     color:white;
 }
-
-
 
 .place-type-search{
     font-size:30px;
