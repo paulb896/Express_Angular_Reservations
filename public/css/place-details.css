@@ -7,13 +7,13 @@
 }
 
 .map-size{
-    height: 200px;
-    width: 200px;
+    height: 210px;
+    width: 500px;
 }
 
 .map-canvas{
     position: absolute;
-    top:134px;
+    top:164px;
     z-index: 0;
     width: 200px;
     height: 200px;
