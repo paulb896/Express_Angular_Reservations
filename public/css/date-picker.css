@@ -158,6 +158,7 @@ ul{
 
 .month-picker > span:not(.month-selected){
     color: lightgray;
+    border: solid #ffffff 1px;
 }
 
 .month-selected{
