@@ -100,6 +100,9 @@
 
 .place-selected{
     height: 200px;
+    border: 5px;
+    background-color: lightgray;
+    color: black;
 }
 
 .place-type{
