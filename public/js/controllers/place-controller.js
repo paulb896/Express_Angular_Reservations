@@ -31,7 +31,7 @@ angular.module('reserveTheTime.place.controller', [])
                 console.log(maps);
                 var mapsArray = new Array(maps.length);
                 for (var i = 0; i < maps.length; i++) {
-                    mapsArray[i] = map = new google.maps.Map(maps[i],
+                    mapsArray[i] = new google.maps.Map(maps[i],
                         mapOptions);
 
                     var marker = new google.maps.Marker({
