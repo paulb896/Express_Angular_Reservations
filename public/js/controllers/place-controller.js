@@ -13,7 +13,7 @@ angular.module('reserveTheTime.place.controller', [])
 
     $scope.ratings = [1,2,3,4,5];
 
-    $scope.getPlaceDetails = function(mapElement) {
+    $scope.getPlaceDetails = function($event) {
         if (UserSelection.place
             && UserSelection.place.hasOwnProperty('reference')
         ) {
@@ -27,7 +27,7 @@ angular.module('reserveTheTime.place.controller', [])
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
 
-                var map = new google.maps.Map(mapElement,
+                var map = new google.maps.Map($event.target,
                     mapOptions);
 
                 var marker = new google.maps.Marker({
