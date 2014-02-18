@@ -2,14 +2,10 @@
     <table class="place-table">
         <tr>
             <td colspan="2"><input ng-model="placeSearch" type="input" class="place-search-input" placeholder="Place Name"/></td>
-        </tr>
-        <tr>
             <td>
-                <div class="found-place-types">
-                    <div ng-repeat="placeType in PageState.placeTypesShort" ng-click="updatePlaceType(placeSearch, placeType.name)"
-                         ng-class="placeType.name"
-                         class="place-type">
-                    </div>
+                <div ng-repeat="placeType in PageState.placeTypesShort" ng-click="updatePlaceType(placeSearch, placeType.name)"
+                     ng-class="placeType.name"
+                     class="place-type">
                 </div>
             </td>
         </tr>

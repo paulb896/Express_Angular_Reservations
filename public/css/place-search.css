@@ -105,8 +105,8 @@
 }
 
 .place-type{
-    width:70px;
-    height:70px;
+    width:45px;
+    height:45px;
     display: inline-block;
     background-color: transparent;
     background-size: 100%;
@@ -146,11 +146,10 @@ td{
 }
 
 .place-result:not(.place-selected){
-    background-color: rgba(200,200,205,0.4);
-    display: inline-table;
-    margin-right: 10px;
-    cursor: pointer;
     height: 80px;
+}
+
+.place-result{
     font-size: 16px;
     font-weight: 700;
     border-radius: 5px;
@@ -159,7 +158,13 @@ td{
     margin-top: 5px;
     padding-right: 0;
     text-align: center;
+    background-color: rgba(200,200,205,0.4);
+    display: inline-table;
+    margin-right: 10px;
+    cursor: pointer;
 }
+
+
 
 .stripe{
     background-color: red;
