@@ -29,13 +29,14 @@ angular.module('reserveTheTime.place.controller', [])
 
                 var maps = document.getElementsByName("map-canvas");
                 console.log(maps);
+                var mapsArray = new Array(maps.length);
                 for (var i = 0; i < maps.length; i++) {
-                    var map = new google.maps.Map(maps[i],
+                    mapsArray[i] = map = new google.maps.Map(maps[i],
                         mapOptions);
 
                     var marker = new google.maps.Marker({
                         position: placeLatlng,
-                        map: map,
+                        map: mapsArray[i],
                         title: UserSelection.place.name,
                         animation: google.maps.Animation.DROP
                     });
