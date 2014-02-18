@@ -13,6 +13,10 @@ angular.module('reserveTheTime.place.controller', [])
 
     $scope.ratings = [1,2,3,4,5];
 
+        /**
+         * TODO: CONVERT TO DIRECTIVE ASAP
+         * @param $event
+         */
     $scope.getPlaceDetails = function($event) {
         if (UserSelection.place
             && UserSelection.place.hasOwnProperty('reference')

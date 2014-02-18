@@ -23,5 +23,6 @@ angular.module('reserveTheTime', [
     ).
     run(['$rootScope', function($rootScope) {
 
-        console.log("HELLO");
+        // Get user session
+
     }]);
