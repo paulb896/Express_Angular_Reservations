@@ -153,6 +153,7 @@ ul{
     width: 35px;
     padding-right: 10px;
     padding-left: 4px;
+    margin-left: 5px;
 }
 
 .month-picker > span:not(.month-selected){

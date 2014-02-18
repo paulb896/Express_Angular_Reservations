@@ -12,7 +12,6 @@
                     </div>
                 </div>
             </td>
-            <td><% include tile-place-details.html %></td>
         </tr>
         <tr>
             <td colspan="3">
@@ -23,6 +22,10 @@
                           class="place-result place-result-color"
                          >
                         {{place.name}}<img class="place-icon" ng-src="{{place.icon}}"><span ng-bind="place.rating"></span>
+                        <div ng-show="place.id==UserSelection.place.id">
+                            <% include tile-place-details.html %>
+                        </div>
+
                     </li>
                     <li class="place-result-modify place-result" ng-show="PageState.places.length > ((PageState.resultSetPage+1) * PageState.resultPageSize)" ng-click="PageState.resultSetPage = PageState.resultSetPage + 1;">Page Forward</li>
                 </ul>

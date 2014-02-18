@@ -54,7 +54,7 @@
 .found-places{
     height: 350px;
     overflow: hidden;
-    width:84%;
+    width:100%;
     margin: 0;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .place-search{
-    width: 600px;
+    width: 900px;
     position: fixed;
     margin-left: 50%;
     margin-top: 30px;
@@ -132,7 +132,7 @@ td{
 
 .place-table{
     margin-bottom: -58px;
-    width: 85%;
+    width: 631px;
 }
 
 .place-result-color{
