@@ -27,7 +27,7 @@ angular.module('reserveTheTime.place.controller', [])
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
 
-                var map = new google.maps.Map($event.target,
+                var map = new google.maps.Map(document.getElementById("map-canvas"),
                     mapOptions);
 
                 var marker = new google.maps.Marker({
