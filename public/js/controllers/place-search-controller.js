@@ -33,7 +33,7 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
 
 
     $scope.updatePlace = function(place) {
-        if (UserSelection.place.id != place.id) {
+        if (!UserSelection.place ||  UserSelection.place.id != place.id) {
             UserSelection.place = place;
         }
     };
