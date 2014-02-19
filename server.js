@@ -32,11 +32,28 @@ var config = require('./config'),
 app.use(express.bodyParser());
 app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/'));
 app.set('partials', __dirname + '/public/partials');
 app.set('views', __dirname + '/public/partials');
 
-app.get('/reservation-system', function(req, res){
+// Not proud of this... fix this later
+app.get('/index', function(req, res){
+    res.render('reserve', {
+        title: "Reserve the Time",
+        header: "Reservation System",
+        loginUrl: loginUrl
+    });
+});
+
+app.get('/index.html', function(req, res){
+    res.render('reserve', {
+        title: "Reserve the Time",
+        header: "Reservation System",
+        loginUrl: loginUrl
+    });
+});
+
+app.get('/', function(req, res){
     res.render('reserve', {
         title: "Reserve the Time",
         header: "Reservation System",
@@ -101,6 +118,10 @@ app.get('/login', function(req, res){
   }
 });
 
+/**
+ * Check for session information, and send back
+ * found session data.
+ */
 app.get('/session', function(req, res) {
   if (!req.query.sessionId) {
     res.status(401).end("Missing sessionId");
