@@ -21,6 +21,7 @@ angular.module('reserveTheTime.services', [])
         "placeType":""
     };
 })
+.value('version', '0.6')
 .factory('PageState', function(){
     return {
         "cities":[{name:"Calgary"}, {name:"Burnaby"}],
