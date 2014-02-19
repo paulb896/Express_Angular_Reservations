@@ -18,6 +18,8 @@ angular.module('reserveTheTime.place.controller', [])
          * @param $event
          */
     $scope.getPlaceDetails = function($event) {
+        console.log($event);
+        console.log("WAS THE EVENT");
         if (UserSelection.place
             && UserSelection.place.hasOwnProperty('reference')
         ) {

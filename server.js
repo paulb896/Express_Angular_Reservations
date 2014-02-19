@@ -243,7 +243,9 @@ app.post('/reserve', function(req, res){
     "&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&approval_prompt=force&access_type=offline";
 
   MongoClient.connect(config.dbHost, function(err, db) {
-    if(err || !req.body ||!db) return false;
+    if (!db) {
+        return false;
+    }
 
     var collection = db.collection('reservation');
 
