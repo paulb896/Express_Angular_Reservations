@@ -10,7 +10,6 @@
 
 // Declare app level module which depends on filters, and services
 angular.module('reserveTheTime', [
-    'reserveTheTime.directives',
     'reserveTheTime.services',
     'reserveTheTime.controllers.banner',
     'reserveTheTime.controllers.betterTimePicker',
