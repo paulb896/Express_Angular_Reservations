@@ -11,7 +11,9 @@
         <span class="ratings">
             <div class="rating" ng-repeat="n in ratings" ng-class="{'rating-positive': (n <= UserSelection.place.rating)}">&#9734;</div>
         </span>
-        <div ng-click="getPlaceDetails($event);" class="map-canvas" name="map-canvas" class="map-size"></div>
+        <div ng-click="getPlaceDetails($event);" class="map-canvas" name="map-canvas" class="map-size">
+            <div ng-show="!mapLoaded">Click Here for Map</div>
+        </div>
     </div>
 
 </div>
