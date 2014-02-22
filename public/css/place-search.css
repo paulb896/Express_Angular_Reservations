@@ -91,9 +91,8 @@
 }
 
 .place-search{
-    width: 900px;
-    position: fixed;
-    margin-left: 50%;
+    width: 33%;
+    display: inline-flex;
     margin-top: 30px;
     padding: 0;
 }
@@ -133,6 +132,7 @@
     border-radius: 5px;
     outline: none;
     width: 180px;
+
 }
 
 td{

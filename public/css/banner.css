@@ -26,6 +26,10 @@
     }
 }
 
+.banner-container{
+
+}
+
 .attendee{
     margin-left: 10px;
     color:black;
@@ -40,8 +44,13 @@
     text-align: left;
 }
 
-.banner{
+
+.banner-container{
+    background-color: red;
+    height: 247px;
+    background-color: rgba(245,245,246,0.8);
     border: solid 1px black;
+    margin-left: 20px;
 }
 
 .banner-left{
@@ -64,7 +73,7 @@
     padding-top: 20px;
     background-color: rgba(245,245,246,0.8);
     z-index: 10;
-    margin-left: 50%;
+    margin-left: 53%;
     position: fixed;
     color:rgba(111,1,1,0.9);
     float:right;
@@ -88,7 +97,7 @@
 .current-date{
     color:rgba(8,8,78,0.87);
     display: inline;
-    font-size: 125%;
+    font-size: 110%;
     font-family: serif;
     text-shadow: 2px 2px rgba(188,188,188,0.1);
     letter-spacing: 1.6px;
