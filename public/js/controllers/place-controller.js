@@ -13,14 +13,15 @@ angular.module('reserveTheTime.place.controller', [])
 
     $scope.ratings = [1,2,3,4,5];
 
-        /**
-         * TODO: CONVERT TO DIRECTIVE ASAP
-         * @param $event
-         */
+    /**
+     * TODO: CONVERT TO DIRECTIVE ASAP
+     * @param $event Click event
+     */
     $scope.getPlaceDetails = function($event) {
         console.log($event);
         console.log("WAS THE EVENT");
-        if (UserSelection.place
+        if (!$scope.mapLoaded
+            && UserSelection.place
             && UserSelection.place.hasOwnProperty('reference')
         ) {
             placeService.details(UserSelection.place.reference).then(function(details) {
@@ -43,6 +44,7 @@ angular.module('reserveTheTime.place.controller', [])
                     animation: google.maps.Animation.DROP
                 });
 
+                $scope.mapLoaded = true;
 //                var maps = document.getElementsByName("map-canvas");
 //                console.log(maps);
 //                var mapsArray = [document.getElementById("map-canvas"), ];
