@@ -10,6 +10,11 @@
     padding: 0;
     zoom:60%;
     position: absolute;
+    opacity: 0.4;
+}
+
+.better-time-picker:hover{
+    opacity: 1;
 }
 
 .highlighted{
