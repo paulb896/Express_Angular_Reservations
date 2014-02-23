@@ -2,7 +2,7 @@
     <% include login.html %>
     <div class="user-info" ng-show="PageState.session.userProfile">
         <span>Hello </span><span ng-bind="PageState.session.userProfile.name.givenName"></span>
-        <img ng-src="PageState.session.userProfile.image.url"/>
+        <img ng-src="{{PageState.session.userProfile.image.url}}"/>
     </div>
     <h2 class="selection-header">
         <span>Find a Place</span>,
