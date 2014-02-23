@@ -245,38 +245,11 @@ app.get('/place-details', function(req, res){
 app.post('/reserve', function(req, res){
 
 //
-//    var sessionId = req.signedCookies.sessionId;
-//    if (!sessionId) {
-//        res.status(401).end("Missing sessionId");
-//        return;
-//    }
-//
-//    MongoClient.connect(config.dbHost, function(err, db) {
-//        if(err) {
-//            res.end(JSON.stringify({}));
-//            return;
-//        }
-//
-//        var collection = db.collection('UserSessions');
-//        collection.find(
-//            {
-//                sessionId:sessionId
-//            }
-//        ).toArray(function(err, results) {
-//                console.dir(results);
-//                res.end(JSON.stringify(results[0]));
-//                // Let's close the db
-//                db.close();
-//            });
-//    });
-//
-//
-//
-
-
-
-
-
+  var sessionId = req.signedCookies.sessionId;
+  if (!sessionId) {
+      res.status(401).end("Missing sessionId");
+      return;
+  }
 
   MongoClient.connect(config.dbHost, function(err, db) {
     if (!db) {
@@ -289,7 +262,9 @@ app.post('/reserve', function(req, res){
     console.log("THIS IS THE BODY: ");
     console.log(req.body);
     console.log("<--HERE");
-    collection.insert(JSON.parse(req.body), function(err, docs) {
+    var event = req.body;
+    event.sessionId = sessionId;
+    collection.insert(JSON.parse(event), function(err, docs) {
       if (err) {
         res.send('Unable to save event properly');
         console.log("Unable to save reservation properly");
