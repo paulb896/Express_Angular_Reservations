@@ -17,8 +17,8 @@
         <li>
             <span ng-show="UserSelection.place.name" class="selected-place" ng-bind="UserSelection.place.name"></span>
         </li>
-        <li ng-controller="reservationController" ng-click="reserve();">
-            <span class="reservation-input reserve">Save</span>
+        <li ng-show="PageState.session.userProfile" ng-controller="reservationController" ng-click="reserve();">
+            <span class="reservation-input reserve">Remember time and place</span>
         </li>
     </ul>
 </div>
