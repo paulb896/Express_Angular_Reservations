@@ -24,6 +24,9 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
      */
     $scope.setHourPicker = function()
     {
+        if (PageState.hourPickerEnabled) {
+            return;
+        }
         PageState.hourPickerEnabled = true;
         PageState.times = [];
         var items = 12;
@@ -39,6 +42,9 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
      */
     $scope.setMinutePicker = function()
     {
+        if (!PageState.hourPickerEnabled) {
+            return;
+        }
         PageState.hourPickerEnabled = false;
         PageState.times = [];
         var items = 12;

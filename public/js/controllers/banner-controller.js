@@ -22,7 +22,7 @@ angular.module('reserveTheTime.controllers.banner', [])
     $scope.loadUser = function() {
         if (!PageState.hasOwnProperty('session')) {
             Session.user().then(function(data) {
-                PageState.session = data[0];
+                PageState.session = data;
             });
         }
         //Session.user().get(function(data){

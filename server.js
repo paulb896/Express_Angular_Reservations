@@ -149,7 +149,7 @@ app.get('/session', function(req, res) {
       }
     ).toArray(function(err, results) {
         console.dir(results);
-        res.end(JSON.stringify(results));
+        res.end(JSON.stringify(results[0]));
         // Let's close the db
         db.close();
       });

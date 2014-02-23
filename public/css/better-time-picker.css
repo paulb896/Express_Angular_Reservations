@@ -52,7 +52,6 @@
 
 .hour:hover{
     color: rgba(111,1,1,0.9);
-    border-radius: 50px;
 }
 
 .selected-hour{
