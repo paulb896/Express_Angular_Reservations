@@ -149,7 +149,7 @@ app.get('/session', function(req, res) {
       }
     ).toArray(function(err, results) {
         console.dir(results);
-        res.end(JSON.stringify(results[0]));
+        res.end(JSON.stringify(results));
         // Let's close the db
         db.close();
       });
@@ -244,11 +244,39 @@ app.get('/place-details', function(req, res){
  */
 app.post('/reserve', function(req, res){
 
-  // Add authentication check here
+//
+//    var sessionId = req.signedCookies.sessionId;
+//    if (!sessionId) {
+//        res.status(401).end("Missing sessionId");
+//        return;
+//    }
+//
+//    MongoClient.connect(config.dbHost, function(err, db) {
+//        if(err) {
+//            res.end(JSON.stringify({}));
+//            return;
+//        }
+//
+//        var collection = db.collection('UserSessions');
+//        collection.find(
+//            {
+//                sessionId:sessionId
+//            }
+//        ).toArray(function(err, results) {
+//                console.dir(results);
+//                res.end(JSON.stringify(results[0]));
+//                // Let's close the db
+//                db.close();
+//            });
+//    });
+//
+//
+//
 
-  var authUrl = "https://accounts.google.com/o/oauth2/auth?redirect_uri=https%3A%2F%2Freservethetime.com" +
-    "&response_type=code&client_id=reservethetime.com" +
-    "&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&approval_prompt=force&access_type=offline";
+
+
+
+
 
   MongoClient.connect(config.dbHost, function(err, db) {
     if (!db) {
