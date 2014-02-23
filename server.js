@@ -36,10 +36,7 @@ app.use(express.static(__dirname + '/public/'));
 app.set('partials', __dirname + '/public/partials');
 app.set('views', __dirname + '/public/partials');
 
-app.configure(function(){
-   express.cookieParser(config.cookieSecret);
-});
-
+app.use(express.cookieParser(config.cookieSecret));
 
 // Not proud of this... fix this later
 app.get('/index', function(req, res){
