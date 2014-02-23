@@ -17,7 +17,7 @@
     display: inline-table;
     width: 50%;
     padding-left: 30px;
-    float: right;
+    float: left;
 }
 
 .day-picker-size{
@@ -35,6 +35,7 @@
 .day-picker > li:nth-child(-n+7){
     background-color: transparent;
     box-shadow: none;
+    text-align: center;
     color:  rgba(86,1,1,0.89);
     cursor: default;
     font-family: monospace times;
@@ -50,7 +51,7 @@
     -ms-transition:0.18s all;
     transition:0.18s all;
     padding:12px;
-    margin-left: 5px;
+    margin-left:5px;
     margin-right: 5px;
     margin-top: 10px;
     display:inline-table;
