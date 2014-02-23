@@ -23,9 +23,9 @@ angular.module('reserveTheTime.controllers.banner', [])
         //Session.user().get(function(data){
         //    console.log("User data", data);
         //});
-        Session.user().then(function(userData) {
-            console.log("User data", userData);
-        });
+//        Session.user().then(function(userData) {
+//            console.log("User data", userData);
+//        });
     };
 
 }])
