@@ -56,7 +56,6 @@ app.get('/index.html', function(req, res){
 });
 
 app.get('/', function(req, res){
-
     res.render('reserve', {
         title: "Reserve the Time",
         header: "Reservation System",
@@ -131,7 +130,8 @@ process.on('uncaughtException', function (err) {
  * found session data.
  */
 app.get('/session', function(req, res) {
-  if (!req.query.sessionId) {
+  var sessionId = req.signedCookies.sessionId;
+  if (!sessionId) {
     res.status(401).end("Missing sessionId");
     return;
   }
@@ -145,7 +145,7 @@ app.get('/session', function(req, res) {
     var collection = db.collection('UserSessions');
     collection.find(
       {
-        sessionId:req.query.sessionId
+        sessionId:sessionId
       }
     ).toArray(function(err, results) {
         console.dir(results);
