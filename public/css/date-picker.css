@@ -32,7 +32,8 @@
 }
 
 .day-picker > li:nth-child(-n+7){
-    background-color: lightgray;
+    background-color: transparent;
+    box-shadow: none;
     color:  rgba(86,1,1,0.89);
     cursor: default;
     font-family: monospace times;

@@ -4,14 +4,6 @@
  * All services used for reservation tracking
  */
 angular.module('reserveTheTime.services', [])
-
-
-
-.service('UserSession', function($resource) {
-    this.get = function() {
-        return $resource("/session");
-    };
-})
 .factory('Session', function($http) {
     var session = {
         user: function() {
