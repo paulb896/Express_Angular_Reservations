@@ -1,4 +1,4 @@
-<div ng-controller="bannerController" ng-class="{'spin-component': UserSelection.place.name.length > 0}" class="banner banner-right banner-height">
+<div ng-controller="bannerController" ng-class="{'spin-component': UserSelection.place.name.length > 0}" class="banner banner-right banner-height" ng-init="loadUser()">
     <% include login.html %>
     <h2 class="selection-header">
         <span>Find a Place</span>,
