@@ -36,6 +36,7 @@ app.use(express.static(__dirname + '/public/'));
 app.set('partials', __dirname + '/public/partials');
 app.set('views', __dirname + '/public/partials');
 
+
 // Not proud of this... fix this later
 app.get('/index', function(req, res){
     res.render('reserve', {
@@ -54,6 +55,7 @@ app.get('/index.html', function(req, res){
 });
 
 app.get('/', function(req, res){
+
     res.render('reserve', {
         title: "Reserve the Time",
         header: "Reservation System",
@@ -104,7 +106,7 @@ app.get('/login', function(req, res){
                   }
 
                   // Session usable for a week
-                  res.cookie('sessionId', sessionId,  { maxAge: 604800000, httpOnly: true });
+                  res.cookie('sessionId', sessionId,  { maxAge: 604800000, httpOnly: false, signed:true, secret:config.cookieSecret });
                   res.redirect('..');
                 });
               });
@@ -116,6 +118,11 @@ app.get('/login', function(req, res){
       loginUrl: loginUrl
     });
   }
+});
+
+process.on('uncaughtException', function (err) {
+    console.error(err);
+    console.log("Node NOT Exiting...");
 });
 
 /**

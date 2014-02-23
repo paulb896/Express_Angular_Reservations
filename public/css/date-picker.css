@@ -16,7 +16,7 @@
 .date-picker{
     display: inline-table;
     width: 50%;
-    padding-left: 70px;
+    padding-left: 30px;
 }
 
 .day-picker-size{
@@ -58,17 +58,20 @@
     height:15px;
 }
 
-.day-selected{
-    background-color: rgba(86,1,1,0.89);
+.day-floating-tile:not(.day-selected){
+    background-color: rgba(22, 12, 12, 0.6);
+    color: #ffffff;
+}
 
+.day-selected{
+    background-color: rgba(76,1,1,0.89);
+    color: #ffffff;
 }
 
 .floatingTile {
     width: 35px;
     height: 35px;
     padding: 5px;
-    color:#ffffff;
-    background-color: rgba(20,20,20,0.7);
 }
 
 .minute-picker{
@@ -82,8 +85,10 @@
 }
 
 .month-name{
-    padding: 10px 10px 2px 0px;
-    font-size: 10px;
+    padding: 10px 22px 2px 0px;
+    font-size: 12px;
+    position: absolute;
+    z-index: 3001;
 }
 
 .month-name:hover{
@@ -91,8 +96,8 @@
 }
 
 .month-picker {
-    height: 30px;
-    margin-bottom: 50px;
+    height: 25px;
+    margin-bottom: 30px;
 }
 
 .month-picker > * {
@@ -113,8 +118,8 @@
     text-decoration: none;
     display: inline-block;
     padding: 2px 10px 0 5px;
-    margin-left: 5px;
-    height: 36px;
+    margin-left: 3px;
+    height: 30px;
 }
 
 .month-picker > span:not(.month-selected){
@@ -124,7 +129,7 @@
 }
 
 .month-selected{
-    width: 2%;
+    width: 20px;
     box-shadow: 2px 2px 5px #888888;
     color: rgba(111,1,1,0.9);
     cursor: pointer;

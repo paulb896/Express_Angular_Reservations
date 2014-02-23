@@ -92,7 +92,7 @@
 
 .place-search{
     width: 33%;
-    display: inline-flex;
+    display: inline-table;
     margin-top: 30px;
     padding: 0;
 }
@@ -123,7 +123,7 @@
 }
 
 .place-search-input{
-    font-size:30px;
+    font-size:20px;
     padding: 10px;
     font-family: 'Noto Serif', serif;
     color:black;
@@ -132,7 +132,6 @@
     border-radius: 5px;
     outline: none;
     width: 180px;
-
 }
 
 td{
