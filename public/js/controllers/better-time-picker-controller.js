@@ -29,16 +29,17 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
         }
     };
 
+    $scope.clearTimeCircle = function() {
+        PageState.times = [];
+    };
+
     /**
      * Initialize hours for time picker.
      */
     $scope.setHourPicker = function()
     {
-        if (PageState.hourPickerEnabled) {
-            return;
-        }
         PageState.hourPickerEnabled = true;
-        PageState.times = [];
+        $scope.clearTimeCircle();
         var items = 12;
         for(var i = 1; i <= items; i++) {
             var x = 100 - 12 + 104 * Math.cos(2 * Math.PI * i / items - (Math.PI/2) );
@@ -52,11 +53,8 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
      */
     $scope.setMinutePicker = function()
     {
-        if (!PageState.hourPickerEnabled) {
-            return;
-        }
         PageState.hourPickerEnabled = false;
-        PageState.times = [];
+        $scope.clearTimeCircle();
         var items = 12;
         for(var i = 0; i < items; i++) {
             var x = 100 - 12 + 104 * Math.cos(2 * Math.PI * i / items - (Math.PI/2)),
@@ -88,6 +86,7 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
         } else {
             $scope.setSelectedMinute(time);
         }
+        $scope.clearTimeCircle();
     };
 
     /**
@@ -96,6 +95,7 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
      */
     $scope.setSelectedHour = function(hour) {
         $scope.UserSelection.selectedDate.setHours(hour);
+        $scope.clearTimeCircle();
     };
 
     /**
@@ -104,5 +104,6 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
      */
     $scope.setSelectedMinute = function(minute) {
         $scope.UserSelection.selectedDate.setMinutes(minute);
+        $scope.clearTimeCircle();
     };
 }]);
