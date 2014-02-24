@@ -60,7 +60,7 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         if (!$scope.UserSelection.selectedDate) {
             var currentTime = new Date();
             $scope.UserSelection.selectedDate = new Date(currentTime.getFullYear(), currentTime.getMonth(), currentTime.getDate(), currentTime.getHours());
-            $scope.setMonth($scope.UserSelection.selectedDate.getMonth()+1);
+            $scope.setMonth(currentTime.getMonth()+1);
         }
     };
 
