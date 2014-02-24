@@ -1,7 +1,7 @@
 <div ng-controller="datePickerController" ng-init="initializeDate();" class="date-picker">
     <div class="month-picker">
-        <span class="month-size" ng-class="{true:'month-selected', false:''}[monthNumber==UserSelection.selectedDate.getMonth()]"
-              ng-repeat="(monthNumber, monthModel) in PageState.months" ng-click="setMonth($index+1);">
+        <span class="month-size" ng-class="{true:'month-selected', false:''}[(monthModel.monthNumber)==monthSelected]"
+              ng-repeat="(monthNumber, monthModel) in PageState.months" ng-click="setMonth(monthModel.monthNumber);">
             {{monthModel.name}}
             <span class="month-name">{{monthModel.fullName}}</span>
         </span>

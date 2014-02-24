@@ -79,8 +79,11 @@
 }
 
 .day-selected{
-    background-color: rgba(76,1,1,0.89);
-    color: #ffffff;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow:none;
+    -moz-box-shadow: none;
+    color: #000000;
     font-weight: 900;
 }
 

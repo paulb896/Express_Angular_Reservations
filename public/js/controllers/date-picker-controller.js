@@ -9,10 +9,16 @@ angular.module('reserveTheTime.controllers.datePicker', [])
  */
 .controller('datePickerController', ['$scope', 'UserSelection', 'PageState', 'reservationSearch', function($scope, UserSelection, PageState, reservationSearch) {
     $scope.setMonth = function(monthNumber) {
+        $scope.monthSelected = monthNumber;
         $scope.newSelectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, $scope.UserSelection.selectedDate.getHours(), $scope.UserSelection.selectedDate.getMinutes());
-        $scope.PageState.days = new Array();
-        console.log("setting month", monthNumber);
-        var daysAmount = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, 0, $scope.UserSelection.selectedDate.getMinutes()).getDate();
+        $scope.PageState.days = [];
+
+        var daysAmount = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, 0).getDate();
+        if (daysAmount < 26) {
+            var currentDate = new Date($scope.UserSelection.selectedDate);
+            daysAmount = new Date(currentDate.getYear(), currentDate.getMonth()-1, 0).getDate();
+        }
+
         $scope.PageState.days.push("S");
         $scope.PageState.days.push("M");
         $scope.PageState.days.push("T");
@@ -57,15 +63,21 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         $scope.UserSelection = UserSelection;
         $scope.PageState.currentDate = new Date();
 
+        var currentTime = new Date();
         if (!$scope.UserSelection.selectedDate) {
-            var currentTime = new Date();
-            $scope.UserSelection.selectedDate = new Date(currentTime.getFullYear(), currentTime.getMonth(), currentTime.getDate(), currentTime.getHours());
-            $scope.setMonth(currentTime.getMonth());
+            console.log("setting sdasefe AAAAAAAAAAAAAAAAAAAAAAA");
+            var currentMonth = currentTime.getMonth();
+            console.log("There is no selected date: ", $scope.UserSelection.selectedDate);
+            UserSelection.selectedDate = new Date();
+            //$scope.setMonth(new Date().getMonth()+1);
         } else {
-            var userDate = new Date($scope.UserSelection.selectedDate);
-            var month = userDate.getMonth();
-            $scope.setMonth(month);
+            console.log("SELSDFSDFEWV DATE: BBBBBBBBBBBBBBBBBBBB", $scope.UserSelection.selectedDate);
+            var dateNew = new Date($scope.UserSelection.selectedDate);
+            console.log("THIS IS DATE NEW: ", dateNew.getMonth()+1);
+            $scope.setMonth(dateNew.getMonth()+1);
         }
+
+        console.log("date initialized", $scope.UserSelection);
     };
 
     $scope.updateReservations = function(){

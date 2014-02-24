@@ -28,7 +28,7 @@ angular.module('reserveTheTime.services', [])
 })
 .factory('UserSelection', function(){
     return {
-        "selectedDate": new Date(),
+        "selectedDate": false,
         "place": null,
         "attendee":"",
         "city":"",
@@ -56,18 +56,18 @@ angular.module('reserveTheTime.services', [])
         "chartHours": [13,14,15,16,17],
         "resultSetPage":0,
         "resultPageSize":6,
-        "months": [{name:"J", fullName:"January"},
-            {name:"F", fullName:"February"},
-            {name:"M", fullName:"March"},
-            {name:"A", fullName:"April"},
-            {name:"M", fullName:"May"},
-            {name:"J", fullName:"June"},
-            {name:"J", fullName:"July"},
-            {name:"A", fullName:"August"},
-            {name:"S", fullName:"September"},
-            {name:"O", fullName:"October"},
-            {name:"N", fullName:"November"},
-            {name: "D", fullName:"December"}
+        "months": [{name:"J", fullName:"January", monthNumber:1},
+            {name:"F", fullName:"February",monthNumber:2},
+            {name:"M", fullName:"March",monthNumber:3},
+            {name:"A", fullName:"April",monthNumber:4},
+            {name:"M", fullName:"May",monthNumber:5},
+            {name:"J", fullName:"June",monthNumber:6},
+            {name:"J", fullName:"July",monthNumber:7},
+            {name:"A", fullName:"August",monthNumber:8},
+            {name:"S", fullName:"September",monthNumber:9},
+            {name:"O", fullName:"October",monthNumber:10},
+            {name:"N", fullName:"November",monthNumber:11},
+            {name: "D", fullName:"December",monthNumber:12}
         ]
     };
 })

@@ -47,6 +47,7 @@
     background-color: rgba(245,245,246,0.8);
     border: solid 1px black;
     margin-left: 20px;
+    width: 94%;
 }
 
 .banner-left{
@@ -156,10 +157,13 @@
 }
 
 .selected-date{
-    font-size: 130%;
-    color:rgba(8,8,78,0.87);
+    font-size: 150%;
+    color:rgba(8,8,105,0.57);
     font-weight:300;
     margin-right: 5px;
+    font-weight: 300;
+    font-family: inherit;
+    font-style: oblique;
 }
 
 
