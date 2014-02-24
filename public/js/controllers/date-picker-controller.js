@@ -9,6 +9,7 @@ angular.module('reserveTheTime.controllers.datePicker', [])
  */
 .controller('datePickerController', ['$scope', 'UserSelection', 'PageState', 'reservationSearch', function($scope, UserSelection, PageState, reservationSearch) {
     $scope.setMonth = function(monthNumber) {
+        console.log("Setting month", monthNumber);
         $scope.monthSelected = monthNumber;
         $scope.newSelectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, $scope.UserSelection.selectedDate.getHours(), $scope.UserSelection.selectedDate.getMinutes());
         $scope.PageState.days = [];
@@ -38,6 +39,7 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         }
         $scope.newSelectedDate.setDate($scope.UserSelection.selectedDate.getDate());
         $scope.UserSelection.selectedDate = $scope.newSelectedDate;
+        $scope.UserSelection.selectedDate.setMonth(monthNumber-1);
         $scope.updateReservations();
     };
 

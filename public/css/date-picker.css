@@ -34,9 +34,7 @@
     -moz-animation-timing-function: linear;
     animation-timing-function: linear;
     -webkit-transition:0.38s all;
-    background-color: rgba(111,1,1,0.9);
     font-style: normal;
-    color: #ffffff;
 }
 
 .day-picker > li:nth-child(-n+7){
@@ -80,12 +78,12 @@
 }
 
 .day-selected{
-    background-color: transparent;
     box-shadow: none;
     -webkit-box-shadow:none;
     -moz-box-shadow: none;
-    color: #000000;
-    font-weight: 900;
+    color: rgba(88,88,88,1);
+    font-weight: 300;
+    font-family: fantasy;
 }
 
 .floatingTile {
