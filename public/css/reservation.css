@@ -36,6 +36,7 @@
     float:right;
     border-radius: 5px;
     margin-right: 20px;
+    margin-top: 15px;
 }
 
 .reservation-place-name{
@@ -72,7 +73,7 @@
     -moz-transition:1.28s all;
     -ms-transition:1.28s all;
     transition:1.28s all;
-    height: 30px;
+    height: 25px;
 }
 
 .reserve:hover{
