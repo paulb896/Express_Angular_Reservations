@@ -115,11 +115,7 @@
 }
 
 .place-type:hover{
-    #border-top-left-radius: 20px;
-    #border-top-right-radius: 20px;
     background-color: rgba(111,1,1,0.9);
-    border-radius: 10px;
-
 }
 
 .place-search-input{
