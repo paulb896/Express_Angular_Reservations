@@ -1,6 +1,6 @@
 <div ng-controller="placeSearchController" ng-init="initialize();" class="place-search">
     <table class="place-table">
-        <tr>
+        <tr style="background-color: rgba(245,245,246,0.8)">
             <td colspan="2"><input ng-model="placeSearch" type="input" class="place-search-input" placeholder="Place Name"/></td>
             <td>
                 <div ng-repeat="placeType in PageState.placeTypesShort" ng-click="updatePlaceType(placeSearch, placeType.name)"
