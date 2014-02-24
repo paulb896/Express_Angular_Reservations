@@ -29,8 +29,6 @@
     font-family: 'Noto Serif', serif;
     font-size: 22px;
     color:black;
-    border-bottom: solid 2px black;
-    border-right: solid 2px black;
     width: 85%;
     outline: none;
     float:right;
@@ -72,16 +70,16 @@
     -moz-transition:1.28s all;
     -ms-transition:1.28s all;
     transition:1.28s all;
-    height: 52px;
+    height: 42px;
 }
 
 .reserve:hover{
-    background-color: rgba(111,1,1,0.9);;
+    background-color: rgba(111,1,1,0.2);;
     color: white;
-    -webkit-transition:0.78s all;
-    -moz-transition:0.78s all;
-    -ms-transition:0.78s all;
-    transition:0.78s all;
+    -webkit-transition:1.78s all;
+    -moz-transition:1.78s all;
+    -ms-transition:1.78s all;
+    transition:1.78s all;
 }
 
 .reservation-input:hover{
