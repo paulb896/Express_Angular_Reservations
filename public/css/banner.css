@@ -176,7 +176,7 @@
 }
 
 .user-image{
-    border-style: solid;
+    border-radius: 30px;
     padding: 1px;
     border-width: 1px;
 }
