@@ -15,8 +15,6 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
     $scope.initializeTime = function() {
         $scope.PageState = PageState;
         $scope.UserSelection = UserSelection;
-
-        $scope.setHourPicker();
     };
 
     /**
