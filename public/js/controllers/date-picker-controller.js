@@ -40,8 +40,8 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         if (!day) {
             return;
         }
-        var newSelectedDate = new Date(UserSelection.selectedDate.getFullYear(), UserSelection.selectedDate.getMonth(), day);
-        newSelectedDate.setMinutes(UserSelection.selectedDate.getMinutes());
+        var newSelectedDate = new Date(UserSelection.selectedDate);
+        newSelectedDate.setDate(day);
         UserSelection.selectedDate = newSelectedDate;
         $scope.updateReservations();
     };
@@ -57,9 +57,9 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         $scope.UserSelection = UserSelection;
         $scope.PageState.currentDate = new Date();
 
-        if (!$scope.UserSelection.selectedDate.hasOwnProperty("getDate")) {
+        if (!$scope.UserSelection.selectedDate) {
             var currentTime = new Date();
-            $scope.UserSelection.selectedDate = new Date(currentTime.getFullYear(), currentTime.getMonth());
+            $scope.UserSelection.selectedDate = new Date(currentTime.getFullYear(), currentTime.getMonth(), currentTime.getDate(), currentTime.getHours());
             $scope.setMonth($scope.UserSelection.selectedDate.getMonth()+1);
         }
     };
