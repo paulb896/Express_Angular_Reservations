@@ -172,5 +172,9 @@
     font-weight:200;
 }
 
-
+.user-image{
+    border-style: solid;
+    padding: 1px;
+    border-width: 1px;
+}
 

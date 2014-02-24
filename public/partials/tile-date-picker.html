@@ -11,6 +11,7 @@
            ng-repeat="dayModel in PageState.days"
            class="floatingTile day-floating-tile"
            ng-class="{true:'selected-tile', false:''}[dayModel==UserSelection.selectedDate]"
+
            ng-click="updateSelectedDay(dayModel)">
             <span class="dayOfMonth">
               {{dayModel}}

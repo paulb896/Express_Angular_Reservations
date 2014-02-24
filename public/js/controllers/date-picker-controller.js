@@ -9,10 +9,9 @@ angular.module('reserveTheTime.controllers.datePicker', [])
  */
 .controller('datePickerController', ['$scope', 'UserSelection', 'PageState', 'reservationSearch', function($scope, UserSelection, PageState, reservationSearch) {
     $scope.setMonth = function(monthNumber) {
-
-        $scope.newSelectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, 0, $scope.UserSelection.selectedDate.getMinutes());
+        $scope.newSelectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, $scope.UserSelection.selectedDate.getHours(), $scope.UserSelection.selectedDate.getMinutes());
         $scope.PageState.days = new Array();
-
+        console.log("setting month", monthNumber);
         var daysAmount = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, 0, $scope.UserSelection.selectedDate.getMinutes()).getDate();
         $scope.PageState.days.push("S");
         $scope.PageState.days.push("M");
@@ -23,7 +22,7 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         $scope.PageState.days.push("S");
 
         // Add spacers for to set first day of week
-        var selectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber-1, 1, 0);
+        var selectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, 1, 0);
         for(var j = 1; j <= selectedDate.getDay(); j++) {
             $scope.PageState.days.push("'");
         }
@@ -61,7 +60,11 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         if (!$scope.UserSelection.selectedDate) {
             var currentTime = new Date();
             $scope.UserSelection.selectedDate = new Date(currentTime.getFullYear(), currentTime.getMonth(), currentTime.getDate(), currentTime.getHours());
-            $scope.setMonth(currentTime.getMonth()+1);
+            $scope.setMonth(currentTime.getMonth());
+        } else {
+            var userDate = new Date($scope.UserSelection.selectedDate);
+            var month = userDate.getMonth();
+            $scope.setMonth(month);
         }
     };
 
