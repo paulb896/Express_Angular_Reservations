@@ -125,7 +125,6 @@
     color:black;
     border-bottom: solid 2px black;
     border-right: solid 2px black;
-    border-radius: 5px;
     outline: none;
     width: 180px;
 }
@@ -151,7 +150,6 @@ td{
 .place-result{
     font-size: 16px;
     font-weight: 700;
-    border-radius: 5px;
     width: 100%;
     margin-top: 5px;
     padding-right: 0;
