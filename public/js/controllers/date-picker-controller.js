@@ -9,6 +9,7 @@ angular.module('reserveTheTime.controllers.datePicker', [])
  */
 .controller('datePickerController', ['$scope', 'UserSelection', 'PageState', 'reservationSearch', function($scope, UserSelection, PageState, reservationSearch) {
     $scope.setMonth = function(monthNumber) {
+
         $scope.newSelectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, 0, $scope.UserSelection.selectedDate.getMinutes());
         $scope.PageState.days = new Array();
 
@@ -24,7 +25,7 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         // Add spacers for to set first day of week
         var selectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber-1, 1, 0);
         for(var j = 1; j <= selectedDate.getDay(); j++) {
-            $scope.PageState.days.push("~");
+            $scope.PageState.days.push("'");
         }
 
         for(var i = 1; i <= daysAmount; i++) {
