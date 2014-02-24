@@ -134,13 +134,13 @@
 }
 
 .spin-component{
-    transform: rotateX(360deg);
-    -webkit-transform: rotateX(360deg); /* Safari and Chrome */
-    -webkit-transition:0.88s all;
-    -moz-transition:0.88s all;
-    -ms-transition:0.88s all;
-    transition:0.88s all;
-    perspective-origin: 50% 50%;
+    /*transform: rotateX(360deg);*/
+    /*-webkit-transform: rotateX(360deg); *//* Safari and Chrome */
+    /*-webkit-transition:0.88s all;*/
+    /*-moz-transition:0.88s all;*/
+    /*-ms-transition:0.88s all;*/
+    /*transition:0.88s all;*/
+    /*perspective-origin: 50% 50%;*/
 }
 
 .selection-header{
