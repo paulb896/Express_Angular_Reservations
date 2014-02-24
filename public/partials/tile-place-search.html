@@ -8,6 +8,9 @@
                      class="place-type">
                 </div>
             </td>
+            <td>
+                <input ng-model="PageState.resultPageSize" class="place-search-input"/>
+            </td>
         </tr>
         <tr>
             <td colspan="3">
@@ -27,6 +30,7 @@
                     <li class="place-result-modify place-result" ng-show="PageState.places.length > ((PageState.resultSetPage+1) * PageState.resultPageSize)" ng-click="PageState.resultSetPage = PageState.resultSetPage + 1;">Page Forward</li>
                 </ul>
             </td>
+
         </tr>
     </table>
 </div>
