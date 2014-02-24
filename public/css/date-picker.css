@@ -36,6 +36,7 @@
     -webkit-transition:0.38s all;
     background-color: rgba(111,1,1,0.9);
     font-style: normal;
+    color: #ffffff;
 }
 
 .day-picker > li:nth-child(-n+7){
