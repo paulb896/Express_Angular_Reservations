@@ -13,6 +13,11 @@
     font-weight: 900;
 }
 
+.dayOfMonth{
+    align: center;
+    vertical-align: middle;
+}
+
 .date-picker{
     display: inline-table;
     width: 50%;
@@ -30,6 +35,7 @@
     animation-timing-function: linear;
     -webkit-transition:0.38s all;
     background-color: rgba(111,1,1,0.9);
+    font-style: normal;
 }
 
 .day-picker > li:nth-child(-n+7){
@@ -39,13 +45,16 @@
     color:  rgba(86,1,1,0.89);
     cursor: default;
     font-family: monospace times;
+    height:10px;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .day-floating-tile{
-    -webkit-box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
-    -moz-box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
-    box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
-    font-family: sans-serif;
+    -webkit-box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4) inset;
+    -moz-box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4) inset;
+    box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4) inset;
+    font-family: monospace, "DejaVu Sans Mono";
     -webkit-transition:0.18s all;
     -moz-transition:0.18s all;
     -ms-transition:0.18s all;
@@ -56,24 +65,28 @@
     margin-top: 10px;
     display:inline-table;
     cursor:pointer;
-    font-weight: 800;
-    width: 15px;
-    height:15px;
+    width: 35px;
+    height:35px;
+    text-align: center;
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: 200;
 }
 
 .day-floating-tile:not(.day-selected){
-    background-color: rgba(22, 12, 12, 0.6);
+    background-color: rgba(22, 12, 12, 0.5);
     color: #ffffff;
 }
 
 .day-selected{
     background-color: rgba(76,1,1,0.89);
     color: #ffffff;
+    font-weight: 900;
 }
 
 .floatingTile {
-    width: 35px;
-    height: 35px;
+    #width: 35px;
+    #height: 35px;
     padding: 5px;
 }
 
