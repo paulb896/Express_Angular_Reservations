@@ -20,9 +20,9 @@
 
 .date-picker{
     display: inline-table;
-    width: 50%;
+    width: 39%;
     padding-left: 30px;
-    float: left;
+    float: right;
 }
 
 .day-picker-size{

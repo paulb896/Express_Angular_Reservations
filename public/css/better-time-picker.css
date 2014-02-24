@@ -78,7 +78,7 @@
     width: 100%;
     padding-top: 20px;
     font-size: 27px;
-    font-family: monospace times;
+    font-family: monospace times, "Times New Roman";
 }
 
 .time-header > span{
