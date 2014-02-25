@@ -13,6 +13,12 @@
     height: 234px;
 }
 
+.map-link{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 140%;
+    text-decoration:none;
+}
+
 .phone-number{
     font-size: 130%;
     color: rgba(8,8,78,0.87);
