@@ -57,7 +57,7 @@
     padding-left: 20px;
     padding-right: 50px;
     padding-bottom: 10px;
-    padding-top: 20px;
+    padding-top: 6px;
     background-color: rgba(245,245,246,0.8);
     z-index: 10;
     font-size: 115%;
@@ -114,8 +114,8 @@
 }
 
 .logo{
-    width:70px;
-    height:40px;
+    width:130px;
+    height:87px;
     z-index: 9005;
     display: inline;
     margin-bottom: -6px;
@@ -124,6 +124,7 @@
 .main-title{
     display: inline;
     font-size:35px;
+    vertical-align: top;
 }
 
 .powered-by-google{
