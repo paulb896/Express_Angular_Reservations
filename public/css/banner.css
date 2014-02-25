@@ -58,7 +58,7 @@
     padding-right: 50px;
     padding-bottom: 10px;
     padding-top: 6px;
-    background-color: rgba(245,245,246,0.8);
+    background-color: transparent;
     z-index: 10;
     font-size: 115%;
     color:rgba(111,1,1,0.9);
@@ -69,7 +69,7 @@
 .banner-right{
     width: 38%;
     padding-bottom: 10px;
-    background-color: rgba(245,245,246,0.8);
+    background-color: transparent;
     z-index: 10;
     margin-left: 53%;
     position: fixed;
