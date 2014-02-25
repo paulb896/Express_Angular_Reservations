@@ -112,15 +112,19 @@
     display: inline-block;
     background-color: transparent;
     background-size: 100%;
+    margin-top: 5px;
 }
 
 .place-type:hover{
-    background-color: rgba(111,1,1,0.9);
+    #background-color: rgba(130, 55, 55, 0.4);
+    -webkit-box-shadow:1px 4px 10px rgba(130, 55, 55, 0.4);
+    -moz-box-shadow:1px 4px 10px rgba(130, 55, 55, 0.4);
+    box-shadow:1px 4px 10px rgba(130, 55, 55, 0.4);
 }
 
 .place-search-input{
     font-size:20px;
-    padding: 10px;
+    padding: 8px;
     font-family: 'Noto Serif', serif;
     color:black;
     border-bottom: solid 2px black;
@@ -151,7 +155,7 @@ td{
     font-size: 16px;
     font-weight: 700;
     width: 100%;
-    margin-top: 5px;
+    margin-top: 2px;
     padding-right: 0;
     text-align: center;
     background-color:#F0EDE5;

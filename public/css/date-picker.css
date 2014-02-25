@@ -50,9 +50,9 @@
 }
 
 .day-floating-tile{
-    -webkit-box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4) inset;
-    -moz-box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4) inset;
-    box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4) inset;
+    -webkit-box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
+    -moz-box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
+    box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
     font-family: monospace, "DejaVu Sans Mono";
     -webkit-transition:0.18s all;
     -moz-transition:0.18s all;
@@ -78,11 +78,11 @@
 }
 
 .day-selected{
-    box-shadow: none;
     -webkit-box-shadow:none;
-    -moz-box-shadow: none;
+    -moz-box-shadow:none;
+    box-shadow:none;
     color: rgba(88,88,88,1);
-    font-weight: 300;
+    font-weight: 600;
     font-family: fantasy;
 }
 
