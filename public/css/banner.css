@@ -187,4 +187,6 @@
 .user-info{
     display: inline-block;
     font-style: italic;
+    float: right;
+    margin-right: 10px;
 }
