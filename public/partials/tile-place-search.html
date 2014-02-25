@@ -1,8 +1,9 @@
 <div ng-controller="placeSearchController" ng-init="initialize();" class="place-search">
     <table class="place-table">
         <tr style="background-color:#F0EDE5;">
-            <td style="padding: 5px;"><input ng-model="placeSearch" type="input" class="place-search-input" placeholder="Place Name"/></td>
-            <td>
+            <td style="padding: 15px;"><input ng-model="placeSearch" type="input" class="place-search-input" placeholder="Place Name"/></td>
+            <td style="padding-left: 60px; padding-right: 60px;"></td>
+            <td style="padding-left: 65px;">
                 <div ng-repeat="placeType in PageState.placeTypesShort" ng-click="updatePlaceType(placeSearch, placeType.name)"
                      ng-class="placeType.name"
                      class="place-type">
