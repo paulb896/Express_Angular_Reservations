@@ -116,6 +116,7 @@
 .month-picker {
     height: 25px;
     margin-bottom: 30px;
+    margin-top: 15px;
 }
 
 .month-picker > * {

@@ -44,6 +44,13 @@ angular.module('reserveTheTime.place.controller', [])
                     animation: google.maps.Animation.DROP
                 });
 
+                var zoomLevel = '17';
+                $scope.mapLinkLocation = "https://www.google.ca/maps/place/"
+                    + details.result.name
+                    + "/@" + details.result.geometry.location.lat
+                    + "," + place.geometry.lng
+                    + "," +zoomLevel + "z";
+
                 $scope.mapLoaded = true;
 //                var maps = document.getElementsByName("map-canvas");
 //                console.log(maps);
