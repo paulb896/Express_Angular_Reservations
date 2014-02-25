@@ -55,14 +55,14 @@
 }
 
 .selected-hour{
-    font-size: 66px;
+    font-size: 86px;
     cursor: pointer;
     font-weight: 500;
-    margin-left:15%;
+    margin-left:9%;
 }
 
 .selected-minute{
-    font-size: 66px;
+    font-size: 86px;
     cursor: pointer;
     font-weight: 500;
 }
