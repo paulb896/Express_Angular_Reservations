@@ -159,7 +159,7 @@
 }
 
 .selected-date{
-    font-size: 150%;
+    font-size: 120%;
     color:rgba(8,8,105,0.57);
     font-weight:300;
     margin-right: 5px;
@@ -170,7 +170,7 @@
 
 
 .selected-place{
-    font-size: 184%;
+    font-size: 134%;
     font-style: oblique;
     letter-spacing: 2px;
     font-style: italic;
