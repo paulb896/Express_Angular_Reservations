@@ -48,7 +48,7 @@ angular.module('reserveTheTime.place.controller', [])
                 $scope.mapLinkLocation = "https://www.google.ca/maps/place/"
                     + details.result.name
                     + "/@" + details.result.geometry.location.lat
-                    + "," + details.geometry.lng
+                    + "," + details.result.geometry.location.lng
                     + "," +zoomLevel + "z";
 
                 $scope.mapLoaded = true;
