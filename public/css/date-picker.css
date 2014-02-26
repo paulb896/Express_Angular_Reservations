@@ -89,12 +89,14 @@
 }
 
 .day-selected{
-    -webkit-box-shadow:none;
-    -moz-box-shadow:none;
-    box-shadow:none;
-    color: rgba(88,88,88,1);
-    font-weight: 600;
-    font-family: fantasy;
+    -webkit-box-shadow:1px 4px 10px white;
+    -moz-box-shadow:1px 4px 10px white;
+    box-shadow:1px 4px 10px white;
+    /*-webkit-box-shadow:none;*/
+    /*-moz-box-shadow:none;*/
+    /*box-shadow:none;*/
+    /*color: rgba(88,88,88,1);*/
+    font-weight: 900;
 }
 
 .floatingTile {
