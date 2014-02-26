@@ -74,7 +74,7 @@
 }
 
 .reserve:hover{
-    background-color: rgba(111,1,1,0.2);;
+    text-decoration: underline;
     color: white;
     -webkit-transition:1.78s all;
     -moz-transition:1.78s all;
