@@ -157,8 +157,8 @@
 }
 
 .month-picker > span:not(.month-selected){
-    color: lightgray;
-    border: solid #ffffff 1px;
+    color: dimgray;
+    border: solid transparent 1px;
     width: 20px;
 }
 

@@ -101,7 +101,7 @@ body{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
+    background-color: rgba(211,212,222,0.18);
 }
 
 body > div{

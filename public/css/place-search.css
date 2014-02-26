@@ -114,6 +114,7 @@
     background-size: 100%;
     margin-top: 13px;
     margin-right: 5px;
+    border-radius: 25px;
 }
 
 .place-type:hover{
