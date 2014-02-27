@@ -80,6 +80,7 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         }
 
         console.log("date initialized", $scope.UserSelection);
+        Draggable.create("#date-picker", {type:"y", edgeResistance:0.3, throwProps:true,bounds:{heigjt:600, bottom:100, left:0, top:-110}});
     };
 
     $scope.updateReservations = function(){

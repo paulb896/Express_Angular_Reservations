@@ -50,6 +50,8 @@
     border: solid 1px black;
     margin-left: 20px;
     width: 94%;
+    position: absolute;
+    z-index: 1000;
 }
 
 .banner-left{

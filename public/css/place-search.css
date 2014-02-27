@@ -115,6 +115,7 @@
     margin-top: 13px;
     margin-right: 5px;
     border-radius: 25px;
+    cursor: pointer;
 }
 
 .place-type:hover{

@@ -1,4 +1,4 @@
-<div ng-controller="datePickerController" ng-init="initializeDate();" class="date-picker">
+<div ng-controller="datePickerController" ng-init="initializeDate();" class="date-picker" id="date-picker">
     <div class="month-picker">
         <span class="month-size" ng-class="{true:'month-selected', false:''}[(monthModel.monthNumber)==monthSelected]"
               ng-repeat="(monthNumber, monthModel) in PageState.months" ng-click="setMonth(monthModel.monthNumber);">
