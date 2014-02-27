@@ -93,8 +93,8 @@
 .place-search{
     width: 33%;
     display: inline-table;
-    margin-top: 30px;
     padding: 0;
+
 }
 
 .place-selected{
@@ -165,8 +165,6 @@ td{
     margin-right: 10px;
     cursor: pointer;
 }
-
-
 
 .stripe{
     background-color: red;

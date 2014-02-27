@@ -114,8 +114,8 @@
 }
 
 .logo{
-    width:130px;
-    height:87px;
+    width:65px;
+    height:35px;
     z-index: 9005;
     display: inline;
     margin-bottom: -6px;
@@ -124,7 +124,7 @@
 .main-title{
     display: inline;
     font-size:35px;
-    vertical-align: top;
+    vertical-align: inherit;
 }
 
 .powered-by-google{

@@ -54,5 +54,7 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
                 $scope.searchPlaces($scope.placeSearch);
             }
         });
+
+        Draggable.create("#place-table", {type:"y", edgeResistance:0.1, throwProps:true,bounds:{top:0, left:0}});
     };
 }]);
