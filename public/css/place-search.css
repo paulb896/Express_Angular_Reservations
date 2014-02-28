@@ -94,7 +94,8 @@
     width: 33%;
     display: inline-table;
     padding: 0;
-
+    padding-right: 45px;
+    border-right:solid rgba(13,1,1,0.1) 1px;
 }
 
 .place-selected{
@@ -172,7 +173,7 @@ td{
 }
 
 .place-result-color:not(.place-selected):hover{
-    background-color: rgba(111,1,1,0.9);
+    background-color: rgb(26,98,177);
     color:white;
 }
 

@@ -7,7 +7,7 @@
     display: inline-table;
     z-index: 4002;
     padding: 0;
-    zoom:60%;
+    zoom:70%;
     position: absolute;
     opacity: 0.6;
     -webkit-transition:1.28s all;
@@ -41,7 +41,6 @@
     border-radius:100px;
     position:relative;
     left:22px;
-    top:32px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -80,7 +79,7 @@
 }
 
 .time-header > span{
-    font-weight: 900;
+    font-weight: 300;
 }
 
 .time-header > span:hover{
