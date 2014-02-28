@@ -36,7 +36,6 @@
 .banner-content{
     height: 50px;
     list-style-type:none;
-    padding-left: 0;
     text-align: left;
     float:right;
     width: 70%;
@@ -44,14 +43,17 @@
 
 
 .banner-container{
-    background-color: red;
-    height: 247px;
-    background-color: rgba(245,245,246,0.8);
-    border: solid 1px black;
-    margin-left: 20px;
-    width: 94%;
+    height: 187px;
+    background-color: #ffffff;
+    border: solid 1px lightgray;
+    margin-left: -40px;
+    width: 105%;
     position: absolute;
     z-index: 1000;
+    padding: 20px;
+    -moz-box-shadow:5px 4px 10px rgba(22,22,3,0.2);
+    box-shadow:5px 4px 10px rgba(22,22,3,0.2);
+    -webkit-box-shadow:5px 4px 10px rgba(22,22,3,0.2);
 }
 
 .banner-left{
