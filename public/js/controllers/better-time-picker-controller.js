@@ -28,7 +28,7 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
             $scope.setHourPicker();
         }
 
-        Draggable.create("#better-time-picker", {type:"y", edgeResistance:0.3, throwProps:true,bounds:{height:600, bottom:0, left:0, maxY:250, minY:0}});
+        Draggable.create("#better-time-picker", {type:"x", edgeResistance:0.3, throwProps:true,bounds:{height:600, bottom:0, left:0, maxX:250, minX:-250}});
     };
 
     $scope.clearTimeCircle = function() {
