@@ -10,10 +10,6 @@
     zoom:70%;
     position: absolute;
     opacity: 0.6;
-    -webkit-transition:1.28s all;
-    -moz-transition:1.28s all;
-    -ms-transition:1.28s all;
-    transition:1.28s all;
 }
 
 .better-time-picker:hover{

@@ -55,6 +55,6 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
             }
         });
 
-        Draggable.create("#found-places", {type:"y", edgeResistance:0.3, throwProps:true,bounds:{heigjt:600, bottom:100, left:0, top:-110}});
+        Draggable.create("#found-places", {type:"y", edgeResistance:0.3, throwProps:true,bounds:{height:600, bottom:100, left:0, top:-110}});
     };
 }]);

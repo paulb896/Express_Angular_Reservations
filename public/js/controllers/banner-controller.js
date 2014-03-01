@@ -17,6 +17,7 @@ angular.module('reserveTheTime.controllers.banner', [])
             PageState.currentDate = new Date();
             $scope.startTime();
         }, 1000);
+
     };
 
     $scope.loadUser = function() {

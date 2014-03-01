@@ -68,6 +68,7 @@
     color:rgba(111,1,1,0.9);
     display: inline-table;
     position: fixed;
+    border-right:solid rgb(209,209,209) 1px;
 }
 
 .banner-right{
