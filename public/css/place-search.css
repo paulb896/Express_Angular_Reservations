@@ -95,7 +95,6 @@
     display: inline-table;
     padding: 0;
     padding-right: 45px;
-    border-right:solid rgba(13,1,1,0.1) 1px;
 }
 
 .place-selected{
