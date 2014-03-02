@@ -44,16 +44,13 @@
 
 .banner-container{
     height: 245px;
-    background-color: #ffffff;
+    background-color:#ffffff;
     border: solid 1px lightgray;
     margin-left: -40px;
     width: 105%;
     position: absolute;
     z-index: 1000;
     padding: 20px;
-    -moz-box-shadow: 3px 4px 10px rgba(22,22,3,0.15);
-    box-shadow:3px 4px 10px rgba(22,22,3,0.15);
-    -webkit-box-shadow:3px 4px 10px rgba(22,22,3,0.15);
 }
 
 .banner-left{
@@ -169,8 +166,7 @@
     font-weight:300;
     margin-right: 5px;
     font-weight: 300;
-    font-family: inherit;
-    font-style: oblique;
+    float: right;
 }
 
 

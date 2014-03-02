@@ -52,7 +52,6 @@
 }
 
 .found-places{
-    height: 563px;
     overflow: hidden;
     width:100%;
     margin: 0;
@@ -161,7 +160,7 @@ td{
     margin-top: 2px;
     padding-right: 0;
     text-align: center;
-    background-color:#F0EDE5;
+    background-color:rgba(200,222,211,0.2);
     display: inline-table;
     margin-right: 10px;
     cursor: pointer;
