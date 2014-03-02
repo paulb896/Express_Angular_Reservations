@@ -176,6 +176,8 @@
     letter-spacing: 2px;
     font-style: italic;
     font-weight:200;
+    text-align: right;
+    float: right;
 }
 
 .user-image{
