@@ -160,7 +160,7 @@ td{
     margin-top: 2px;
     padding-right: 0;
     text-align: center;
-    background-color:rgba(200,222,211,0.2);
+    background-color:transparent;
     display: inline-table;
     margin-right: 10px;
     cursor: pointer;
