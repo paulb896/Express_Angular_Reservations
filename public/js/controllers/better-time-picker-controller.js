@@ -73,7 +73,7 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
     {
         var hour = $scope.UserSelection.selectedDate.getHours() + 12;
         if (hour > 23) {
-            hour = hour - 23;
+            hour = hour - 24;
         }
         $scope.UserSelection.selectedDate.setHours(hour);
     }
