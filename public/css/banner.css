@@ -194,7 +194,7 @@
     background-color: rgba(12,22,22,0.7);
     font-style: oblique;
     border:solid black 1px;
-    text-shadow: 2px 2px lightgrey;
+    text-shadow: 3px 3px rgba(120,120,120,0.8);
 }
 
 
