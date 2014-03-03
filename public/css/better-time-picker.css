@@ -23,12 +23,13 @@
 .hour{
     cursor: pointer;
     position: absolute;
-    color:darkslategray;
-    font-size: 250%;
+    color: darkgrey;
+    font-size: 280%;
     width: 50px;
     height: 50px;
     text-align: center;
     margin: 10px;
+    font-family: Monaco;
 }
 
 .hours-circle{
