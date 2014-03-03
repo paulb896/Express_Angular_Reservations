@@ -206,8 +206,7 @@
 }
 
 .user-image{
-    border-radius: 30px;
-    padding: 1px;
+    padding-left: 20px;
     border-width: 1px;
     height: 35px;
     float: right;
@@ -218,5 +217,5 @@
     font-style: italic;
     float: right;
     margin-right: 40px;
-
+    color:#ffffff;
 }
