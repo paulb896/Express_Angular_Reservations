@@ -95,8 +95,8 @@
     background-repeat: no-repeat;
     background-size:100%;
     background-image: url("../img/calendar.svg");
-    background-position-x:-100px;
-    background-position-y:-65px;
+    background-position-x:-200px;
+    background-position-y:0px;
 }
 
 .current-date-info{
