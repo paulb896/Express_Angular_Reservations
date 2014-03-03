@@ -1,13 +1,11 @@
 <div ng-controller="bannerController" ng-class="{'spin-component': UserSelection.place.name.length > 0}" class="banner banner-right banner-height" ng-init="loadUser()">
-    <ul class="banner-content" ng-controller="tileNavigationController">
-        <li>
-            <span class="selected-date"><div style="font-weight: 900;">Selected Date</div><div ng-bind="UserSelection.selectedDate | date:'EEEE MMMM d, y  h:mm a'"></div></span>
-        </li>
-        <li>
-            <span ng-show="UserSelection.place.name" class="selected-place" ng-bind="UserSelection.place.name"></span>
-        </li>
-        <li ng-show="PageState.session.userProfile" ng-controller="reservationController">
+    <span class="banner-content" ng-controller="tileNavigationController">
+
+        <span class="selected-date"><div style="font-weight: 900;">Selected Date</div><div ng-bind="UserSelection.selectedDate | date:'EEEE MMMM d, y  h:mm a'"></div></span>
+        <span ng-show="UserSelection.place.name" class="selected-place" ng-bind="UserSelection.place.name"></span>
+
+        <span ng-show="PageState.session.userProfile" ng-controller="reservationController">
             <span class="reservation-input reserve day-floating-tile" ng-click="reserve();">Remember time and place</span>
-        </li>
-    </ul>
+        </span>
+    </span>
 </div>
