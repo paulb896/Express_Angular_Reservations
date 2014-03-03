@@ -92,16 +92,15 @@
     z-index: 0;
     opacity: 0.4;
     background-repeat: no-repeat;
-    background-size: 82%;
+    background-size:100%;
     background-image: url("../img/calendar.svg");
-    background-position-x:-180%;
-    background-position-y:-66px;
+    background-position-x:-100px;
+    background-position-y:-65px;
 }
 
 .current-date-info{
     margin-top: 48px;
-    -webkit-transform:skew(-25deg, 5deg);
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .current-date-label{
