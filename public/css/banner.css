@@ -179,15 +179,15 @@
 }
 
 .selected-date{
-    font-size: 158%;
-    color:#ffffff;
+    font-size: 170%;
+    color:rgba(22,112,122,1);
     font-weight:300;
     margin-right: 5px;
     font-weight: 300;
     float: right;
-    text-align: right;
+    text-align: center;
     width: 220px;
-    background-color: rgba(1,2,1,0.7);
+    #background-color: rgba(1,2,1,0.7);
     padding-top:20px;
     padding-right: 20px;
     height: 122px;
