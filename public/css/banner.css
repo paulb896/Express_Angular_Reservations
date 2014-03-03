@@ -90,15 +90,18 @@
     height: 900px;
     width: 100%;
     z-index: 0;
-    opacity: 0.8;
+    opacity: 0.4;
     background-repeat: no-repeat;
-    background-size: 42%;
+    background-size: 82%;
     background-image: url("../img/calendar.svg");
-    background-position-x:350px;
+    background-position-x:-180%;
+    background-position-y:-66px;
 }
 
 .current-date-info{
-    margin-top: 20px;
+    margin-top: 48px;
+    -webkit-transform:skew(-25deg, 5deg);
+    margin-left: 40px;
 }
 
 .current-date-label{
