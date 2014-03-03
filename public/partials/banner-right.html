@@ -7,11 +7,11 @@
             </div>
         </li>
         <li>
+            <span class="selected-date" ng-bind="UserSelection.selectedDate | date:'EEEE MMMM d, y  h:mm a'"></span>
             <div class="user-info" ng-show="PageState.session.userProfile">
                 <img class="user-image" ng-src="{{PageState.session.userProfile.image.url}}"/>
                 <span>Hello </span><span ng-bind="PageState.session.userProfile.name.givenName">!</span>
             </div>
-            <span class="selected-date" ng-bind="UserSelection.selectedDate | date:'EEEE MMMM d, y  h:mm a'"></span>
         </li>
         <li>
             <span ng-show="UserSelection.place.name" class="selected-place" ng-bind="UserSelection.place.name"></span>
