@@ -209,6 +209,8 @@
     border-radius: 30px;
     padding: 1px;
     border-width: 1px;
+    height: 35px;
+    float: right;
 }
 
 .user-info{

@@ -4,6 +4,10 @@
     <span ng-controller="bannerController" ng-hide="PageState.session.userProfile">
         <% include login.html %>
     </span>
+    <span class="user-info" ng-show="PageState.session.userProfile">
+        <img class="user-image" ng-src="{{PageState.session.userProfile.image.url}}"/>
+        <span>Hello </span><span ng-bind="PageState.session.userProfile.name.givenName">!</span>
+    </span>
 </div>
 <div class="banner-container">
     <div class="banner-full"></div>
