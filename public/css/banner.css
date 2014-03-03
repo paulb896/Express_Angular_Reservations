@@ -41,7 +41,6 @@
     width: 70%;
 }
 
-
 .banner-container{
     height: 245px;
     background-color:#ffffff;
@@ -52,6 +51,7 @@
     z-index: 1000;
     padding: 20px;
     overflow: hidden;
+    border-top:solid rgba(111,1,1,0.9) 31px;
 }
 
 .banner-left{
@@ -66,6 +66,7 @@
     color:rgba(111,1,1,0.9);
     display: inline-table;
     position: fixed;
+    margin-top: -60px;
 }
 
 .banner-right{
@@ -89,7 +90,7 @@
     height: 900px;
     width: 100%;
     z-index: 0;
-    opacity: 0.5;
+    opacity: 0.8;
     background-repeat: no-repeat;
     background-size: 100%;
     background-image: url("../img/calendar.svg");
@@ -129,17 +130,20 @@
 }
 
 .logo{
-    width:65px;
-    height:35px;
+    width:35px;
+    height:20px;
     z-index: 9005;
     display: inline;
-    margin-bottom: -6px;
+    margin-top: 4px;
 }
 
 .main-title{
     display: inline;
-    font-size:35px;
+    font-size:29px;
     vertical-align: inherit;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: inherit;
 }
 
 .powered-by-google{
