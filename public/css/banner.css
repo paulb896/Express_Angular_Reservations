@@ -39,6 +39,7 @@
     text-align: left;
     float:right;
     width: 70%;
+    margin: 0;
 }
 
 .banner-container{
@@ -178,7 +179,7 @@
 }
 
 .selected-date{
-    font-size: 130%;
+    font-size: 118%;
     color:#ffffff;
     font-weight:300;
     margin-right: 5px;
