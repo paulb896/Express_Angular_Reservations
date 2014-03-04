@@ -186,17 +186,15 @@
     float: right;
     text-align: center;
     width: 350px;
-    #background-color: rgba(1,2,1,0.7);
-    padding-top:20px;
+    padding-top:5px;
     padding-right: 30px;
-    height: 122px;
-    margin-top: 16px;
+    height: 152px;
+    margin-top: 5px;
     background-color: rgba(12,22,22,0.7);
     font-style: oblique;
     border:solid black 1px;
     text-shadow: 3px 3px rgba(120,120,120,0.8);
 }
-
 
 .selected-place{
     font-size: 134%;
@@ -205,7 +203,6 @@
     font-style: italic;
     font-weight:200;
     text-align: right;
-    float: right;
 }
 
 .user-image{
