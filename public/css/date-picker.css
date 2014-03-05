@@ -64,7 +64,6 @@
     -webkit-box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
     -moz-box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
     box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
-    font-family: monospace, "DejaVu Sans Mono";
     -webkit-transition:0.18s all;
     -moz-transition:0.18s all;
     -ms-transition:0.18s all;
@@ -79,13 +78,15 @@
     height:35px;
     text-align: center;
     font-size: 20px;
-    font-style: oblique;
     font-weight: 200;
+    font-family: 'Fjalla One', sans-serif;
+    text-shadow: 2px 2px rgba(120, 120, 120,0.7);
 }
 
 .day-floating-tile:not(.day-selected){
-    background-color: rgba(22, 12, 12, 0.5);
+    background-color: rgba(22, 22, 22, 0.7);
     color: #ffffff;
+
 }
 
 .day-selected{
