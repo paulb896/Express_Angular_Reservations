@@ -1,15 +1,13 @@
 .better-time-picker{
     width: 300px;
     height: 400px;
-    background-color: transparent;
     color:rgba(98, 98, 98, 1);
     text-shadow: 1px 1px 3px rgba(215, 215, 233, 1);
     display: inline-table;
-    z-index: 4002;
+    z-index: 14002;
     padding: 0;
-    position: absolute;
+    margin-top: 90px;
     opacity: 0.7;
-    zoom:0.7;
 }
 
 .better-time-picker:hover{
