@@ -164,7 +164,7 @@ td{
     display: inline-table;
     margin-right: 10px;
     cursor: pointer;
-    box-shadow: 2px 4px 3px rgba(1,2,2,0.4);
+    box-shadow: 2px 2px 3px rgba(1,2,2,0.4);
 }
 
 .stripe{
