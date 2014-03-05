@@ -45,7 +45,7 @@
 .banner-container{
     height: 150px;
     background-color:#ffffff;
-    border: solid 2px lightgray;
+
     margin-left: -40px;
     width: 105%;
     position: absolute;
@@ -53,6 +53,8 @@
     padding: 20px;
     overflow: hidden;
     padding-top: 0;
+
+    border: solid 2px lightgray;
     box-shadow: 2px 4px 12px rgba(1,2,2,0.4);
 }
 
