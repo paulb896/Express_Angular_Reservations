@@ -181,8 +181,8 @@
 }
 
 .selected-date{
-    font-size: 160%;
-    color:#ffffff;
+    font-size: 22px;
+    color:#eaeae2;
     margin-right: 23%;
     font-weight: 100;
     float: right;
@@ -192,7 +192,7 @@
     padding-right: 30px;
     height: 108px;
     margin-top: 5px;
-    background-color: rgba(12,22,22,0.4);
+    background-color: rgba(12,22,22,0.3);
     font-style: oblique;
     border:solid black 1px;
     text-shadow: 3px 3px rgba(120,120,120,0.8);
