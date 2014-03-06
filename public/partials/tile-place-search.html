@@ -5,7 +5,7 @@
             <td style="padding-left: 60px; padding-right: 60px;"></td>
             <td style="padding-left: 65px;">
                 <div ng-repeat="placeType in PageState.placeTypesShort" ng-click="updatePlaceType(placeSearch, placeType.name)"
-                     ng-class="{true:'place-type-selected', false:''}[placeType.name==UserSelection.placeType]; placeType.name"
+                     ng-class="{true:'place-type-selected '+placeType.name, false:placeType.name}[placeType.name==UserSelection.placeType]"
                      class="place-type">
                 </div>
             </td>

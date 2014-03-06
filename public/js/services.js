@@ -32,7 +32,7 @@ angular.module('reserveTheTime.services', [])
         "place": null,
         "attendee":"",
         "city":"",
-        "placeType":""
+        "placeType":"store"
     };
 })
 .value('version', '0.6')

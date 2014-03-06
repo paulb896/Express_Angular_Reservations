@@ -118,15 +118,10 @@
 }
 
 .place-type-selected{
-    background-color: red;
-    width: 100px;
-    height: 100px;
-    color: red;
-    margin-top: 100px;
+    background-color: rgba(111,1,1,0.9);
 }
 
 .place-type:hover{
-    #background-color: transparent;
     -webkit-box-shadow:0px 3px 8px rgba(130, 55, 55, 0.4);
     -moz-box-shadow:0px 3px 8px rgba(130, 55, 55, 0.4);
     box-shadow:0px 3px 8px rgba(130, 55, 55, 0.4);
