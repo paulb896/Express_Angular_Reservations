@@ -114,8 +114,15 @@
     background-size: 100%;
     margin-top: 13px;
     margin-right: 5px;
-    border-radius: 25px;
     cursor: pointer;
+}
+
+.place-type-selected{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    color: red;
+    margin-top: 100px;
 }
 
 .place-type:hover{

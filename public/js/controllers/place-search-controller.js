@@ -8,8 +8,6 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
  * Controller that handles place search requests
  */
 .controller('placeSearchController', ['$scope', 'UserSelection', 'PageState', 'placeService', function($scope, UserSelection, PageState, placeService) {
-    $scope.UserSelection = UserSelection;
-    $scope.PageState = PageState;
 
     $scope.searchPlaces = function(searchText) {
         console.log("SEARCH REQUEST, search text", searchText);
@@ -39,7 +37,8 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
     };
 
     $scope.updatePlaceType = function(searchText, placeType) {
-        UserSelection.placeType = placeType;
+        console.log("UPDATE PLACE", placeType, UserSelection.placeType);
+        $scope.UserSelection.placeType = placeType;
         if (!searchText || !searchText.length) {
             console.log("SEARCHING WITH PLACE TYPE");
             $scope.searchPlaces(placeType.substr(0, placeType.charAt('_')));
@@ -55,6 +54,7 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
             }
         });
 
-        //Draggable.create("#found-places", {type:"y", edgeResistance:0.3, throwProps:true,bounds:{height:600, bottom:100, left:0, top:0, maxY:0, minY:-600}});
+        $scope.UserSelection = UserSelection;
+        $scope.PageState = PageState;
     };
 }]);
