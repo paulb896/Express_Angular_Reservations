@@ -223,6 +223,12 @@ app.get('/places', function(req, res){
   })
 });
 
+
+
+
+
+
+
 /**
  * Respond with details about a given place
  */
