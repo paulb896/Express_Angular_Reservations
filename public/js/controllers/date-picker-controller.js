@@ -29,7 +29,7 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         $scope.PageState.days.push("S");
 
         // Add spacers for to set first day of week
-        var selectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, 1, 0);
+        var selectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber-1, 1, 0);
         for(var j = 1; j <= selectedDate.getDay(); j++) {
             $scope.PageState.days.push("'");
         }
