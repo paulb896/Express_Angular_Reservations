@@ -1,7 +1,7 @@
 <div ng-controller="bannerController" ng-class="{'spin-component': UserSelection.place.name.length > 0}" class="banner banner-right banner-height" ng-init="loadUser()">
     <span class="banner-content" ng-controller="tileNavigationController">
 
-        <span class="selected-date"><div style="font-weight: 900;">Selected Date</div><div ng-bind="UserSelection.selectedDate | date:'EEEE MMMM d, y  h:mm a'"></div></span>
+        <span class="selected-date"><div style="font-weight: 900; font-style: normal;">Selected Date</div><div ng-bind="UserSelection.selectedDate | date:'EEEE MMMM d, y  h:mm a'"></div></span>
         <span ng-show="UserSelection.place.name" class="selected-place" ng-bind="UserSelection.place.name"></span>
 
         <span ng-show="PageState.session.userProfile" ng-controller="reservationController">
