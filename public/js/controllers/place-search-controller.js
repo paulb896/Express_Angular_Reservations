@@ -14,7 +14,7 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
     $scope.searchPlaces = function(searchText) {
         console.log("SEARCH REQUEST, search text", searchText);
         Pace.start();
-        placeService.find(UserSelection.placeType, searchText).then(function(placeData) {
+        placeService.find(UserSelection.placeType, searchText, PageState.location).then(function(placeData) {
             // Send view an array of reservations for the current state
             //$scope.selectedDate.reservations = d;
             console.log("Data from place search: ", placeData);
