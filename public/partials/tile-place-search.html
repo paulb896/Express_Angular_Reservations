@@ -14,6 +14,14 @@
             <td></td>
         </tr>
         <tr>
+            <td>
+                Latitude <input ng-model="PageState.location.lat"/>
+            </td>
+            <td>
+                Longitude <input ng-model="PageState.location.lng"/>
+            </td>
+        </tr>
+        <tr>
             <td colspan="3">
                 <ul class="found-places" id="found-places">
                     <li ng-hide="PageState.places.length" class="place-result">Search results will show here</li>
