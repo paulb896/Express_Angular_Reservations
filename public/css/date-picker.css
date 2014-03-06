@@ -118,7 +118,7 @@
 }
 
 .month-name{
-    padding: 10px 22px 2px 0px;
+    padding: 2px 22px 2px 0px;
     font-size: 23px;
     position: absolute;
     z-index: 3001;
