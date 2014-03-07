@@ -16,9 +16,8 @@
     background-size: 100%;
     width: 150px;
     height: 28px;
-    margin-left: 20%;
-    float: right;
     margin-right: 5px;
+    z-index: 1000;
 }
 
 #login

@@ -105,16 +105,19 @@
 }
 
 .current-date-label{
-    font-size: 120%;
+    font-size: 30px;
     width: 25%;
     display: inline;
     margin-right: 5px;
+    text-shadow: 2px 2px 4px rgba(118,118,118,0.4);
+
 }
 
 .current-date{
-    color:rgba(8,8,78,0.87);
+    text-shadow: 2px 2px 4px rgba(118,118,118,0.3);
+    color:rgba(8,8,120,1);
     display: inline;
-    font-size: 105%;
+    font-size: 26px;
     font-family: serif;
 }
 
@@ -142,11 +145,12 @@
     display: block;
     font-size:54px;
     vertical-align: inherit;
-    color: rgba(86,1,1,0.89);
+    color: rgb(177,33,6);
+    text-shadow: 2px 1px 3px rgb(190,177,177);
     font-weight: 500;
     font-style: italic;
-    margin-left: 400px;
-    margin-top: 140px;
+    margin-left: 217px;
+    margin-top: 118px;
     position: absolute;
     -webkit-transform: skew(-15deg,-2deg) rotate(7deg);
     transform:skew(-15deg,-2deg) rotate(7deg);
@@ -189,8 +193,8 @@
 }
 
 .selected-date{
-    font-size: 22px;
-    color:#ffffff;
+    font-size: 25px;
+    color:#000000;
     margin-right: 23%;
     font-weight: 100;
     float: right;
@@ -199,10 +203,8 @@
     padding-top:5px;
     padding-right: 30px;
     height: 90px;
-    margin-top: 5px;
-    background-color: rgba(12,22,22,0.45);
+    margin-top: 155px;
     font-style: oblique;
-    border:solid black 1px;
     text-shadow: 2px 2px 3px rgba(120,120,120,0.8);
     z-index: 1000;
     position: absolute;

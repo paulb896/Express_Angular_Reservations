@@ -1,4 +1,6 @@
 <span ng-controller="bannerController" ng-init="startTime()" class="banner banner-left banner-height">
+    <h2 class="current-date-label">It's Currently </h2>
+    <span class="current-date" ng-bind="PageState.currentDate | date:'MMMM dd hh:mm:ss a'"></span>
     <span  ng-hide="PageState.session.userProfile">
         <% include login.html %>
     </span>
@@ -6,6 +8,4 @@
         <img class="user-image" ng-src="{{PageState.session.userProfile.image.url}}"/>
         <span>Hello </span><span ng-bind="PageState.session.userProfile.name.givenName">!</span>
     </span>
-    <h2 class="current-date-label">It's Currently </h2>
-    <span class="current-date" ng-bind="PageState.currentDate | date:'MMMM dd hh:mm:ss a'"></span>
 </span>
