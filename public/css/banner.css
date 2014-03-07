@@ -65,10 +65,9 @@
     font-size: 115%;
     color:rgba(111,1,1,0.9);
     display: inline;
-    float: left;
-    position: absolute;
-    margin-left: 30%;
+    float: right;
     width: 700px;
+    margin-right: 50px;
 }
 
 .banner-right{
@@ -91,7 +90,7 @@
     position: absolute;
     width:1700px;
     height: 100%;
-    background-position: -749px -5px;
+    background-position: -579px 15px;
     background-size: 130%;
     background-attachment: scroll;
     background-repeat: no-repeat;
