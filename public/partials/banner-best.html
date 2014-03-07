@@ -1,0 +1,15 @@
+<div style="float: right; margin-right: 120px;" ng-controller="bannerController" ng-init="startTime()">
+    <h2 class="current-date-label">It's Currently </h2>
+    <span class="current-date" ng-bind="PageState.currentDate | date:'MMMM dd hh:mm:ss a'"></span>
+</div>
+<div style="float: right; margin-right: 120px;" ng-controller="bannerController">
+    <div class="selected-date">Selected Date
+        <div ng-bind="UserSelection.selectedDate | date:'EEEE MMMM d, y  h:mm a'">
+    </div>
+    <span ng-show="UserSelection.place.name" class="selected-place" ng-bind="UserSelection.place.name"></span>
+
+    <span ng-show="PageState.session.userProfile" ng-controller="reservationController">
+        <span class="reservation-input reserve day-floating-tile" ng-click="reserve();">Remember time and place</span>
+    </span>
+    </div>
+</div>
