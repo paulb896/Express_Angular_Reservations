@@ -1,10 +1,10 @@
 @media only screen and (min-width: 1501px) {
     .banner-width{
-        width: 38%;
+        width: 750px;
     }
 
     .banner-height{
-        height: 215px;
+        height: 115px;
     }
 
     .banner-content > li{
@@ -14,11 +14,11 @@
 
 @media only screen and (max-width: 1500px) {
     .banner-width{
-        width: 38%;
+        width: 450px;
     }
 
     .banner-height{
-        height: 215px;
+        height: 115px;
     }
 
     .banner-content > li{
@@ -43,9 +43,8 @@
 }
 
 .banner-container{
-    height: 270px;
+    height: 326px;
     background-color:#ffffff;
-
     margin-left: -40px;
     width: 105%;
     position: absolute;
@@ -53,52 +52,52 @@
     padding: 20px;
     overflow: hidden;
     padding-top: 0;
-
     border: solid 1px lightgray;
     box-shadow: 2px 4px 12px rgba(1,2,2,0.4);
 }
 
 .banner-left{
-    margin-left: 30px;
     padding-left: 20px;
     padding-right: 50px;
     padding-bottom: 10px;
-    padding-top: 6px;
     background-color: transparent;
     z-index: 10000;
     font-size: 115%;
     color:rgba(111,1,1,0.9);
-    display: inline-table;
-    position: fixed;
+    display: inline;
+    float: left;
+    position: absolute;
+    margin-left: 30%;
+    width: 700px;
 }
 
 .banner-right{
-    width: 48%;
+    width: 100px;
+    margin-top: 100px;
+    float: right;
     padding-bottom: 10px;
     background-color: transparent;
     z-index: 10;
-    margin-left: 62%;
-    position: fixed;
     color:rgba(111,1,1,0.9);
-    float:right;
-    display: inline-table;
-    margin-right: 20px;
+    display: inline;
+    margin-right:235px;
     padding-left: 17px;
-    padding-right: 10px;
+    padding-right: 20px;
     font-size: 18px;
+    z-index: 10000;
 }
 
 .banner-full{
     position: absolute;
-    height: 900px;
-    width: 100%;
-    z-index: 0;
-    opacity: 0.4;
+    width:1700px;
+    height: 100%;
+    background-position: -749px -5px;
+    background-size: 130%;
+    background-attachment: scroll;
     background-repeat: no-repeat;
-    background-size:121%;
-    background-image: url("../img/calendar.svg");
-    background-position-x:-467px;
-    background-position-y:0px;
+    z-index: 0;
+    opacity: 0.6;
+    background-image: url(../img/calendar.svg);
 }
 
 .current-date-info{
@@ -109,7 +108,7 @@
 .current-date-label{
     font-size: 120%;
     width: 25%;
-    display: table-cell;
+    display: inline;
     margin-right: 5px;
 }
 
@@ -121,11 +120,13 @@
 }
 
 .git-link{
-    display: block;
+    position: absolute;
+    text-align: center;
+    display: inline-table;
+    margin-left: 10px;
     margin-top: 10px;
     text-decoration: none;
     color:rgba(8,8,78,0.87);
-    display: block;
     font-size: 70%;
     text-shadow: 2px 2px rgba(188,188,188,0.8);
 }
@@ -139,22 +140,30 @@
 }
 
 .main-title{
-    display: inline;
-    font-size:22px;
+    display: block;
+    font-size:54px;
     vertical-align: inherit;
-    color: white;
+    color: rgba(86,1,1,0.89);
     font-weight: 500;
-    font-family: inherit;
-    vertical-align: text-bottom;
+    font-style: italic;
+    margin-left: 400px;
+    margin-top: 140px;
+    position: absolute;
+    -webkit-transform: skew(-15deg,-2deg) rotate(7deg);
+    transform:skew(-15deg,-2deg) rotate(7deg);
+    font-family: "Libre Baskerville";
+    font-style: italic;
 }
 
 .powered-by-google{
     background-image:url('../img/powered-by-google-on-white.png');
     width: 104px;
-    height: 16px;
+    height: 30px;
     background-size: 100%;
-    display: inline-block;
+    display: inline-table;
     vertical-align: text-bottom;
+    background-repeat: no-repeat;
+    z-index: 1000;
 }
 
 .spin-component{
@@ -196,6 +205,8 @@
     font-style: oblique;
     border:solid black 1px;
     text-shadow: 2px 2px 3px rgba(120,120,120,0.8);
+    z-index: 1000;
+    position: absolute;
 }
 
 .selected-place{

@@ -1,16 +1,5 @@
-<div style="height: 30px; background-color: rgba(12,37,63,0.52); padding-left:26px;" ng-controller="bannerController">
-    <embed src="img/calendar.svg" class="logo" type="image/svg+xml"/>
-    <h1 class="main-title">Reserve The Time</h1>
-    <span  ng-hide="PageState.session.userProfile">
-        <% include login.html %>
-    </span>
-    <span class="user-info" ng-show="PageState.session.userProfile">
-        <img class="user-image" ng-src="{{PageState.session.userProfile.image.url}}"/>
-        <span>Hello </span><span ng-bind="PageState.session.userProfile.name.givenName">!</span>
-    </span>
-</div>
-<div class="banner-container">
+<div class="banner-container" ng-controller="bannerController">
     <div class="banner-full"></div>
     <% include banner-left.html %>
-    <% include banner-right.html %>
+    <h1 class="main-title">Reserve The Time</h1>
 </div>

@@ -21,18 +21,18 @@
     cursor: pointer;
     position: absolute;
     color: darkgrey;
-    font-size: 280%;
-    width: 50px;
-    height: 50px;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
     text-align: center;
     margin: 10px;
     font-family: Monaco;
 }
 
 .hours-circle{
-    width:200px;
-    height:200px;
-    border-radius:100px;
+    width:248px;
+    height:248px;
     position:relative;
     left:22px;
     -webkit-touch-callout: none;

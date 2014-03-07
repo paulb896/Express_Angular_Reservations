@@ -1,11 +1,11 @@
-
-<span ng-controller="bannerController" ng-init="startTime()" class="banner banner-left banner-height banner-width">
-    <div class="current-date-info">
-        <h2 class="current-date-label">It's Currently </h2>
-        <span class="current-date" ng-bind="PageState.currentDate | date:'MMMM dd hh:mm:ss a'"></span>
-    </div>
-    <a class="git-link" href="https://github.com/paulb896/Express_Anguar_Reservations">
-        Source Code <img src="../img/github-icon-small.png">
-    </a>
-    <div class="powered-by-google"></div>
+<span ng-controller="bannerController" ng-init="startTime()" class="banner banner-left banner-height">
+    <span  ng-hide="PageState.session.userProfile">
+        <% include login.html %>
+    </span>
+    <span class="user-info" ng-show="PageState.session.userProfile">
+        <img class="user-image" ng-src="{{PageState.session.userProfile.image.url}}"/>
+        <span>Hello </span><span ng-bind="PageState.session.userProfile.name.givenName">!</span>
+    </span>
+    <h2 class="current-date-label">It's Currently </h2>
+    <span class="current-date" ng-bind="PageState.currentDate | date:'MMMM dd hh:mm:ss a'"></span>
 </span>
