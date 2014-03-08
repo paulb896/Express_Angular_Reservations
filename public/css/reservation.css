@@ -21,7 +21,7 @@
 }
 
 .reservation-input{
-    font-family: 'Noto Serif', serif;
+    font-family: inherit;
     font-size: 18px;
     color:black;
     width: 85%;
