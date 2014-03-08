@@ -14,10 +14,11 @@
     .selected-date-color{
         color:rgba(111,1,1,0.9);
         text-shadow: 2px 2px 3px rgba(120,120,120,0.8);
+        font-weight: 900;
     }
 
     .selected-date-background{
-        background-color: #ffffff;
+
     }
 }
 
@@ -35,6 +36,7 @@
     }
 
     .selected-date-color{
+        font-weight: 200;
         color:white;
         text-shadow: 2px 2px 2px rgba(1,1,1,1);
     }
@@ -163,7 +165,7 @@
     display: block;
     font-size:54px;
     vertical-align: inherit;
-    color: rgb(177,33,6);
+    color: rgb(128,26,6);
     text-shadow: 2px 1px 3px rgb(190,177,177);
     font-weight: 500;
     font-style: italic;
@@ -217,14 +219,12 @@
     display: inline-table;
     text-align: center;
     width: 315px;
-    padding-top:5px;
-    padding-right: 30px;
     height: 90px;
-    margin-top: 202px;
+    margin-top: 160px;
     font-style: oblique;
     z-index: 1000;
-    position: absolute;
-    width: 440px;
+    -webkit-transform: skew(-15deg,-2deg) rotate(7deg);
+    transform:skew(-15deg,-2deg) rotate(7deg);
 }
 
 .selected-place{
