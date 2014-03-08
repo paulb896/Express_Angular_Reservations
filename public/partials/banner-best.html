@@ -1,6 +1,9 @@
 <div style="float: right; margin-right: 201px;" ng-controller="bannerController" ng-init="startTime()">
     <h2 class="current-date-label">It's Currently </h2>
     <span class="current-date" ng-bind="PageState.currentDate | date:'MMMM dd hh:mm:ss a'"></span>
+    <span  ng-hide="PageState.session.userProfile">
+        <% include login.html %>
+    </span>
 </div>
 <div style="float: left; margin-left:396px; margin-top: -70px;" ng-controller="bannerController" class="selected-date-color">
     <div class="selected-date">
