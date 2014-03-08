@@ -108,6 +108,7 @@
 .banner-full{
     position: absolute;
     width:1700px;
+    opacity: 0.6;
     height: 100%;
     background-position: -600px 15px;
     background-size: 130%;
