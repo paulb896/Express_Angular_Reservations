@@ -4,6 +4,10 @@
     <span ng-hide="PageState.session.userProfile">
         <% include login.html %>
     </span>
+    <span class="user-info" ng-show="PageState.session.userProfile">
+        <img class="user-image" ng-src="{{PageState.session.userProfile.image.url}}"/>
+        <span>Hello </span><span ng-bind="PageState.session.userProfile.name.givenName">!</span>
+    </span>
 </div>
 <div style="float:left; margin-left:396px; margin-top:-70px;" class="selected-date-color">
     <div class="selected-date">
