@@ -9,7 +9,7 @@
 .map-canvas{
     margin: 10px;
     z-index: 0;
-    width: 590px;
+    width: 100%;
     height: 234px;
 }
 
