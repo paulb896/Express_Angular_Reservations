@@ -108,12 +108,12 @@
     position: absolute;
     width:1700px;
     height: 100%;
-    background-position: -579px 15px;
+    background-position: -600px 15px;
     background-size: 130%;
     background-attachment: scroll;
     background-repeat: no-repeat;
     z-index: 0;
-    opacity: 0.6;
+    opacity: 0.75;
     background-image: url(../img/calendar.svg);
 }
 
