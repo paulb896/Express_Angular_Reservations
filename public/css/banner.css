@@ -12,8 +12,8 @@
     }
 
     .selected-date-color{
-        color:rgba(111,1,1,0.9);
-        text-shadow: 2px 2px 3px rgba(120,120,120,0.8);
+        color:rgba(1,1,111,0.95);
+        text-shadow: 2px 2px 2px rgba(180,180,180,0.9);
         font-weight: 900;
     }
 
@@ -36,8 +36,8 @@
     }
 
     .selected-date-color{
-        color:rgba(111,1,1,0.9);
-        text-shadow: 2px 2px 3px rgba(120,120,120,0.8);
+        color:rgba(1,1,111,0.95);
+        text-shadow: 2px 2px 2px rgba(180,180,180,0.9);
         font-weight: 900;
     }
 
@@ -63,7 +63,7 @@
 }
 
 .banner-container{
-    height: 326px;
+    height: 260px;
     background-color:#ffffff;
     margin-left: -40px;
     width: 105%;
@@ -211,12 +211,11 @@
 }
 
 .selected-date{
-    text-align: left;
-    border-radius:20px;
-    font-size: 32px;
-    font-weight: 100;
-    font-style: oblique;
     text-align: center;
+    border-radius:20px;
+    font-size: 36px;
+    font-weight: 600;
+    font-style: oblique;
     width: 615px;
     height: 290px;
     margin-right: 13%;
