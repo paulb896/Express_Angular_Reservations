@@ -18,6 +18,7 @@ angular.module('reserveTheTime.controllers.banner', [])
             $scope.startTime();
         }, 1000);
 
+        $scope.loadUser();
     };
 
     $scope.loadUser = function() {
