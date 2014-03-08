@@ -113,6 +113,7 @@
     background-attachment: scroll;
     background-repeat: no-repeat;
     z-index: 0;
+    opacity: 0.6;
     background-image: url(../img/calendar.svg);
 }
 
