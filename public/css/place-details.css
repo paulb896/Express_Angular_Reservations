@@ -4,6 +4,7 @@
     font-style: italic;
     font-weight: 700;
     line-height: 25px;
+    text-align: center;
 }
 
 .map-canvas{
@@ -27,8 +28,9 @@
     font-weight: 900;
     font-style: italic;
     margin-top: 10px;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
     width: 272px;
+    text-align: center;
 }
 
 .rating{
