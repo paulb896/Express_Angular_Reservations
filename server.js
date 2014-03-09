@@ -22,7 +22,6 @@ var config = require('./config'),
   oauth2Client = new OAuth2(config.clientId, config.clientSecret, config.redirectUrl),
   loginUrl = oauth2Client.generateAuthUrl({
     access_type: 'offline',
-    login_hint: config.loginHint,
     scope: 'https://www.googleapis.com/auth/plus.me'
   });
 
