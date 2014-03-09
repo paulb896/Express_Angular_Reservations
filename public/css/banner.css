@@ -238,7 +238,8 @@
     font-style: italic;
     float: right;
     margin-right: 40px;
-    color:#10111a;
+    color:#1400FF;
+    font-size: 30px;
 }
 
 .user-info > span{
