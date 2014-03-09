@@ -93,8 +93,8 @@
 .place-search{
     width: 33%;
     display: inline-table;
-    padding: 0;
     padding-right: 45px;
+    margin-left: 33px;
 }
 
 .place-selected{
