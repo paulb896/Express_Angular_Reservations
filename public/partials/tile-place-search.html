@@ -1,7 +1,10 @@
 <div ng-controller="placeSearchController" ng-init="initialize();" class="place-search" id="place-search">
     <table class="place-table" id="place-table">
         <tr style="background-color:transparent; z-index: 1000; position: absolute;">
-            <td><input ng-model="placeSearch" type="input" class="place-search-input" placeholder="Place Name"/></td>
+            <td>
+                <input ng-model="placeSearch" type="input" class="place-search-input" placeholder="Place Name"/>
+            </td>
+            <td>
                 <div ng-repeat="placeType in PageState.placeTypesShort" ng-click="updatePlaceType(placeSearch, placeType.name)"
                      ng-class="{true:'place-type-selected '+placeType.name, false:placeType.name}[placeType.name==UserSelection.placeType]"
                      class="place-type">
@@ -20,7 +23,7 @@
             </td>
         </tr>
         <tr>
-            <td colspan="3">
+            <td colspan="2">
                 <ul class="found-places" id="found-places">
                     <li ng-hide="PageState.places.length" class="place-result">Search results will show here</li>
 

@@ -228,6 +228,8 @@
     font-size: 102%;
     font-weight:800;
     text-align: right;
+    color: rgb(197,0,0);
+    text-shadow: 2px 2px 3px rgba(122,122,122,0.5);
 }
 
 .user-image{

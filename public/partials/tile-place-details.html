@@ -1,7 +1,6 @@
 <div ng-controller="placeController" ng-init="getPlaceDetails(UserSelection.place);">
     <div style="position: absolute; z-index: 22;">
         <h2 ng-show="false">{{UserSelection.place.name}} Details</h2>
-        <span ng-hide="UserSelection.place.formatted_phone_number" class="refresh" ng-click="getPlaceDetails(UserSelection.place);"></span>
         <div class="area">
             {{UserSelection.place.formatted_address}}
         </div>
