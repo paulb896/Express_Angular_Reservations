@@ -178,6 +178,8 @@
 
 .powered-by-google{
     background-image:url('../img/powered-by-google-on-white.png');
+    margin-top: 165px;
+    position: absolute;
     width: 104px;
     height: 30px;
     background-size: 100%;
