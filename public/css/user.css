@@ -20,4 +20,5 @@
     z-index: 1000;
     position: relative;
     display: inline-block;
+    vertical-align: sub;
 }

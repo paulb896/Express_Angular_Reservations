@@ -5,9 +5,13 @@
 <div style="width: 50%; position: absolute;">
     <% include tile-place-search.html %>
 </div>
-<div style="width: 50%; position: absolute; margin-left: 50%;">
-    <% include tile-date-picker.html %>
-    <% include better-time-picker.html %>
+<div style="width: 50%; position: absolute; margin-left: 50%;" ng-controller="dayTimeToggleController">
+    <div ng-hide="UserSelection.timePickerEnabled">
+        <% include tile-date-picker.html %>
+    </div>
+    <div ng-show="UserSelection.timePickerEnabled">
+        <% include better-time-picker.html %>
+    </div>
 </div>
 
 <% include footer.html %>

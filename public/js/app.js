@@ -15,6 +15,7 @@ angular.module('reserveTheTime', [
     'reserveTheTime.controllers.banner',
     'reserveTheTime.controllers.betterTimePicker',
     'reserveTheTime.controllers.datePicker',
+    'reserveTheTime.controllers.dayTimeToggle',
     'reserveTheTime.controllers.hourChart',
     'reserveTheTime.controllers.placeSearch',
     'reserveTheTime.controllers.reservation',

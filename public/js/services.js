@@ -32,7 +32,8 @@ angular.module('reserveTheTime.services', [])
         "place": null,
         "attendee":"",
         "city":"",
-        "placeType":"store"
+        "placeType":"store",
+        "timePickerEnabled":false
     };
 })
 .value('version', '0.6')

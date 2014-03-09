@@ -52,6 +52,7 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         newSelectedDate.setDate(day);
         UserSelection.selectedDate = newSelectedDate;
         $scope.updateReservations();
+        $scope.UserSelection.timePickerEnabled = true;
     };
 
     $scope.updateSelectedTime = function(dateTime) {

@@ -89,6 +89,7 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
             $scope.setSelectedMinute(time);
         }
         $scope.clearTimeCircle();
+        $scope.UserSelection.timePickerEnabled = false;
     };
 
     /**
@@ -97,7 +98,6 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
      */
     $scope.setSelectedHour = function(hour) {
         $scope.UserSelection.selectedDate.setHours(hour);
-        $scope.clearTimeCircle();
     };
 
     /**
@@ -106,6 +106,5 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
      */
     $scope.setSelectedMinute = function(minute) {
         $scope.UserSelection.selectedDate.setMinutes(minute);
-        $scope.clearTimeCircle();
     };
 }]);
