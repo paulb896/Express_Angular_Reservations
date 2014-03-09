@@ -108,10 +108,9 @@
 .banner-full{
     position: absolute;
     width:1990px;
-    opacity: 1;
     height: 100%;
-    background-position: -600px 15px;
-    background-size: 130%;
+    background-position: -596px 15px;
+    background-size: 105%;
     background-attachment: scroll;
     background-repeat: no-repeat;
     z-index: 0;
@@ -168,11 +167,11 @@
     text-shadow: 2px 1px 3px rgb(190,177,177);
     font-weight: 500;
     font-style: inherit;
-    margin-left: 325px;
-    margin-top: 158px;
+    margin-left: 170px;
+    margin-top: 128px;
     position: absolute;
-    -webkit-transform: skew(-15deg,-2deg) rotate(9deg);
-    transform:skew(-15deg,-2deg) rotate(9deg);
+    -webkit-transform: skew(-17deg,-8deg) rotate(13deg);
+    transform:skew(-17deg,-8deg) rotate(13deg);
     font-family: "Libre Baskerville";
 }
 
@@ -214,8 +213,7 @@
     text-align: center;
     border-radius:20px;
     font-size: 30px;
-    font-weight: 600;
-    font-style: oblique;
+    font-weight: 700;
     width: 615px;
     height: 290px;
     margin-right: 13%;
@@ -223,8 +221,8 @@
     display: inline-table;
     padding: 5px;
     z-index: 1000;
-    -webkit-transform: skew(-11deg,-2deg) rotate(7deg);
-    transform:skew(-15deg,-2deg) rotate(7deg);
+    -webkit-transform: skew(-17deg,-8deg) rotate(13deg);
+    transform:skew(-17deg,-8deg) rotate(13deg);
 }
 
 .selected-place{
