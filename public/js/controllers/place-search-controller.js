@@ -7,7 +7,7 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
 /**
  * Controller that handles place search requests
  */
-.controller('placeSearchController', ['$scope', 'UserSelection', 'PageState', 'placeService', function($scope, UserSelection, PageState, placeService) {
+.controller('placeSearchController', ['$scope', 'UserSelection', 'PageState', 'placeService', '$timeout', function($scope, UserSelection, PageState, placeService, $timeout) {
 
     $scope.searchPlaces = function(searchText) {
         console.log("SEARCH REQUEST, search text", searchText);
@@ -26,7 +26,7 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
      * @param string city
      */
     $scope.updateCity = function(city) {
-        UserSelection.city = city;
+        console.log("Searching for city " + city);
     };
 
 
@@ -49,8 +49,22 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
 
     $scope.initialize = function() {
         $scope.$watch('placeSearch', function() {
-            if ($scope.placeSearch && $scope.placeSearch.length > 3) {
-                $scope.searchPlaces($scope.placeSearch);
+            if ($scope.placeSearch && $scope.placeSearch.length > 3 && !$scope.updatingPlace) {
+                $scope.updatingPlace = true;
+                $timeout(function() {
+                    $scope.searchPlaces($scope.placeSearch);
+                    $scope.updatingPlace = false;
+                }, 5000);
+            }
+        });
+
+        $scope.$watch('UserSelection.city', function() {
+            if ($scope.UserSelection.city && $scope.UserSelection.city.length > 4 && !$scope.updatingCity) {
+                $scope.updatingCity = true;
+                $timeout(function() {
+                    $scope.updateCity($scope.UserSelection.city);
+                    $scope.updatingCity = false;
+                }, 5000);
             }
         });
 
