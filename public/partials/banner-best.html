@@ -14,7 +14,8 @@
         <div ng-bind="UserSelection.selectedDate | date:'EEEE MMMM d, y  h:mm a'" class="selected-date-background"></div>
         <span ng-show="UserSelection.place.name" class="selected-place" ng-bind="UserSelection.place.name"></span>
         <span ng-show="PageState.session.userProfile" ng-controller="reservationController">
-        <span class="reservation-input reserve day-floating-tile" ng-click="reserve();">Remember time and place</span>
-    </span>
+            <span class="reservation-input reserve day-floating-tile" ng-click="reserve();">Remember time and place</span>
+        </span>
     </div>
+    <div class="powered-by-google"></div>
 </span>
