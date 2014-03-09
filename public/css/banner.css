@@ -170,8 +170,6 @@
     margin-left: 170px;
     margin-top: 128px;
     position: absolute;
-    -webkit-transform: skew(-17deg,-8deg) rotate(13deg);
-    transform:skew(-17deg,-8deg) rotate(13deg);
     font-family: "Libre Baskerville";
 }
 
@@ -217,11 +215,10 @@
     width: 615px;
     height: 290px;
     margin-top: 180px;
-    display: inline-table;
+    display: inline;
+    position: absolute;
     padding: 5px;
     z-index: 1000;
-    -webkit-transform: skew(-17deg,-8deg) rotate(13deg);
-    transform:skew(-17deg,-8deg) rotate(13deg);
 }
 
 .selected-place{
