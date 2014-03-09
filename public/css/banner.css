@@ -107,7 +107,7 @@
 
 .banner-full{
     position: absolute;
-    width:1700px;
+    width:1990px;
     opacity: 1;
     height: 100%;
     background-position: -600px 15px;
@@ -167,14 +167,13 @@
     color: rgb(128,26,6);
     text-shadow: 2px 1px 3px rgb(190,177,177);
     font-weight: 500;
-    font-style: italic;
-    margin-left: 157px;
-    margin-top: 128px;
+    font-style: inherit;
+    margin-left: 325px;
+    margin-top: 158px;
     position: absolute;
-    -webkit-transform: skew(-15deg,-2deg) rotate(7deg);
-    transform:skew(-15deg,-2deg) rotate(7deg);
+    -webkit-transform: skew(-15deg,-2deg) rotate(9deg);
+    transform:skew(-15deg,-2deg) rotate(9deg);
     font-family: "Libre Baskerville";
-    font-style: italic;
 }
 
 .powered-by-google{
@@ -220,7 +219,7 @@
     width: 615px;
     height: 290px;
     margin-right: 13%;
-    margin-top: 200px;
+    margin-top: 173px;
     display: inline-table;
     padding: 5px;
     z-index: 1000;
