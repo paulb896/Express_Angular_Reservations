@@ -132,11 +132,10 @@
 }
 
 .current-date{
-    text-shadow: 2px 2px 4px rgba(118,118,118,0.3);
-    color:rgba(8,8,120,1);
     display: inline;
-    font-size: 26px;
-    font-family: serif;
+    font-size: 28px;
+    color: rgb(11,1,1);
+    text-shadow: 2px 2px 4px rgba(118,118,118,0.4);
 }
 
 .git-link{
@@ -214,7 +213,7 @@
     font-weight: 400;
     width: 615px;
     height: 290px;
-    margin-top: 160px;
+    margin-top: 132px;
     display: inline;
     position: absolute;
     padding: 5px;
