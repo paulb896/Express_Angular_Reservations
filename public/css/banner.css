@@ -213,7 +213,7 @@
     text-align: center;
     border-radius:20px;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 400;
     width: 615px;
     height: 290px;
     margin-right: 13%;
@@ -227,7 +227,6 @@
 
 .selected-place{
     font-size: 102%;
-    font-style: oblique;
     font-weight:800;
     text-align: right;
 }
