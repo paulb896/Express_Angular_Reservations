@@ -223,12 +223,6 @@ app.get('/places', function(req, res){
   })
 });
 
-
-
-
-
-
-
 /**
  * Respond with details about a given place
  */
@@ -257,6 +251,34 @@ app.get('/place-details', function(req, res){
     }
   })
 });
+
+/**
+ * City or region search
+ */
+app.get('/location', function(req, res){
+    var request = require('request'),
+        latitude = "49.248869",
+        longitude = "-122.973796";
+
+    if (req.query.hasOwnProperty("latitude")) {
+        latitude = req.query.latitude;
+    }
+
+    if (req.query.hasOwnProperty("longitude")) {
+        longitude = req.query.longitude;
+    }
+
+    var requestUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + req.query.address
+        + "&sensor=false&key=" + config.developerKey;
+
+    request(requestUrl, function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            console.log(body);
+            res.end(body);
+        }
+    })
+});
+
 
 /**
  * Attempt to save a reservation to the database.

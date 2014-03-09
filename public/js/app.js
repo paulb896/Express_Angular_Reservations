@@ -21,5 +21,5 @@ angular.module('reserveTheTime', [
     'reserveTheTime.controllers.reservation',
     'reserveTheTime.controllers.tileNavigation',
     'reserveTheTime.place.controller',
-    'reserveTheTime.filters']
+    'reserveTheTime.filters', 'ngResource']
     );

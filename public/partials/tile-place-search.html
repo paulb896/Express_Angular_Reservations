@@ -1,7 +1,7 @@
 <div ng-controller="placeSearchController" ng-init="initialize();" class="place-search" id="place-search">
     <table class="place-table" id="place-table">
         <tr style="background-color:transparent; z-index: 1000; position: absolute;">
-            <td style="padding: 15px;"><input ng-model="placeSearch" type="input" class="place-search-input" placeholder="Place Name"/></td>
+            <td><input ng-model="placeSearch" type="input" class="place-search-input" placeholder="Place Name"/></td>
             <td style="padding-left: 60px; padding-right: 60px;"></td>
             <td style="padding-left: 65px;">
                 <div ng-repeat="placeType in PageState.placeTypesShort" ng-click="updatePlaceType(placeSearch, placeType.name)"
@@ -15,18 +15,10 @@
         </tr>
         <tr>
             <td>
-                Latitude <input ng-model="PageState.location.lat"/>
+                <input ng-model="UserSelection.city" class="place-search-input" placeholder="City or Region">
             </td>
             <td>
-                Longitude <input ng-model="PageState.location.lng"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input ng-model="UserSelection.city" class="place-search-input" placeholder="City or Neighborhood">
-            </td>
-            <td>
-
+                Searching for places near <span ng-bind="PageState.selectedCityName"/>
             </td>
         </tr>
         <tr>

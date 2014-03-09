@@ -7,7 +7,8 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
 /**
  * Controller that handles place search requests
  */
-.controller('placeSearchController', ['$scope', 'UserSelection', 'PageState', 'placeService', '$timeout', function($scope, UserSelection, PageState, placeService, $timeout) {
+.controller('placeSearchController', ['$scope', 'UserSelection', 'PageState', 'placeService', '$timeout','LocationService',
+    function($scope, UserSelection, PageState, placeService, $timeout, LocationService) {
 
     $scope.searchPlaces = function(searchText) {
         console.log("SEARCH REQUEST, search text", searchText);
@@ -26,9 +27,13 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
      * @param string city
      */
     $scope.updateCity = function(city) {
-        console.log("Searching for city " + city);
+        LocationService({address:city}).then(function(data) {
+           if (data.hasOwnProperty('results')) {
+               $scope.PageState.location = data.results[0].geometry.location;
+               $scope.PageState.selectedCityName = data.results[0].formatted_address;
+           }
+        });
     };
-
 
     $scope.updatePlace = function(place) {
         if (!UserSelection.place ||  UserSelection.place.id != place.id) {
@@ -54,7 +59,7 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
                 $timeout(function() {
                     $scope.searchPlaces($scope.placeSearch);
                     $scope.updatingPlace = false;
-                }, 5000);
+                }, 3000);
             }
         });
 
@@ -64,7 +69,7 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
                 $timeout(function() {
                     $scope.updateCity($scope.UserSelection.city);
                     $scope.updatingCity = false;
-                }, 5000);
+                }, 3000);
             }
         });
 

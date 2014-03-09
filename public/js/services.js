@@ -4,6 +4,26 @@
  * All services used for reservation tracking
  */
 angular.module('reserveTheTime.services', [])
+
+
+.factory('LocationResource', ['$resource', function($resource) {
+    return $resource('/location?address=:address');
+}])
+
+.factory('LocationService', ['$q', 'LocationResource', function($q, LocationResource) {
+    return function(params) {
+        var defer = $q.defer();
+        LocationResource.get(params, function(data) {
+            defer.resolve(data);
+
+        }, function(data) {
+            defer.reject(data);
+        });
+
+        return defer.promise;
+    };
+}])
+
 .factory('Session', function($http) {
     var session = {
         user: function() {
@@ -23,7 +43,6 @@ angular.module('reserveTheTime.services', [])
             return promise;
         }
     };
-
     return session;
 })
 .factory('UserSelection', function(){
