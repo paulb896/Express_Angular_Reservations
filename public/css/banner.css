@@ -173,9 +173,9 @@
     color: rgb(128,26,6);
     text-shadow: 2px 1px 3px rgb(190,177,177);
     font-weight: 500;
-    font-style: inherit;
-    margin-left: 170px;
-    margin-top: 128px;
+    margin-left: 226px;
+    margin-top: 108px;
+    font-style: italic;
     position: absolute;
     font-family: "Libre Baskerville";
 }
@@ -218,6 +218,7 @@
 }
 
 .selected-date{
+    font-style: italic;
     text-align: left;
     border-radius:20px;
     font-size: 30px;
