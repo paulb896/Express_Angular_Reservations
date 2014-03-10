@@ -136,6 +136,7 @@
     border-right: solid 2px black;
     outline: none;
     width: 180px;
+    font-style: italic;
 }
 
 td{
