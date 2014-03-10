@@ -126,8 +126,9 @@
 }
 
 .month-picker > span{
-    font-size: 176%;
-    font-style: oblique;
+    font-family: "Times New Roman",sans-serif;
+    font-size: 230%;
+    font-style: italic;
     font-weight: 900;
     text-decoration: none;
     display: inline-block;
@@ -137,7 +138,7 @@
 }
 
 .month-picker > span:not(.month-selected){
-    color: dimgray;
+    color: #000000;
     border: solid transparent 1px;
     width: 20px;
 }
