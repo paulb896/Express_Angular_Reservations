@@ -73,13 +73,8 @@
 }
 
 .day-selected{
-    -webkit-box-shadow:1px 4px 10px white;
-    -moz-box-shadow:1px 4px 10px white;
-    box-shadow:1px 4px 10px white;
-    /*-webkit-box-shadow:none;*/
-    /*-moz-box-shadow:none;*/
-    /*box-shadow:none;*/
-    /*color: rgba(88,88,88,1);*/
+    background-color:#801a06;
+    color: #e2ded5;
     font-weight: 900;
 }
 
