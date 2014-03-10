@@ -49,13 +49,9 @@
 }
 
 .day-floating-tile{
-    -webkit-box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
-    -moz-box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
-    box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
-    -webkit-transition:0.18s all;
-    -moz-transition:0.18s all;
-    -ms-transition:0.18s all;
-    transition:0.18s all;
+    -webkit-box-shadow:5px 7px 20px rgba(15, 15, 15, 0.8);
+    -moz-box-shadow:5px 7px 20px rgba(15, 15, 15, 0.8);
+    box-shadow:5px 7px 20px rgba(15, 15, 15, 0.8);
     padding:12px;
     margin-left:5px;
     margin-right: 5px;
@@ -72,9 +68,8 @@
 }
 
 .day-floating-tile:not(.day-selected){
-    background-color: rgba(22, 22, 22, 0.7);
-    color: #ffffff;
-
+    background-color:#e2ded5;
+    color: #801a06;
 }
 
 .day-selected{
