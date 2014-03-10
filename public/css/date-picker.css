@@ -15,6 +15,7 @@
 
 .dayOfMonth{
     vertical-align: super;
+    font-style: italic;
 }
 
 .date-picker{
