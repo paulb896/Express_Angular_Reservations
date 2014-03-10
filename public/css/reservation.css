@@ -66,10 +66,6 @@
 
 .reserve:hover{
     color: white;
-    -webkit-transition:1.78s all;
-    -moz-transition:1.78s all;
-    -ms-transition:1.78s all;
-    transition:1.78s all;
 }
 
 .reservation-input:hover{
