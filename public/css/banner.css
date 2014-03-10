@@ -233,6 +233,7 @@
 }
 
 .selected-place{
+    margin-left: 40px;
     float: right;
     font-style: italic;
     font-size: 102%;
