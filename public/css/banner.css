@@ -187,7 +187,7 @@
     width: 104px;
     height: 30px;
     background-size: 100%;
-    display: inline-table;
+    display: inline;
     vertical-align: text-bottom;
     background-repeat: no-repeat;
     z-index: 1000;
