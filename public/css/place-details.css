@@ -31,6 +31,7 @@
     letter-spacing: 1px;
     width: 272px;
     text-align: center;
+    float: left;
 }
 
 .rating{
