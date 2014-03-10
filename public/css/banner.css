@@ -74,7 +74,7 @@
     height: 260px;
     background-color:#ffffff;
     margin-left: -40px;
-    width: 1450px;
+    width: 160%;
     position: absolute;
     z-index: 1000;
     padding: 20px;
@@ -115,7 +115,7 @@
 
 .banner-full{
     position: absolute;
-    width:1990px;
+    width:2129px;
     height: 2000px;
     background-position: -596px 15px;
     background-size: 105%;
@@ -228,14 +228,17 @@
     position: absolute;
     padding: 5px;
     z-index: 1000;
+    margin-left: 465px;
 }
 
 .selected-place{
+    float: right;
+    font-style: italic;
     font-size: 102%;
-    font-weight:800;
+    font-weight:600;
     text-align: right;
     color: rgb(170,0,0);
-    text-shadow: 2px 2px 3px rgba(122,122,122,0.5);
+    text-shadow: 5px 5px 6px rgba(12,12,12,0.7);
 }
 
 .user-image{
