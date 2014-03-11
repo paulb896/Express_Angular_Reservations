@@ -21,8 +21,7 @@ angular.module('reserveTheTime.controllers.banner', [])
 
     $scope.loadUser = function() {
         if (!PageState.hasOwnProperty('session')) {
-            Session.get({}).then(function(data) {
-                console.log("data", data);
+            Session.user().then(function(data) {
                 PageState.session = data[0];
             });
         }
