@@ -24,27 +24,26 @@ angular.module('reserveTheTime.services', [])
     };
 }])
 
-.factory('Session', function($http) {
-    var session = {
-        user: function() {
-            // $http returns a promise, which has a then function, which also returns a promise
-            var promise = $http.get("/session").then(function (response) {
-                // The then function here is an opportunity to modify the response
-                console.log(response);
-                // The return value gets picked up by the then in the controller.
-                if (response.status == 200) {
-                    return response.data;
-                }
+.factory('SessionResource', ['$resource', function($resource) {
+    return $resource('/session');
+}])
 
-                return [];
+.factory('Session', ['$q', 'SessionResource', function($q, SessionResource) {
+    var session = {
+        get: function(params) {
+            var defer = $q.defer();
+            SessionResource.get(params, function(data) {
+                defer.resolve(data);
+
+            }, function(data) {
+                defer.reject(data);
             });
 
-            // Return the promise to the controller
-            return promise;
+            return defer.promise;
         }
     };
     return session;
-})
+}])
 .factory('UserSelection', function(){
     return {
         "selectedDate": false,
