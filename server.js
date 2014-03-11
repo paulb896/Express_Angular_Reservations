@@ -141,7 +141,7 @@ app.put('/session', function(req, res) {
         }
 
         var collection = db.collection('UserSessions');
-        collection.update({sessionId: sessionId}, {$set: {pageState:JSON.stringify(req.body)}}, {w:1}, function(err) {
+        collection.update({sessionId: sessionId}, {$set: {session:JSON.stringify(req.body)}}, {w:1}, function(err) {
             if (err) {return;}
 
             console.log("session updated");

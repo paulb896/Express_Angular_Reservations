@@ -7,8 +7,8 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
 /**
  * Controller that handles place search requests
  */
-.controller('placeSearchController', ['$scope', 'UserSelection', 'PageState', 'placeService', '$timeout','LocationService',
-    function($scope, UserSelection, PageState, placeService, $timeout, LocationService) {
+.controller('placeSearchController', ['$scope', 'UserSelection', 'PageState', 'placeService', '$timeout','LocationService', 'Session',
+    function($scope, UserSelection, PageState, placeService, $timeout, LocationService, Session) {
 
     $scope.searchPlaces = function(searchText) {
         console.log("SEARCH REQUEST, search text", searchText);
@@ -38,6 +38,9 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
     $scope.updatePlace = function(place) {
         if (!UserSelection.place ||  UserSelection.place.id != place.id) {
             UserSelection.place = place;
+            Session.save({pageState:PageState, userSelection:UserSelection}).then(function(data) {
+                console.log("page state saved");
+            });
         }
     };
 
