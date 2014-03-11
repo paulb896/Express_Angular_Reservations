@@ -4,16 +4,16 @@
 </div>
 <% include banner.html %>
 <div style="height: 280px;"></div>
-<div style="width: 50%; position: absolute; margin-left: 20px; margin-top: 10px;">
+<span class="body-left">
     <% include tile-place-search.html %>
-</div>
-<div style="width: 50%; position: absolute; margin-left: 50%;" ng-controller="dayTimeToggleController">
+</span>
+<span class="body-right" ng-controller="dayTimeToggleController">
     <div ng-hide="UserSelection.timePickerEnabled">
         <% include tile-date-picker.html %>
     </div>
     <div ng-show="UserSelection.timePickerEnabled">
         <% include better-time-picker.html %>
     </div>
-</div>
+</span>
 
 <% include footer.html %>

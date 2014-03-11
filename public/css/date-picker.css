@@ -22,6 +22,7 @@
     display: inline-table;
     width: 39%;
     padding-left: 30px;
+    position: absolute;
 }
 
 .day-picker-size{

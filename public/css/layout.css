@@ -91,6 +91,13 @@
 }
 
 
+@media only screen and (max-width: 1300px) {
+    .body-right{
+        margin-top:800px;
+        width: 70%;
+        display: block;
+    }
+}
 
 body{
     width:100%;
@@ -108,6 +115,18 @@ body{
 
 body > div{
     #padding: 10px;
+}
+
+.body-left{
+    width: 45%;
+    margin-top: 10px;
+}
+
+.body-right{
+    margin-left: 70px;
+    width: 600px;
+    display: inline-table;
+    margin-right: 150px;
 }
 
 h2{

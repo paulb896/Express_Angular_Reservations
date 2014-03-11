@@ -145,8 +145,9 @@ td{
 
 .place-table{
     margin-bottom: -58px;
-    width: 158%;
+    width: 615px;
     font-weight: 700;
+    position: absolute;
 }
 
 .place-result-color{
@@ -169,7 +170,6 @@ td{
     margin-right: 10px;
     cursor: pointer;
     box-shadow: 2px 2px 3px rgba(1,2,2,0.4);
-    border: double #ebebeb 3px;
 }
 
 .stripe{
