@@ -45,6 +45,18 @@ angular.module('reserveTheTime.services', [])
 
             // Return the promise to the controller
             return promise;
+        },
+        save: function(data) {
+            var promise = $http.put("/session").then(function (response) {
+                if (response.status == 200) {
+                    return response.data;
+                }
+
+                return [];
+            });
+
+            // Return the promise to the controller
+            return promise;
         }
     };
     return session;

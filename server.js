@@ -125,6 +125,30 @@ process.on('uncaughtException', function (err) {
     console.log("Unexpected exception caught");
 });
 
+app.put('/session', function(req, res) {
+    console.log("Attempting to save session");
+    var sessionId = 122;
+//    var sessionId = req.signedCookies.sessionId;
+//    if (!sessionId) {
+//        res.status(401).end("Missing sessionId");
+//        return;
+//    }
+
+    MongoClient.connect(config.dbHost, function(err, db) {
+        if(err) {
+            res.end(JSON.stringify({}));
+            return;
+        }
+
+        var collection = db.collection('UserSessions');
+        collection.update({sessionId: sessionId}, {$set: {pageState:JSON.stringify(req.body)}}, {w:1}, function(err) {
+            if (err) {return;}
+
+            console.log("session updated");
+        });
+    });
+});
+
 /**
  * Check for session information, and send back
  * found session data.
