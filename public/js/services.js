@@ -30,9 +30,9 @@ angular.module('reserveTheTime.services', [])
 
 .factory('Session', ['$q', 'SessionResource', function($q, SessionResource) {
     var session = {
-        get: function(params) {
+        get: function() {
             var defer = $q.defer();
-            SessionResource.get(params, function(data) {
+            SessionResource.get(function(data) {
                 defer.resolve(data);
 
             }, function(data) {
