@@ -37,7 +37,7 @@ angular.module('reserveTheTime.controllers.banner', [])
                     PageState.session = {};
                 }
 
-                PageState.session.userProfile = data[0].session.userProfile;
+                PageState.session.userProfile = data[0].userProfile;
             });
         }
     };
