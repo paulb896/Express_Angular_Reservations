@@ -26,9 +26,7 @@ angular.module('reserveTheTime.controllers.banner', [])
 //                PageState = data[0];
 //                PageState.session = data[0];
                 console.log("session data", data);
-                if (data.hasOwnProperty(0)
-                    &&  data[0].hasOwnProperty('session')
-                ) {
+                if (data[0].hasOwnProperty('session')) {
                     PageState = data[0].session.pageState;
                     UserSelection = data[0].session.userSelection;
                 }
