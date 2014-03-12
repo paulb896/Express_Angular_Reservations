@@ -1,44 +1,45 @@
-<div ng-controller="placeSearchController" ng-init="initialize();">
-    <table class="place-table">
-        <tr>
-            <td colspan="2"><input ng-model="placeSearch" type="input" class="place-search" placeholder="Place Name"/></td>
-            <td colspan="2">
-                <input ng-model="citySearch" type="input" class="city-search" placeholder="City Name"/>
+<div ng-controller="placeSearchController" ng-init="initialize();" class="place-search" id="place-search">
+    <table class="place-table" id="place-table">
+        <tr style="background-color:transparent; z-index: 1000; position: absolute;">
+            <td>
+                <input ng-model="placeSearch" type="input" class="place-search-input" placeholder="Place Name"/>
             </td>
-
+            <td>
+                <div ng-repeat="placeType in PageState.placeTypesShort" ng-click="updatePlaceType(placeSearch, placeType.name)"
+                     ng-class="{true:'place-type-selected '+placeType.name, false:placeType.name}[placeType.name==UserSelection.placeType]"
+                     class="place-type">
+                </div>
+            </td>
+        </tr>
+        <tr style="height:70px;">
+            <td></td>
         </tr>
         <tr>
             <td>
-                <div class="found-place-types">
-                    <div ng-repeat="placeType in PageState.placeTypesShort" ng-click="updatePlaceType(placeSearch, placeType.name)"
-                         ng-class="placeType.name"
-                         class="place-type">
-                    </div>
-                </div>
+                <input ng-model="UserSelection.city" class="place-search-input" placeholder="City or Region">
             </td>
-            <td ng-show="false">
-                <div class="found-cities">
-                    <span ng-repeat="city in PageState.cities" ng-click="updateCity(city)"
-                          class="floatingTile city-result">
-                        {{city.name}}
-                    </span>
-                </div>
+            <td>
+                Searching for places near <span ng-bind="PageState.selectedCityName"/>
             </td>
         </tr>
         <tr>
-            <td colspan="3">
-                <ul class="found-places">
-
-                    <li ng-hide="PageState.places.length" class="place-result">Search results will show here</li>
+            <td colspan="2">
+                <ul class="found-places" id="found-places">
                     <li class="place-result-modify place-result" ng-show="PageState.resultSetPage > 0" ng-click="PageState.resultSetPage = PageState.resultSetPage - 1;">Page Back</li>
-                    <li ng-repeat="place in PageState.places | visibleResults:PageState.resultSetPage:PageState.resultPageSize" ng-click="updatePlace(place)"
+                    <li ng-class="{true:'place-selected', false:''}[place.id==UserSelection.place.id]"
+                        ng-repeat="place in PageState.places | visibleResults:PageState.resultSetPage:PageState.resultPageSize" ng-click="updatePlace(place)"
                           class="place-result place-result-color"
                          >
                         {{place.name}}<img class="place-icon" ng-src="{{place.icon}}"><span ng-bind="place.rating"></span>
+                        <div ng-show="place.id==UserSelection.place.id">
+                            <% include tile-place-details.html %>
+                        </div>
+
                     </li>
                     <li class="place-result-modify place-result" ng-show="PageState.places.length > ((PageState.resultSetPage+1) * PageState.resultPageSize)" ng-click="PageState.resultSetPage = PageState.resultSetPage + 1;">Page Forward</li>
                 </ul>
             </td>
+
         </tr>
     </table>
 </div>

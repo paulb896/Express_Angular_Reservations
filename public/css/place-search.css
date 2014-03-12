@@ -52,10 +52,10 @@
 }
 
 .found-places{
-    height: 350px;
     overflow: hidden;
-    width:84%;
+    width:100%;
     margin: 0;
+    margin-top: 52px;
 }
 
 .found-place-types{
@@ -85,37 +85,58 @@
     color: rgba(30,19,19,0.7);
 }
 
-.place-result-modify:hover{
+.place-result-modify:not(.place-selected):hover{
     background-color: rgba(111,1,1,0.8);
     color: whitesmoke;
 }
 
+.place-search{
+    width: 33%;
+    display: inline-table;
+    padding-right: 45px;
+    margin-left: 33px;
+}
+
+.place-selected{
+    height: 330px;
+    color: rgba(111,1,1,0.9);
+    font-weight: 300;
+    padding: 5px;
+    background-color:#F0EDE5;
+    text-align:right;
+}
+
 .place-type{
-    width:70px;
-    height:70px;
+    width:45px;
+    height:45px;
     display: inline-block;
     background-color: transparent;
     background-size: 100%;
+    margin-top: 13px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.place-type-selected{
+    background-color: rgba(111,1,1,0.9);
 }
 
 .place-type:hover{
-    #border-top-left-radius: 20px;
-    #border-top-right-radius: 20px;
-    background-color: rgba(111,1,1,0.9);
-    border-radius: 10px;
-
+    -webkit-box-shadow:0px 3px 8px rgba(130, 55, 55, 0.4);
+    -moz-box-shadow:0px 3px 8px rgba(130, 55, 55, 0.4);
+    box-shadow:0px 3px 8px rgba(130, 55, 55, 0.4);
 }
 
-.place-search{
-    font-size:30px;
-    padding: 10px;
+.place-search-input{
+    font-size:20px;
+    padding: 8px;
     font-family: 'Noto Serif', serif;
     color:black;
     border-bottom: solid 2px black;
     border-right: solid 2px black;
-    border-radius: 5px;
     outline: none;
     width: 180px;
+    font-style: italic;
 }
 
 td{
@@ -124,39 +145,42 @@ td{
 
 .place-table{
     margin-bottom: -58px;
-    width: 85%;
+    width: 615px;
+    font-weight: 700;
+    position: absolute;
+    font-size: 22px;
 }
 
 .place-result-color{
     color:rgba(111,1,1,0.9);
 }
 
+.place-result:not(.place-selected){
+    height: 35px;
+}
+
 .place-result{
-    background-color: rgba(200,200,205,0.4);
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 2px;
+    padding-right: 0;
+    text-align: center;
+    background-color:transparent;
     display: inline-table;
     margin-right: 10px;
     cursor: pointer;
-    height: 80px;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 5px;
-    width: 100%;
-    height: 35px;
-    margin-top: 5px;
-    padding-right: 0;
-    text-align: center;
+    box-shadow: 2px 2px 3px rgba(1,2,2,0.4);
 }
 
 .stripe{
     background-color: red;
 }
 
-.place-result-color:hover{
-    background-color: rgba(111,1,1,0.9);
+.place-result-color:not(.place-selected):hover{
+    background-color: rgb(26,98,177);
     color:white;
 }
-
-
 
 .place-type-search{
     font-size:30px;

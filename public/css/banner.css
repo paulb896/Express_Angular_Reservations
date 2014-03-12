@@ -1,30 +1,56 @@
 @media only screen and (min-width: 1501px) {
     .banner-width{
-        width: 38%;
+        width: 750px;
     }
 
     .banner-height{
-        height: 225px;
+        height: 115px;
     }
 
     .banner-content > li{
-        margin-bottom: 18px;
         height: 40px;
+    }
+
+    .selected-date-color{
+        color:rgba(77,1,1,0.95);
+        text-shadow: 2px 2px 2px rgba(180,180,180,0.9);
+        font-weight: 900;
+    }
+
+    .selected-date-background{
+
+    }
+
+    .user-info{
+        background-color: rgba(255,255,255,0.7);
     }
 }
 
 @media only screen and (max-width: 1500px) {
     .banner-width{
-        width: 38%;
+        width: 450px;
     }
 
     .banner-height{
-        height: 275px;
+        height: 115px;
     }
 
     .banner-content > li{
-        margin-bottom: 32px;
         height: 40px;
+    }
+
+    .selected-date-color{
+        color:rgba(77,1,1,0.95);
+        text-shadow: 2px 2px 2px rgba(180,180,180,0.9);
+        font-weight: 900;
+    }
+
+    .selected-date-background{
+
+    }
+
+    .user-info{
+        background-color: rgba(255,255,255,0.7);
     }
 }
 
@@ -38,105 +64,144 @@
 .banner-content{
     height: 50px;
     list-style-type:none;
-    padding-left: 0;
     text-align: left;
+    float:right;
+    width: 100%;
+    margin: 0;
 }
 
-.banner{
-    border: solid 1px black;
+.banner-container{
+    height: 260px;
+    background-color:#ffffff;
+    margin-left: -40px;
+    width: 160%;
+    position: absolute;
+    z-index: 1000;
+    padding: 20px;
+    overflow: hidden;
+    padding-top: 0;
+    border: solid 1px lightgray;
+    box-shadow: 2px 4px 12px rgba(1,2,2,0.4);
 }
 
 .banner-left{
-    margin-left: 30px;
     padding-left: 20px;
     padding-right: 50px;
     padding-bottom: 10px;
-    padding-top: 20px;
-    background-color: rgba(245,245,246,0.8);
-    z-index: 10;
+    background-color: transparent;
+    z-index: 10000;
     font-size: 115%;
     color:rgba(111,1,1,0.9);
-    display: inline-table;
-    position: fixed;
+    display: inline;
+    float: right;
+    width: 700px;
+    margin-right: 50px;
 }
 
 .banner-right{
-    width: 38%;
+    width: 100px;
+    margin-top: 100px;
+    float: right;
     padding-bottom: 10px;
-    padding-top: 20px;
-    background-color: rgba(245,245,246,0.8);
-    z-index: 10;
-    margin-left: 50%;
-    position: fixed;
+    background-color: transparent;
     color:rgba(111,1,1,0.9);
-    float:right;
-    display: inline-table;
-    margin-right: 20px;
+    display: inline;
+    margin-right:235px;
     padding-left: 17px;
-    padding-right: 10px;
+    padding-right: 20px;
+    font-size: 18px;
+    z-index: 10000;
+}
+
+.banner-full{
+    position: absolute;
+    width:2129px;
+    height: 2000px;
+    background-position: -596px 15px;
+    background-size: 105%;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    z-index: 0;
+    background-image: url(../img/calendar.svg);
 }
 
 .current-date-info{
-    margin-top: 20px;
+    margin-top: 5px;
+    text-shadow: -2px 2px 4px rgba(118,118,118,0.5);
 }
 
 .current-date-label{
-    font-size: 120%;
+    font-size: 30px;
     width: 25%;
     display: inline;
     margin-right: 5px;
+    text-shadow: 2px 2px 4px rgba(118,118,118,0.4);
+
 }
 
 .current-date{
-    color:rgba(8,8,78,0.87);
     display: inline;
-    font-size: 125%;
-    font-family: serif;
-    text-shadow: 2px 2px rgba(188,188,188,0.1);
-    letter-spacing: 1.6px;
-
+    font-size: 28px;
+    color: rgb(11,1,1);
+    text-shadow: 2px 2px 4px rgba(118,118,118,0.4);
 }
 
 .git-link{
-    display: block;
+    position: absolute;
+    text-align: center;
+    display: inline-table;
+    margin-left: 10px;
     margin-top: 10px;
     text-decoration: none;
     color:rgba(8,8,78,0.87);
-    display: block;
     font-size: 70%;
     text-shadow: 2px 2px rgba(188,188,188,0.8);
 }
 
 .logo{
-    width:70px;
-    height:40px;
+    width:35px;
+    height:20px;
     z-index: 9005;
     display: inline;
-    margin-bottom: -6px;
+    margin-top: 4px;
 }
 
 .main-title{
-    display: inline;
+    display: block;
     font-size:35px;
+    vertical-align: inherit;
+    color: rgb(128,26,6);
+    text-shadow: 2px 1px 3px rgb(190,177,177);
+    font-weight: 500;
+    margin-left: 226px;
+    margin-top: 108px;
+    font-style: italic;
+    position: absolute;
+    font-family: "Libre Baskerville";
 }
 
 .powered-by-google{
     background-image:url('../img/powered-by-google-on-white.png');
+    margin-top: 154px;
+    margin-left: 32px;
+    position: absolute;
     width: 104px;
-    height: 16px;
+    height: 30px;
     background-size: 100%;
-    display: inline-block;
+    display: inline;
     vertical-align: text-bottom;
+    background-repeat: no-repeat;
+    z-index: 1000;
 }
 
 .spin-component{
-    transform: rotateX(360deg);
-    -webkit-transform: rotateX(360deg); /* Safari and Chrome */
-    -webkit-transition:0.88s all;
-    -moz-transition:0.88s all;
-    -ms-transition:0.88s all;
-    transition:0.88s all;
-    perspective-origin: 50% 50%;
+    /*transform: rotateX(360deg);*/
+    /*-webkit-transform: rotateX(360deg); *//* Safari and Chrome */
+    /*-webkit-transition:0.88s all;*/
+    /*-moz-transition:0.88s all;*/
+    /*-ms-transition:0.88s all;*/
+    /*transition:0.88s all;*/
+    /*perspective-origin: 50% 50%;*/
 }
 
 .selection-header{
@@ -153,20 +218,48 @@
 }
 
 .selected-date{
-    font-size: 130%;
-    color:rgba(8,8,78,0.87);
-    font-weight:300;
-    margin-right: 5px;
+    font-style: italic;
+    text-align: left;
+    border-radius:20px;
+    font-size: 30px;
+    font-weight: 400;
+    width: 615px;
+    height: 290px;
+    margin-top: 137px;
+    display: inline;
+    position: absolute;
+    padding: 5px;
+    z-index: 1000;
+    margin-left: 216px;
 }
-
 
 .selected-place{
-    font-size: 184%;
-    font-style: oblique;
-    letter-spacing: 2px;
+    margin-left: 40px;
+    float: right;
     font-style: italic;
-    font-weight:200;
+    font-size: 102%;
+    font-weight:600;
+    text-align: right;
+    color: rgb(120,0,0);
+    text-shadow: 5px 5px 6px rgba(12,12,12,0.5);
 }
 
+.user-image{
+    padding-left: 20px;
+    border-width: 1px;
+    height: 35px;
+    float: right;
+}
 
+.user-info{
+    position: absolute;
+    font-style: italic;
+    float: right;
+    margin-right: 40px;
+    color:#10111a;
+    font-size: 30px;
+}
 
+.user-info > span{
+    vertical-align: middle;
+}

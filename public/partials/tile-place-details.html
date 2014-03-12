@@ -1,7 +1,6 @@
 <div ng-controller="placeController" ng-init="getPlaceDetails(UserSelection.place);">
     <div style="position: absolute; z-index: 22;">
-        <h2>{{UserSelection.place.name}} Details</h2>
-        <span ng-hide="UserSelection.place.formatted_phone_number" class="refresh" ng-click="getPlaceDetails(UserSelection.place);"></span>
+        <h2 ng-show="false">{{UserSelection.place.name}} Details</h2>
         <div class="area">
             {{UserSelection.place.formatted_address}}
         </div>
@@ -11,6 +10,10 @@
         <span class="ratings">
             <div class="rating" ng-repeat="n in ratings" ng-class="{'rating-positive': (n <= UserSelection.place.rating)}">&#9734;</div>
         </span>
+        <a class="map-link" ng-href="{{mapLinkLocation}}" ng-show="mapLinkLocation">Link to Map</a>
+        <div ng-click="getPlaceDetails($event);" class="map-canvas" name="map-canvas" class="map-size">
+            <span width=1 height=1 ng-show="!mapLoaded">Click Below for Map</span>
+        </div>
     </div>
-    <div id="map-canvas" class="map-size"></div>
+
 </div>

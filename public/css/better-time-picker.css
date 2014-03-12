@@ -1,11 +1,17 @@
 .better-time-picker{
     width: 300px;
     height: 400px;
-    background-color: rgba(11,11,11,0.6);
     color:rgba(98, 98, 98, 1);
     text-shadow: 1px 1px 3px rgba(215, 215, 233, 1);
-    box-shadow: 2px 2px 10px rgba(10,10,10,0.8);
-    zoom: 1.25;
+    display: inline-table;
+    z-index: 14002;
+    padding: 0;
+    opacity: 0.8;
+    position: absolute;
+}
+
+.better-time-picker:hover{
+    opacity: 1;
 }
 
 .highlighted{
@@ -15,21 +21,21 @@
 .hour{
     cursor: pointer;
     position: absolute;
-    color:white;
-    font-size: 250%;
-    width: 50px;
-    height: 50px;
+    color: darkgrey;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
     text-align: center;
     margin: 10px;
+    font-family: Monaco,"Times New Roman";
 }
 
 .hours-circle{
-    width:200px;
-    height:200px;
-    border-radius:100px;
+    width:248px;
+    height:248px;
     position:relative;
     left:22px;
-    top:135px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -40,19 +46,17 @@
 
 .hour:hover{
     color: rgba(111,1,1,0.9);
-    font-weight: 900;
-    border-radius: 50px;
 }
 
 .selected-hour{
-    font-size: 66px;
+    font-size: 86px;
     cursor: pointer;
     font-weight: 500;
-    margin-left:15%;
+    margin-left:9%;
 }
 
 .selected-minute{
-    font-size: 66px;
+    font-size: 86px;
     cursor: pointer;
     font-weight: 500;
 }
@@ -63,17 +67,15 @@
 }
 
 .time-header{
-    float: right;
-    background-color: rgba(245,245,246,0.8);
-    width: 300px;
     height: 100px;
-    padding-top: 20px;
+    width: 100%;
     font-size: 27px;
-    font-family: monospace times;
+    font-style: italic;
+    font-family: monospace times, "Times New Roman";
 }
 
 .time-header > span{
-    font-weight: 900;
+    font-weight: 300;
 }
 
 .time-header > span:hover{

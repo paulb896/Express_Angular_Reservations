@@ -1,34 +1,3 @@
-
-/*@media only screen and (min-width: 1501px) {*/
-    /*day-picker-size{*/
-        /*width: 68%;*/
-    /*}*/
-/*}*/
-
-/*@media screen and (min-width: 801px) and (max-width: 1500px) {*/
-    /*day-picker-size{*/
-        /*width: 60%;*/
-    /*}*/
-/*}*/
-
-/*@media only screen and (max-width: 800px) {*/
-    /*day-picker-size{*/
-        /*width: 50%;*/
-    /*}*/
-/*}*/
-
-.day-picker-size{
-    width: 600px;
-}
-
-.floatingTile {
-    width: 6%;
-    height: 4%;
-    padding: 5px;
-    color:#ffffff;
-    background-color: rgba(20,20,20,0.7);
-}
-
 .cool-time-picker{
     padding: 20px;
     font-size: 2em;
@@ -44,13 +13,20 @@
     font-weight: 900;
 }
 
-.date-picker{
-    display: inline-block;
-    margin-left:10px;
+.dayOfMonth{
+    vertical-align: super;
+    font-style: italic;
 }
 
-ul{
-    padding: 0;
+.date-picker{
+    display: inline-table;
+    width: 39%;
+    padding-left: 30px;
+    position: absolute;
+}
+
+.day-picker-size{
+    width: 400px;
 }
 
 .floatingTile:hover{
@@ -58,35 +34,139 @@ ul{
     -moz-animation-timing-function: linear;
     animation-timing-function: linear;
     -webkit-transition:0.38s all;
-    background-color: rgba(111,1,1,0.9);
+    font-style: normal;
 }
 
 .day-picker > li:nth-child(-n+7){
-  background-color: lightgray;
-    font-size: 22px;
+    background-color: transparent;
+    box-shadow: none;
+    text-align: center;
     color:  rgba(86,1,1,0.89);
     cursor: default;
     font-family: monospace times;
+    height:10px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.day-floating-tile{
+    -webkit-box-shadow:5px 7px 20px rgba(15, 15, 15, 0.8);
+    -moz-box-shadow:5px 7px 20px rgba(15, 15, 15, 0.8);
+    box-shadow:5px 7px 20px rgba(15, 15, 15, 0.8);
+    padding:12px;
+    margin-left:5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    display:inline-table;
+    cursor:pointer;
+    width: 35px;
+    height:35px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.day-floating-tile:not(.day-selected){
+    background-color:#e2ded5;
+    color: #801a06;
+}
+
+.day-selected{
+    background-color:#801a06;
+    color: #e2ded5;
+    font-weight: 900;
+}
+
+.floatingTile {
+    #width: 35px;
+    #height: 35px;
+    padding: 5px;
+}
+
+.minute-picker{
+    height: 50px;
+    cursor: pointer;
+    width: 80%;
+    cursor: pointer;
+    width:70%;
+    cursor: pointer;
+    margin-top: 30px;
+    position: relative;
+}
+
+.month-name{
+    padding: 2px 22px 2px 0px;
+    font-size: 23px;
+    position: absolute;
+    z-index: 3001;
+}
+
+.month-name:hover{
+    color: red;
+}
+
+.month-picker {
+    height: 35px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    width: 500px;
+    margin-left: 11px;
+    position: relative;
+    z-index: 1111;
+}
+
+.month-picker > * {
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-transition:0.28s all;
+    -moz-transition:0.28s all;
+    -ms-transition:0.28s all;
+    transition:0.28s all;
+    font-family: "Times New Roman";
+}
+
+.month-picker > span{
+    font-family: "Times New Roman",sans-serif;
+    font-size: 230%;
+    font-style: italic;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 10px 0 5px;
+    margin-left: 3px;
+    height: 30px;
+}
+
+.month-picker > span:not(.month-selected){
+    color: #000000;
+    border: solid transparent 1px;
+    width: 20px;
+}
+
+.month-selected{
+    width: 20px;
+    color: rgba(111,1,1,0.9);
+    cursor: pointer;
+    font-weight: 900;
+    margin:0px;
+    height:80px;
+}
+
+.month-name{
+    display: none;
+}
+
+.month-selected > span{
+    display: block;
 }
 
 
-.day-floating-tile{
-    -webkit-box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
-    -moz-box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
-    box-shadow:1px 4px 10px rgba(10, 10, 10, 0.4);
-    font-family: sans-serif;
-    -webkit-transition:0.18s all;
-    -moz-transition:0.18s all;
-    -ms-transition:0.18s all;
-    transition:0.18s all;
-    padding:12px;
-    margin: 6px;
-    display:inline-table;
-    #float:left;
-    cursor:pointer;
-    font-weight: 800;
-    width: 8%;
-    height:30px;
+
+.month-picker > span:not(.month-selected):hover{
+    color:rgba(111,1,1,0.9);
+    cursor: pointer;
 }
 
 .selected-tile{
@@ -106,99 +186,7 @@ ul{
     transition:0.38s all;
 }
 
-.minute-picker{
-    height: 50px;
-    cursor: pointer;
-    width: 80%;
-    cursor: pointer;
-    width:70%;
-    cursor: pointer;
-    margin-top: 30px;
+
+ul{
+    padding: 0;
 }
-
-
-.month-name{
-    padding: 10px 10px 2px 0px;
-    font-size: 10px;
-}
-
-.month-name:hover{
-    color: red;
-}
-
-.month-picker {
-    height: 30px;
-    width: 100%;
-    margin-bottom: 50px;
-}
-
-.month-picker > * {
-    -webkit-animation-timing-function: ease-in-out;
-    -moz-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    -webkit-transition:0.28s all;
-    -moz-transition:0.28s all;
-    -ms-transition:0.28s all;
-    transition:0.28s all;
-    font-family: "Times New Roman";
-}
-
-.month-picker > span{
-    font-size: 200%;
-    font-style: oblique;
-    font-weight: 900;
-    text-decoration: none;
-    display: inline-block;
-    margin: 5px;
-    padding-right: 10px;
-    padding-left: 4px;
-}
-
-.month-picker > span:not(.month-selected){
-    color: lightgray;
-    #padding: 0px 8px 4px 1px;
-}
-
-.month-selected{
-    box-shadow: 2px 2px 5px #888888;
-    color: rgba(111,1,1,0.9);
-    cursor: pointer;
-    font-weight: 900;
-    border: solid #000000 1px;
-}
-
-.month-name{
-    display: none;
-}
-
-.month-selected > span{
-    display: block;
-}
-
-.day-selected{
-    background-color: rgba(86,1,1,0.89);
-
-}
-
-.month-picker > span:not(.month-selected):hover{
-    color:rgba(111,1,1,0.9);
-    cursor: pointer;
-    #box-shadow: 2px 2px 2px #888888 inset;
-}
-
-.time-picker-table{
-    height: 50px;
-    margin-top: -20px;
-}
-
-.time-indicator{
-    font-size: 77%;
-    letter-spacing: 1px;
-    cursor: pointer;
-    margin-left: 3px;
-}
-
-.time-indicator:hover{
-    border-bottom: solid #000000 1px;
-}
-

@@ -13,8 +13,15 @@ angular.module('reserveTheTime.place.controller', [])
 
     $scope.ratings = [1,2,3,4,5];
 
-    $scope.getPlaceDetails = function() {
-        if (UserSelection.place
+    /**
+     * TODO: CONVERT TO DIRECTIVE ASAP
+     * @param $event Click event
+     */
+    $scope.getPlaceDetails = function($event) {
+        console.log($event);
+        console.log("WAS THE EVENT");
+        if (!$scope.mapLoaded
+            && UserSelection.place
             && UserSelection.place.hasOwnProperty('reference')
         ) {
             placeService.details(UserSelection.place.reference).then(function(details) {
@@ -27,7 +34,7 @@ angular.module('reserveTheTime.place.controller', [])
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
 
-                var map = new google.maps.Map(document.getElementById('map-canvas'),
+                var map = new google.maps.Map($event.target,
                     mapOptions);
 
                 var marker = new google.maps.Marker({
@@ -36,6 +43,30 @@ angular.module('reserveTheTime.place.controller', [])
                     title: UserSelection.place.name,
                     animation: google.maps.Animation.DROP
                 });
+
+                var zoomLevel = '17';
+                $scope.mapLinkLocation = "https://www.google.ca/maps/place/"
+                    + details.result.name
+                    + "/@" + details.result.geometry.location.lat
+                    + "," + details.result.geometry.location.lng
+                    + "," +zoomLevel + "z";
+
+                $scope.mapLoaded = true;
+//                var maps = document.getElementsByName("map-canvas");
+//                console.log(maps);
+//                var mapsArray = [document.getElementById("map-canvas"), ];
+//                for (var i = 0; i < maps.length; i++) {
+//                    mapsArray[i] = new google.maps.Map(maps[i],
+//                        mapOptions);
+//
+//                    var marker = new google.maps.Marker({
+//                        position: placeLatlng,
+//                        map: mapsArray[i],
+//                        title: UserSelection.place.name,
+//                        animation: google.maps.Animation.DROP
+//                    });
+//                }
+
             });
         }
     };

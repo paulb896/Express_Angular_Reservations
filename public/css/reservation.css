@@ -4,10 +4,6 @@
     font-size: 20px;
 }
 
-.selected-date-label{
-
-}
-
 .duration{
     width:50%;
     font-size: 20px;
@@ -25,17 +21,15 @@
 }
 
 .reservation-input{
-    padding: 10px;
-    font-family: 'Noto Serif', serif;
-    font-size: 24px;
+    font-size: 18px;
     color:black;
-    border-bottom: solid 2px black;
-    border-right: solid 2px black;
     width: 85%;
     outline: none;
     float:right;
-    border-radius: 5px;
     margin-right: 20px;
+    margin-top: 15px;
+    padding: 0;
+    border: solid black 2px;
 }
 
 .reservation-place-name{
@@ -64,25 +58,15 @@
 }
 
 .reserve{
-    width: 50%;
-    margin-left: 25%;
+    width: 250px;
     cursor: pointer;
     text-align: center;
     float: left;
-    -webkit-transition:1.28s all;
-    -moz-transition:1.28s all;
-    -ms-transition:1.28s all;
-    transition:1.28s all;
-    height: 30px;
+    height: 25px;
 }
 
 .reserve:hover{
-    background-color: rgba(111,1,1,0.9);;
     color: white;
-    -webkit-transition:0.78s all;
-    -moz-transition:0.78s all;
-    -ms-transition:0.78s all;
-    transition:0.78s all;
 }
 
 .reservation-input:hover{

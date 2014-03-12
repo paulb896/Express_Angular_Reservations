@@ -9,10 +9,17 @@ angular.module('reserveTheTime.controllers.datePicker', [])
  */
 .controller('datePickerController', ['$scope', 'UserSelection', 'PageState', 'reservationSearch', function($scope, UserSelection, PageState, reservationSearch) {
     $scope.setMonth = function(monthNumber) {
-        $scope.newSelectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, 0, $scope.UserSelection.selectedDate.getMinutes());
-        $scope.PageState.days = new Array();
+        console.log("Setting month", monthNumber);
+        $scope.monthSelected = monthNumber;
+        $scope.newSelectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, $scope.UserSelection.selectedDate.getHours(), $scope.UserSelection.selectedDate.getMinutes());
+        $scope.PageState.days = [];
 
-        var daysAmount = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, 0, $scope.UserSelection.selectedDate.getMinutes()).getDate();
+        var daysAmount = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber, 0).getDate();
+        if (daysAmount < 26) {
+            var currentDate = new Date($scope.UserSelection.selectedDate);
+            daysAmount = new Date(currentDate.getYear(), currentDate.getMonth()-1, 0).getDate();
+        }
+
         $scope.PageState.days.push("S");
         $scope.PageState.days.push("M");
         $scope.PageState.days.push("T");
@@ -24,7 +31,7 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         // Add spacers for to set first day of week
         var selectedDate = new Date($scope.UserSelection.selectedDate.getFullYear(), monthNumber-1, 1, 0);
         for(var j = 1; j <= selectedDate.getDay(); j++) {
-            $scope.PageState.days.push(".");
+            $scope.PageState.days.push("'");
         }
 
         for(var i = 1; i <= daysAmount; i++) {
@@ -32,6 +39,7 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         }
         $scope.newSelectedDate.setDate($scope.UserSelection.selectedDate.getDate());
         $scope.UserSelection.selectedDate = $scope.newSelectedDate;
+        $scope.UserSelection.selectedDate.setMonth(monthNumber-1);
         $scope.updateReservations();
     };
 
@@ -40,10 +48,11 @@ angular.module('reserveTheTime.controllers.datePicker', [])
         if (!day) {
             return;
         }
-        var newSelectedDate = new Date(UserSelection.selectedDate.getFullYear(), UserSelection.selectedDate.getMonth(), day);
-        newSelectedDate.setMinutes(UserSelection.selectedDate.getMinutes());
+        var newSelectedDate = new Date(UserSelection.selectedDate);
+        newSelectedDate.setDate(day);
         UserSelection.selectedDate = newSelectedDate;
         $scope.updateReservations();
+        $scope.UserSelection.timePickerEnabled = true;
     };
 
     $scope.updateSelectedTime = function(dateTime) {
@@ -53,16 +62,26 @@ angular.module('reserveTheTime.controllers.datePicker', [])
     };
 
     $scope.initializeDate = function() {
-        $scope.PageState.currentDate = new Date();
-
-        if (!$scope.UserSelection.selectedDate.hasOwnProperty("getDate")) {
-            var currentTime = new Date();
-            $scope.UserSelection.selectedDate = new Date(currentTime.getFullYear(), currentTime.getMonth());
-            $scope.setMonth($scope.UserSelection.selectedDate.getMonth()+1);
-        }
-
         $scope.PageState = PageState;
         $scope.UserSelection = UserSelection;
+        $scope.PageState.currentDate = new Date();
+
+        var currentTime = new Date();
+        if (!$scope.UserSelection.selectedDate) {
+            console.log("setting sdasefe AAAAAAAAAAAAAAAAAAAAAAA");
+            var currentMonth = currentTime.getMonth();
+            console.log("There is no selected date: ", $scope.UserSelection.selectedDate);
+            UserSelection.selectedDate = new Date();
+            //$scope.setMonth(new Date().getMonth()+1);
+        } else {
+            console.log("SELSDFSDFEWV DATE: BBBBBBBBBBBBBBBBBBBB", $scope.UserSelection.selectedDate);
+            var dateNew = new Date($scope.UserSelection.selectedDate);
+            console.log("THIS IS DATE NEW: ", dateNew.getMonth()+1);
+            $scope.setMonth(dateNew.getMonth()+1);
+        }
+
+        console.log("date initialized", $scope.UserSelection);
+        //Draggable.create("#day-picker", {type:"y", edgeResistance:0.3, throwProps:true,bounds:{heigjt:600, bottom:100, left:0, top:-110}});
     };
 
     $scope.updateReservations = function(){

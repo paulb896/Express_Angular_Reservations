@@ -16,7 +16,23 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
         $scope.PageState = PageState;
         $scope.UserSelection = UserSelection;
 
-        $scope.setHourPicker();
+        if ($scope.UserSelection.selectedDate) {
+            var selectedDate = new Date($scope.UserSelection.selectedDate);
+            $scope.setSelectedHour(selectedDate.getHours());
+            $scope.setSelectedMinute(selectedDate.getMinutes());
+            $scope.setHourPicker();
+        } else if ($scope.PageState.currentDate) {
+            var selectedDate = new Date();
+            $scope.setSelectedHour(selectedDate.getHours());
+            $scope.setSelectedMinute(selectedDate.getMinutes());
+            $scope.setHourPicker();
+        }
+
+        //Draggable.create("#day-picker", {type:"x", edgeResistance:0.3, throwProps:true,bounds:{height:600, bottom:0, left:0, maxX:250, minX:-250}});
+    };
+
+    $scope.clearTimeCircle = function() {
+        PageState.times = [];
     };
 
     /**
@@ -25,7 +41,7 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
     $scope.setHourPicker = function()
     {
         PageState.hourPickerEnabled = true;
-        PageState.times = [];
+        $scope.clearTimeCircle();
         var items = 12;
         for(var i = 1; i <= items; i++) {
             var x = 100 - 12 + 104 * Math.cos(2 * Math.PI * i / items - (Math.PI/2) );
@@ -40,7 +56,7 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
     $scope.setMinutePicker = function()
     {
         PageState.hourPickerEnabled = false;
-        PageState.times = [];
+        $scope.clearTimeCircle();
         var items = 12;
         for(var i = 0; i < items; i++) {
             var x = 100 - 12 + 104 * Math.cos(2 * Math.PI * i / items - (Math.PI/2)),
@@ -57,7 +73,7 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
     {
         var hour = $scope.UserSelection.selectedDate.getHours() + 12;
         if (hour > 23) {
-            hour = hour - 23;
+            hour = hour - 24;
         }
         $scope.UserSelection.selectedDate.setHours(hour);
     }
@@ -72,6 +88,7 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
         } else {
             $scope.setSelectedMinute(time);
         }
+        $scope.clearTimeCircle();
     };
 
     /**
@@ -88,5 +105,6 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
      */
     $scope.setSelectedMinute = function(minute) {
         $scope.UserSelection.selectedDate.setMinutes(minute);
+        $scope.UserSelection.timePickerEnabled = false;
     };
 }]);

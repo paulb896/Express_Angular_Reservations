@@ -1,0 +1,21 @@
+<span style="position: absolute; margin-left:33px;">
+    <h2 class="current-date-label">It's Currently </h2>
+    <span class="current-date" ng-bind="PageState.currentDate | date:'MMMM dd hh:mm:ss a'"></span>
+    <span ng-hide="PageState.session.userProfile">
+        <% include login.html %>
+    </span>
+    <span class="user-info" ng-show="PageState.session.userProfile">
+        <img class="user-image" ng-src="{{PageState.session.userProfile.image.url}}"/>
+        <span class="user-message">Hello </span><span class="user-message" ng-bind="PageState.session.userProfile.name.givenName">!</span>
+    </span>
+</span>
+<span class="selected-date-color">
+    <div class="selected-date">
+        <div ng-bind="UserSelection.selectedDate | date:'EEEE MMMM d, y  h:mm a'" class="selected-date-background"></div>
+        <span ng-show="UserSelection.place.name" class="selected-place" ng-bind="UserSelection.place.name"></span>
+        <span ng-show="PageState.session.userProfile" ng-controller="reservationController">
+            <span class="reservation-input reserve day-floating-tile" ng-click="reserve();">Remember time and place</span>
+        </span>
+    </div>
+    <div class="powered-by-google"></div>
+</span>

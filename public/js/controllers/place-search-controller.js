@@ -7,18 +7,17 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
 /**
  * Controller that handles place search requests
  */
-.controller('placeSearchController', ['$scope', 'UserSelection', 'PageState', 'placeService', function($scope, UserSelection, PageState, placeService) {
-    $scope.UserSelection = UserSelection;
-    $scope.PageState = PageState;
+.controller('placeSearchController', ['$scope', 'UserSelection', 'PageState', 'placeService', '$timeout','LocationService', 'Session',
+    function($scope, UserSelection, PageState, placeService, $timeout, LocationService, Session) {
 
     $scope.searchPlaces = function(searchText) {
         console.log("SEARCH REQUEST, search text", searchText);
         Pace.start();
-        placeService.find(UserSelection.placeType, searchText).then(function(d) {
+        placeService.find(UserSelection.placeType, searchText, PageState.location).then(function(placeData) {
             // Send view an array of reservations for the current state
             //$scope.selectedDate.reservations = d;
-            console.log("Data from place search: ", d);
-            PageState.places = d.results;
+            console.log("Data from place search: ", placeData);
+            PageState.places = placeData.results;
             Pace.stop();
         });
     };
@@ -28,16 +27,26 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
      * @param string city
      */
     $scope.updateCity = function(city) {
-        UserSelection.city = city;
+        LocationService({address:city}).then(function(data) {
+           if (data.hasOwnProperty('results')) {
+               $scope.PageState.location = data.results[0].geometry.location;
+               $scope.PageState.selectedCityName = data.results[0].formatted_address;
+           }
+        });
     };
 
-
     $scope.updatePlace = function(place) {
-        UserSelection.place = place;
+        if (!UserSelection.place ||  UserSelection.place.id != place.id) {
+            UserSelection.place = place;
+            Session.save({pageState:PageState, userSelection:UserSelection}).then(function(data) {
+                console.log("page state saved");
+            });
+        }
     };
 
     $scope.updatePlaceType = function(searchText, placeType) {
-        UserSelection.placeType = placeType;
+        console.log("UPDATE PLACE", placeType, UserSelection.placeType);
+        $scope.UserSelection.placeType = placeType;
         if (!searchText || !searchText.length) {
             console.log("SEARCHING WITH PLACE TYPE");
             $scope.searchPlaces(placeType.substr(0, placeType.charAt('_')));
@@ -48,9 +57,26 @@ angular.module('reserveTheTime.controllers.placeSearch', [])
 
     $scope.initialize = function() {
         $scope.$watch('placeSearch', function() {
-            if ($scope.placeSearch && $scope.placeSearch.length > 3) {
-                $scope.searchPlaces($scope.placeSearch);
+            if ($scope.placeSearch && $scope.placeSearch.length > 3 && !$scope.updatingPlace) {
+                $scope.updatingPlace = true;
+                $timeout(function() {
+                    $scope.searchPlaces($scope.placeSearch);
+                    $scope.updatingPlace = false;
+                }, 3000);
             }
         });
+
+        $scope.$watch('UserSelection.city', function() {
+            if ($scope.UserSelection.city && $scope.UserSelection.city.length > 4 && !$scope.updatingCity) {
+                $scope.updatingCity = true;
+                $timeout(function() {
+                    $scope.updateCity($scope.UserSelection.city);
+                    $scope.updatingCity = false;
+                }, 3000);
+            }
+        });
+
+        $scope.UserSelection = UserSelection;
+        $scope.PageState = PageState;
     };
 }]);
