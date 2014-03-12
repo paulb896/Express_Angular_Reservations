@@ -47,7 +47,7 @@ angular.module('reserveTheTime.services', [])
             return promise;
         },
         save: function(data) {
-            var promise = $http.put("/session").then(function (response) {
+            var promise = $http.put("/session", data).then(function (response) {
                 if (response.status == 200) {
                     return response.data;
                 }
