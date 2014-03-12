@@ -22,19 +22,21 @@ angular.module('reserveTheTime.controllers.banner', [])
     $scope.loadUser = function() {
         if (!PageState.hasOwnProperty('session')) {
             Session.user().then(function(data) {
+                console.log("session data", data);
 //                PageState = data[0];
 //                PageState.session = data[0];
-                if (!data.hasOwnProperty(0)
-                    || !data[0].hasOwnProperty('session')
+                console.log("session data", data);
+                if (data.hasOwnProperty(0)
+                    &&  data[0].hasOwnProperty('session')
                 ) {
-                    return;
+                    PageState = data[0].session.pageState;
+                    UserSelection = data[0].session.userSelection;
                 }
 
-                PageState = data[0].session.pageState;
-                UserSelection = data[0].session.userSelection;
                 if (!PageState.hasOwnProperty('session')) {
                     PageState.session = {};
                 }
+
                 PageState.session.userProfile = data[0].session.userProfile;
             });
         }
