@@ -142,7 +142,7 @@ app.put('/session', function(req, res) {
         }
 
         var collection = db.collection('UserSessions');
-        collection.update({sessionId: sessionId}, {$set: {session:"Session data is here"}}, {w:1}, function(err) {
+        collection.update({sessionId: sessionId}, {$set: {session:req.body}}, {w:1}, function(err) {
             if (err) {
                 console.log("Could not save session");
                 return;
