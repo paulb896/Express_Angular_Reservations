@@ -134,6 +134,7 @@ app.put('/session', function(req, res) {
         return;
     }
 
+    console.log("Session data", req.body);
     MongoClient.connect(config.dbHost, function(err, db) {
         if(err) {
             res.end(JSON.stringify({}));
