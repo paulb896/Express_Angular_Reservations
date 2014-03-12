@@ -127,12 +127,12 @@ process.on('uncaughtException', function (err) {
 
 app.put('/session', function(req, res) {
     console.log("Attempting to save session");
-    var sessionId = 122;
-//    var sessionId = req.signedCookies.sessionId;
-//    if (!sessionId) {
-//        res.status(401).end("Missing sessionId");
-//        return;
-//    }
+
+    var sessionId = req.signedCookies.sessionId;
+    if (!sessionId) {
+        res.status(401).end("Missing sessionId");
+        return;
+    }
 
     MongoClient.connect(config.dbHost, function(err, db) {
         if(err) {
