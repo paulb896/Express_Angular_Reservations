@@ -32,6 +32,7 @@ angular.module('reserveTheTime.controllers.banner', [])
                     $scope.PageState.selectedCityName = data[0].session.pageState.selectedCityName;
                     $scope.UserSelection.place = data[0].session.userSelection.place;
                     $scope.UserSelection.placeType = data[0].session.userSelection.placeType;
+                    $scope.UserSelection.selectedDate = data[0].session.userSelection.selectedDate;
                 }
 
                 if (!PageState.hasOwnProperty('session')) {
