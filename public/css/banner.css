@@ -136,7 +136,7 @@
     display: inline;
     margin-right: 5px;
     text-shadow: 2px 2px 4px rgba(118,118,118,0.4);
-
+    font-style: italic;
 }
 
 .current-date{
