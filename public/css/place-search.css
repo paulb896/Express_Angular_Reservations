@@ -107,14 +107,15 @@
 }
 
 .place-type{
-    width:45px;
-    height:45px;
+    width:35px;
+    height:35px;
     display: inline-block;
     background-color: transparent;
     background-size: 100%;
     margin-top: 13px;
     margin-right: 5px;
     cursor: pointer;
+    vertical-align: baseline;
 }
 
 .place-type-selected{
