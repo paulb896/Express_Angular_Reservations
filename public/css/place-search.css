@@ -109,7 +109,7 @@
 .place-type{
     width:35px;
     height:35px;
-    display: inline-block;
+    display: table-cell;
     background-color: transparent;
     background-size: 100%;
     margin-top: 13px;
