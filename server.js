@@ -36,6 +36,8 @@ app.use(express.static(__dirname + '/public/'));
 app.set('partials', __dirname + '/public/partials');
 app.set('views', __dirname + '/public/partials');
 
+app.use(express.favicon(__dirname + '/public/img/favicon.ico'));
+
 app.use(express.cookieParser(config.cookieSecret));
 
 // Not proud of this... fix this later

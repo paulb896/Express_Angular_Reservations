@@ -141,9 +141,10 @@
 
 .current-date{
     display: inline;
-    font-size: 28px;
+    font-size: 22px;
     color: rgb(11,1,1);
     text-shadow: 2px 2px 4px rgba(118,118,118,0.4);
+    font-style: italic;
 }
 
 .git-link{
