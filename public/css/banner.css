@@ -174,7 +174,7 @@
     color: rgb(128,26,6);
     text-shadow: 2px 1px 3px rgb(190,177,177);
     font-weight: 500;
-    margin-left: 226px;
+    margin-left: 208px;
     margin-top: 108px;
     font-style: italic;
     position: absolute;
@@ -231,7 +231,7 @@
     position: absolute;
     padding: 5px;
     z-index: 1000;
-    margin-left: 216px;
+    margin-left: 200px;
 }
 
 .selected-place{
