@@ -109,7 +109,7 @@
 .month-picker {
     height: 35px;
     margin-bottom: 30px;
-    margin-top: 15px;
+    margin-top: -8px;
     width: 500px;
     margin-left: 11px;
     position: relative;
