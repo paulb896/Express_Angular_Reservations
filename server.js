@@ -116,7 +116,7 @@ app.get('/login', function(req, res){
 
                   // Session usable for a week
                   res.cookie('sessionId', sessionId,  { maxAge: 604800000, httpOnly: false, signed:true });
-                  res.redirect('..');
+                  res.redirect('./');
                 });
               });
             });
