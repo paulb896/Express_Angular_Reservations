@@ -3,11 +3,29 @@
 
 </div>
 <% include banner.html %>
-<div style="height:250px;"></div>
-<span class="body-left">
-    <% include tile-place-search.html %>
-</span>
-<span class="body-right" ng-controller="dayTimeToggleController">
+<div style="height:265px;"></div>
+<style>
+    .time-control > span {
+        width: 45%;
+        font-size:60px;
+        display:inline-table;
+        cursor:pointer;
+        position:absolute;
+        margin-left:30px;
+    }
+    .time-control > span:hover {
+        color:rgba(129,122,122,0.8);
+    }
+</style>
+<span class="body-left" ng-controller="dayTimeToggleController">
+    <div class="time-control">
+        <span ng-click="UserSelection.timePickerEnabled = false">
+            Calendar
+        </span>
+        <span ng-click="UserSelection.timePickerEnabled = true"
+        style="margin-left:40%; text-align:right;">Clock</span>
+    </div>
+    <div style="height:55px;"></div>
     <div ng-hide="UserSelection.timePickerEnabled">
         <% include tile-date-picker.html %>
     </div>
@@ -15,5 +33,7 @@
         <% include better-time-picker.html %>
     </div>
 </span>
-
+<span class="body-right">
+    <% include tile-place-search.html %>
+</span>
 <% include footer.html %>

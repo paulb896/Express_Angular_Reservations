@@ -110,12 +110,12 @@
     width:35px;
     height:35px;
     display: table-cell;
-    background-color: transparent;
     background-size: 100%;
+    background-repeat: no-repeat;
     margin-top: 13px;
     margin-right: 5px;
     cursor: pointer;
-    vertical-align: baseline;
+    vertical-align: middle;
 }
 
 .place-type-selected{
