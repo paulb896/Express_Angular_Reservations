@@ -107,14 +107,15 @@
 }
 
 .place-type{
-    width:45px;
-    height:45px;
-    display: inline-block;
-    background-color: transparent;
+    width:35px;
+    height:35px;
+    display: table-cell;
     background-size: 100%;
+    background-repeat: no-repeat;
     margin-top: 13px;
     margin-right: 5px;
     cursor: pointer;
+    vertical-align: middle;
 }
 
 .place-type-selected{
@@ -145,7 +146,7 @@ td{
 
 .place-table{
     margin-bottom: -58px;
-    width: 615px;
+    width: 50%;
     font-weight: 700;
     position: absolute;
     font-size: 22px;
@@ -162,15 +163,14 @@ td{
 .place-result{
     font-size: 16px;
     font-weight: 700;
-    width: 100%;
+    width: 60%;
     margin-top: 2px;
-    padding-right: 0;
-    text-align: center;
+    padding: 0;
+    text-align: left;
     background-color:transparent;
     display: inline-table;
-    margin-right: 10px;
+    margin-left: 10px;
     cursor: pointer;
-    box-shadow: 2px 2px 3px rgba(1,2,2,0.4);
 }
 
 .stripe{

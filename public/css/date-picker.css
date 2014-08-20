@@ -23,6 +23,7 @@
     width: 39%;
     padding-left: 30px;
     position: absolute;
+    margin-left:25%;
 }
 
 .day-picker-size{
@@ -109,7 +110,7 @@
 .month-picker {
     height: 35px;
     margin-bottom: 30px;
-    margin-top: 15px;
+    margin-top: -8px;
     width: 500px;
     margin-left: 11px;
     position: relative;

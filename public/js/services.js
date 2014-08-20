@@ -7,7 +7,7 @@ angular.module('reserveTheTime.services', [])
 
 
 .factory('LocationResource', ['$resource', function($resource) {
-    return $resource('/location?address=:address');
+    return $resource('./location?address=:address');
 }])
 
 .factory('LocationService', ['$q', 'LocationResource', function($q, LocationResource) {
@@ -25,14 +25,14 @@ angular.module('reserveTheTime.services', [])
 }])
 
 .factory('SessionResource', ['$resource', function($resource) {
-    return $resource('/session');
+    return $resource('./session');
 }])
 
 .factory('Session', function($http) {
     var session = {
         user: function() {
             // $http returns a promise, which has a then function, which also returns a promise
-            var promise = $http.get("/session").then(function (response) {
+            var promise = $http.get("./session").then(function (response) {
                 // The then function here is an opportunity to modify the response
                 console.log(response);
                 // The return value gets picked up by the then in the controller.
@@ -47,7 +47,7 @@ angular.module('reserveTheTime.services', [])
             return promise;
         },
         save: function(data) {
-            var promise = $http.put("/session", data).then(function (response) {
+            var promise = $http.put("./session", data).then(function (response) {
                 if (response.status == 200) {
                     return response.data;
                 }
@@ -116,7 +116,7 @@ angular.module('reserveTheTime.services', [])
     var placeService = {
         find: function(category, searchText, location) {
             // $http returns a promise, which has a then function, which also returns a promise
-            var promise = $http.get("/places?category="+category+"&searchText="+searchText+"&latitude="+location.lat+"&longitude="+location.lng).then(function (response) {
+            var promise = $http.get("./places?category="+category+"&searchText="+searchText+"&latitude="+location.lat+"&longitude="+location.lng).then(function (response) {
                 // The then function here is an opportunity to modify the response
                 console.log(response);
                 // The return value gets picked up by the then in the controller.
@@ -131,7 +131,7 @@ angular.module('reserveTheTime.services', [])
             return promise;
         },
         details: function(reference) {
-            var promise = $http.get("/place-details?reference="+reference).then(function (response) {
+            var promise = $http.get("./place-details?reference="+reference).then(function (response) {
                 // The then function here is an opportunity to modify the response
                 console.log(response);
                 // The return value gets picked up by the then in the controller.
@@ -152,7 +152,7 @@ angular.module('reserveTheTime.services', [])
     var service = {
         find: function(year, month, day) {
             // $http returns a promise, which has a then function, which also returns a promise
-            var promise = $http.get("/reservations?day="+day+"&month="+month+"&year="+year).then(function (response) {
+            var promise = $http.get("./reservations?day="+day+"&month="+month+"&year="+year).then(function (response) {
                 // The then function here is an opportunity to modify the response
                 console.log(response);
                 // The return value gets picked up by the then in the controller.
@@ -176,7 +176,7 @@ angular.module('reserveTheTime.services', [])
 
             //$http.jsonp()
 
-            var promise = $http.post("/reserve", reservation).then(function (response) {
+            var promise = $http.post("./reserve", reservation).then(function (response) {
                 // The then function here is an opportunity to modify the response
                 console.log("response from post");
                 console.log(response);
@@ -196,7 +196,7 @@ angular.module('reserveTheTime.services', [])
 }).factory('Attendee', function($http, UserSelection) {
     var Attendee = {
         email: function(attendeeEmail) {
-            var promise = $http.post("/notification",
+            var promise = $http.post("./notification",
                 {
                     "email": attendeeEmail,
                     "date": UserSelection.selectedDate,

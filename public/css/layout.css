@@ -118,8 +118,10 @@ body > div{
 }
 
 .body-left{
-    width: 45%;
+    width: 100%;
     margin-top: 10px;
+    height: 600px;
+    display: flex;
 }
 
 .body-right{

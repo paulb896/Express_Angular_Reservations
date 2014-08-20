@@ -105,6 +105,5 @@ angular.module('reserveTheTime.controllers.betterTimePicker', [])
      */
     $scope.setSelectedMinute = function(minute) {
         $scope.UserSelection.selectedDate.setMinutes(minute);
-        $scope.UserSelection.timePickerEnabled = false;
     };
 }]);

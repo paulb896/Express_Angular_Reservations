@@ -71,7 +71,7 @@
 }
 
 .banner-container{
-    height: 260px;
+    height: 234px;
     background-color:#ffffff;
     margin-left: -40px;
     width: 160%;
@@ -115,14 +115,13 @@
 
 .banner-full{
     position: absolute;
-    width:2129px;
     height: 2000px;
-    background-position: -596px 15px;
-    background-size: 105%;
-    background-attachment: scroll;
+    background-position: 25px 35px;
+    background-size: 80%;
     background-repeat: no-repeat;
     z-index: 0;
     background-image: url(../img/calendar.svg);
+    width:80%;
 }
 
 .current-date-info{
@@ -136,14 +135,15 @@
     display: inline;
     margin-right: 5px;
     text-shadow: 2px 2px 4px rgba(118,118,118,0.4);
-
+    font-style: italic;
 }
 
 .current-date{
     display: inline;
-    font-size: 28px;
+    font-size: 22px;
     color: rgb(11,1,1);
     text-shadow: 2px 2px 4px rgba(118,118,118,0.4);
+    font-style: italic;
 }
 
 .git-link{
@@ -168,13 +168,13 @@
 
 .main-title{
     display: block;
-    font-size:35px;
+    font-size:120%;
     vertical-align: inherit;
     color: rgb(128,26,6);
     text-shadow: 2px 1px 3px rgb(190,177,177);
     font-weight: 500;
-    margin-left: 226px;
-    margin-top: 108px;
+    margin-left: 32px;
+    margin-top: 40px;
     font-style: italic;
     position: absolute;
     font-family: "Libre Baskerville";
@@ -221,27 +221,24 @@
     font-style: italic;
     text-align: left;
     border-radius:20px;
-    font-size: 30px;
+    font-size: 110%;
     font-weight: 400;
     width: 615px;
     height: 290px;
-    margin-top: 137px;
+    margin-top: 56px;
     display: inline;
     position: absolute;
     padding: 5px;
     z-index: 1000;
-    margin-left: 216px;
+    margin-left: 26px;
+    text-shadow: none;
 }
 
 .selected-place{
-    margin-left: 40px;
-    float: right;
-    font-style: italic;
     font-size: 102%;
-    font-weight:600;
+    font-weight:900;
     text-align: right;
-    color: rgb(120,0,0);
-    text-shadow: 5px 5px 6px rgba(12,12,12,0.5);
+    color: rgba(8,8,78,0.87);
 }
 
 .user-image{

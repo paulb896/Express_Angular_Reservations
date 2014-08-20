@@ -15,28 +15,37 @@
 var config = require('./config'),
   MongoClient = require('mongodb').MongoClient,
   express = require('express'),
-  crypto = require('crypto'),
+  bodyParser = require('body-parser'),
   app = express(),
-  googleapis = require('googleapis'),
+  googleapis = require('./node_modules/googleapis/lib/googleapis.js');
+  cookieParser = require('cookie-parser'),
+  favicon = require('serve-favicon'),
   OAuth2 = googleapis.auth.OAuth2,
-  oauth2Client = new OAuth2(config.clientId, config.clientSecret, config.redirectUrl),
+  oauth2Client = new OAuth2(
+  config.clientId,
+  config.clientSecret,
+  config.redirectUrl
+  ),
   loginUrl = oauth2Client.generateAuthUrl({
     access_type: 'offline',
     login_hint: config.loginHint,
     scope: 'https://www.googleapis.com/auth/plus.me'
-  });
+  }),
+  crypto = require('crypto');
 
 /**
  * Configure express server
  */
-app.use(express.bodyParser());
+app.use(bodyParser());
 app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
 app.use(express.static(__dirname + '/public/'));
 app.set('partials', __dirname + '/public/partials');
 app.set('views', __dirname + '/public/partials');
 
-app.use(express.cookieParser(config.cookieSecret));
+app.use(favicon(__dirname + '/public/img/favicon.ico'));
+
+app.use(cookieParser(config.cookieSecret));
 
 // Not proud of this... fix this later
 app.get('/index', function(req, res){
@@ -107,7 +116,7 @@ app.get('/login', function(req, res){
 
                   // Session usable for a week
                   res.cookie('sessionId', sessionId,  { maxAge: 604800000, httpOnly: false, signed:true });
-                  res.redirect('..');
+                  res.redirect('./');
                 });
               });
             });
