@@ -17,7 +17,7 @@
         color:rgba(129,122,122,0.8);
     }
 </style>
-<span class="body-left" ng-controller="dayTimeToggleController">
+<div class="body-left" ng-controller="dayTimeToggleController">
     <div class="time-control">
         <span ng-click="UserSelection.timePickerEnabled = false">
             Calendar
@@ -32,8 +32,8 @@
     <div ng-show="UserSelection.timePickerEnabled">
         <% include better-time-picker.html %>
     </div>
-</span>
-<span class="body-right">
+</div>
+<div class="body-right">
     <% include tile-place-search.html %>
-</span>
+</div>
 <% include footer.html %>
